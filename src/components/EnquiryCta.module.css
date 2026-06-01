@@ -1,0 +1,38 @@
+.cta {
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+}
+
+.body {
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  color: var(--color-cream);
+  max-width: 60ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  color: var(--color-clay);
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.phone:hover,
+.phone:focus-visible {
+  color: var(--color-cream);
+}

@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 2.5rem 2.5rem;
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+  overflow: hidden;
+}
+
+/* Oversized quotation mark (design.md §11) */
+.card::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.5rem;
+  left: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-clay);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.stars {
+  display: flex;
+  gap: 0.35rem;
+  color: var(--color-star);
+}
+
+.quote {
+  position: relative;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--color-cream);
+  margin: 0;
+  max-width: none;
+}
+
+.author {
+  margin-top: auto;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: var(--weight-light);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

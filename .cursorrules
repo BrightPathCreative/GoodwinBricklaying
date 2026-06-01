@@ -1,0 +1,81 @@
+# Cursor Rules — Goodwin Bricklaying
+# BrightPath Creative | goodwinbricklaying.com.au
+# These rules apply to every file, component, and decision in this project.
+
+## Project Identity
+You are building a premium, image-led website for Goodwin Bricklaying — a luxury masonry specialist
+in Melbourne, Australia. The site must feel like a high-end architecture studio, not a trades website.
+Read docs/brief.md and docs/content-notes.md before generating any code.
+
+## Non-Negotiable Design Rules
+- Use ONLY the colour palette defined in docs/content-notes.md — no exceptions
+- Font weights: 300–400 only. Never bold (700+)
+- Generous negative space — never crowd elements
+- All images must have descriptive, keyword-rich alt text (see docs/seo.md for conventions)
+- Apply warm image treatment: filter: sepia(0.12) saturate(0.92) brightness(0.96)
+- Hero overlays: rgba(78, 67, 61, 0.72)
+- Buttons: outlined only, uppercase, letter-spacing 0.2em, never rounded
+
+## Copy Rules
+- Never use: "affordable", "cheap", "competitive rates", "free quote", "no job too big or small"
+- Never claim David is a licensed builder — he is NOT
+- All copy is approved and final — use it verbatim from docs/copy/*.md
+- Do not paraphrase or rewrite copy unless explicitly asked
+
+## Technical Standards (2025/2026)
+- Semantic HTML5: use <header>, <nav>, <main>, <article>, <section>, <footer> correctly
+- One <h1> per page only
+- Every page needs: unique <title>, meta description, canonical tag, Open Graph tags
+- Images: WebP format, lazy-loaded (except hero), explicit width and height attributes
+- Hero video/media: autoplay, muted, loop, playsinline, preload="none"
+- Include skip link at top of every page: <a href="#main-content" class="skip-link">Skip to main content</a>
+- Breadcrumbs on all inner pages with BreadcrumbList schema
+- All forms submit to BrightPath CRM (GoHighLevel) — wire to endpoint when provided
+- robots.txt at domain root pointing to sitemap.xml
+- sitemap.xml listing all canonical URLs
+- llms.txt at domain root (already created — do not modify)
+- Privacy Policy, Cookie Policy pages must exist before launch
+
+## SEO & Schema
+- FAQPage schema on every page that has FAQ content
+- LocalBusiness + HomeAndConstructionBusiness schema on homepage
+- BreadcrumbList schema on all inner pages
+- Open Graph tags on every page (og:title, og:description, og:image, og:url, og:type)
+- All URLs: lowercase, hyphen-separated, no query strings
+- 301 redirect: goodwinbrickblockandheritage.com.au → goodwinbricklaying.com.au
+
+## AEO / LLM Optimisation
+- FAQ sections must use proper <details>/<summary> or structured HTML — not hidden content
+- Self-contained answer paragraphs — each FAQ answer must make sense without surrounding context
+- Structured data (JSON-LD) in <head> of every page
+- llms.txt is in the project root — ensure it is served at /llms.txt
+
+## Accessibility (WCAG 2.1 AA)
+- Minimum contrast ratio 4.5:1 for normal text, 3:1 for large text
+- All interactive elements keyboard-accessible with visible focus states
+- ARIA roles on complex/dynamic components
+- Skip link visible on keyboard focus at top of page
+- All form inputs have associated <label> elements
+
+## File & Asset Conventions
+- Images: /public/images/[service]-[description]-[suburb]-[number].webp
+- Logo: /public/logo/goodwin-logo-white-transparent.png (white version)
+- Never recreate or alter the logo in code — use the PNG asset only
+- Placeholder images: earthy brown solid (#5B4F47) until real photography supplied
+
+## Placeholders in Copy
+- [CRM Number] → replace with CRM tracking number (to be supplied)
+- [BUTTON] → styled CTA button per design spec
+- [PHONE] → click-to-call link using CRM number
+
+## What to Build First
+1. Global layout: nav, footer, colour tokens, typography
+2. Homepage
+3. Service pages (5)
+4. About page
+5. Contact page
+6. Location pages (9)
+7. Testimonials page
+8. 404 page
+9. Privacy Policy + Cookie Policy
+10. robots.txt, sitemap.xml (auto-generate if possible)

@@ -1,0 +1,81 @@
+.hero {
+  position: relative;
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+  padding-top: calc(var(--nav-height) + 3rem);
+  padding-bottom: var(--section-padding);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    160deg,
+    var(--color-heritage) 0%,
+    var(--color-primary) 130%
+  );
+  opacity: 0.85;
+}
+
+/* Background photograph (warm-treated) behind a darker scrim for legibility. */
+.image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  filter: sepia(0.12) saturate(0.92) brightness(0.92);
+}
+
+.hasImage::before {
+  background: linear-gradient(
+    160deg,
+    rgba(38, 30, 26, 0.72) 0%,
+    rgba(38, 30, 26, 0.85) 100%
+  );
+  opacity: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  margin-bottom: 1.25rem;
+  animation: heroIn 700ms var(--ease-reveal) 100ms both;
+}
+
+.title {
+  max-width: 20ch;
+  margin-bottom: 1.5rem;
+  animation: heroIn 800ms var(--ease-reveal) 200ms both;
+}
+
+.subtext {
+  max-width: 56ch;
+  font-size: 1.15rem;
+  color: var(--color-cream);
+  animation: heroIn 700ms var(--ease-reveal) 350ms both;
+}
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eyebrow,
+  .title,
+  .subtext {
+    animation: none;
+  }
+}

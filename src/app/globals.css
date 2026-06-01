@@ -1,0 +1,391 @@
+/* ==========================================================================
+   Goodwin Bricklaying — Global tokens & base styles
+   Palette and typography are LOCKED per docs/content-notes.md. Do not add
+   cool greys, blues, or corporate colours. Font weights 300–400 only.
+   ========================================================================== */
+
+:root {
+  /* --- Colour palette (locked) --- */
+  --color-primary: #5b4f47; /* Grey Brown — logo bg, primary brand */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-taupe: #66574f; /* Warm Taupe Brown */
+  --color-heritage: #4e433d; /* Deep Heritage Brown — dark sections */
+  --color-stone: #74665d; /* Soft Stone Brown */
+  --color-clay: #8a7a70; /* Clay Beige — labels, accents */
+  --color-cream: #f5f1ec; /* Warm Cream — light backgrounds */
+  --color-text-dark: #2c2420; /* Body text on light */
+  --color-text-light: #f5f1ec; /* Body text on dark */
+  --color-overlay: rgba(78, 67, 61, 0.72);
+  --color-overlay-light: rgba(91, 79, 71, 0.45);
+  --color-divider: #8a7a70;
+  --color-star: #c9a96e; /* Gold — star ratings only */
+
+  /* --- Typography --- */
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-jost), system-ui, sans-serif;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+
+  --tracking-eyebrow: 0.25em;
+  --tracking-nav: 0.15em;
+  --tracking-button: 0.2em;
+
+  --leading-heading: 1.15;
+  --leading-body: 1.75;
+
+  /* --- Layout --- */
+  --max-width: 1280px;
+  --max-width-narrow: 780px;
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --section-padding: clamp(4rem, 10vw, 8rem);
+
+  /* --- Image treatment (warm earthy, locked) --- */
+  --image-treatment: sepia(0.12) saturate(0.92) brightness(0.96);
+
+  /* --- Motion (per docs design.md) --- */
+  --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1); /* scroll reveals */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  --duration-fast: 200ms; /* hover states, micro interactions */
+  --duration-base: 400ms; /* most transitions */
+  --duration-slow: 700ms; /* page elements, reveals */
+  --duration-hero: 1200ms; /* hero text entrance */
+
+  /* --- Misc --- */
+  --nav-height: 6.75rem;
+  --transition: var(--duration-base) var(--ease-luxury);
+}
+
+/* --------------------------------------------------------------------------
+   Reset
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Every transition shares the same luxury curve (per design.md §1). */
+  transition-timing-function: var(--ease-luxury);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height); /* offset for sticky nav */
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: 1.0625rem;
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-heading);
+  letter-spacing: 0.005em;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.125rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+p {
+  max-width: var(--max-width-narrow);
+}
+
+strong,
+b {
+  /* Brand never uses bold weights; "strong" stays at regular. */
+  font-weight: var(--weight-regular);
+}
+
+/* Eyebrow / label */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--color-clay);
+}
+
+/* --------------------------------------------------------------------------
+   Layout helpers
+   -------------------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--max-width-narrow);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.section--dark {
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+}
+
+.section--cream {
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+}
+
+/* Warm earthy treatment for photography */
+.image-treatment {
+  filter: var(--image-treatment);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons (outlined only, uppercase, never rounded)
+   -------------------------------------------------------------------------- */
+
+.btn {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid currentColor;
+  border-radius: 0;
+  padding: 0.85rem 2.25rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: var(--weight-light);
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition: color var(--duration-base) var(--ease-luxury);
+}
+
+/* Fill wipes in from the left on hover (design.md §5). */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-base) var(--ease-luxury);
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* On dark backgrounds: light border/text → fills cream on hover */
+.btn--light {
+  color: var(--color-text-light);
+  border-color: var(--color-text-light);
+}
+
+.btn--light::before {
+  background-color: var(--color-cream);
+}
+
+.btn--light:hover,
+.btn--light:focus-visible {
+  color: var(--color-text-dark);
+}
+
+/* On light backgrounds: dark border/text → fills heritage on hover */
+.btn--dark {
+  color: var(--color-text-dark);
+  border-color: var(--color-text-dark);
+}
+
+.btn--dark::before {
+  background-color: var(--color-heritage);
+}
+
+.btn--dark:hover,
+.btn--dark:focus-visible {
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: focus + skip link
+   -------------------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-heritage);
+  color: var(--color-cream);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll reveal (IntersectionObserver-driven — see components/Reveal.tsx)
+   -------------------------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--duration-slow) var(--ease-reveal),
+    transform var(--duration-slow) var(--ease-reveal);
+  will-change: opacity, transform;
+}
+
+.reveal--left {
+  transform: translateX(-40px);
+}
+
+.reveal--right {
+  transform: translateX(40px);
+}
+
+/* Eyebrow labels fade only — no movement (design.md §3). */
+.reveal--fade {
+  transform: none;
+  transition: opacity 500ms var(--ease-reveal);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Staggered grid: each child reveals 120ms after the previous. */
+.reveal-grid > * {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--duration-slow) var(--ease-reveal),
+    transform var(--duration-slow) var(--ease-reveal);
+}
+
+.reveal-grid.is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-grid.is-visible > *:nth-child(1) {
+  transition-delay: 0ms;
+}
+.reveal-grid.is-visible > *:nth-child(2) {
+  transition-delay: 120ms;
+}
+.reveal-grid.is-visible > *:nth-child(3) {
+  transition-delay: 240ms;
+}
+.reveal-grid.is-visible > *:nth-child(4) {
+  transition-delay: 360ms;
+}
+.reveal-grid.is-visible > *:nth-child(5) {
+  transition-delay: 480ms;
+}
+.reveal-grid.is-visible > *:nth-child(6) {
+  transition-delay: 600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Never leave reveal content hidden when motion is disabled. */
+  .reveal,
+  .reveal-grid > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

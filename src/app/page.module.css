@@ -1,0 +1,518 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+  padding-top: var(--nav-height);
+  overflow: hidden;
+}
+
+/* Hero photograph, warm-treated, full bleed and clearly visible. */
+.heroImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  filter: sepia(0.1) saturate(0.95) brightness(1);
+}
+
+/* Gradient sits behind the words (left) so the brickwork stays visible right. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    95deg,
+    rgba(20, 15, 13, 0.9) 0%,
+    rgba(20, 15, 13, 0.7) 28%,
+    rgba(20, 15, 13, 0.35) 50%,
+    rgba(20, 15, 13, 0) 72%
+  );
+}
+
+/* Soft top + bottom vignette for depth, fades in on load. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 15, 13, 0.18) 0%,
+    rgba(20, 15, 13, 0) 22%,
+    rgba(20, 15, 13, 0) 62%,
+    rgba(20, 15, 13, 0.45) 100%
+  );
+  animation: heroOverlay 1000ms var(--ease-luxury) 300ms both;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  padding-block: var(--section-padding);
+}
+
+/* On small screens the text spans the width — darken vertically instead. */
+@media (max-width: 768px) {
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(20, 15, 13, 0.55) 0%,
+      rgba(20, 15, 13, 0.78) 100%
+    );
+  }
+}
+
+/* Staggered hero entrance (design.md §2). */
+.heroEyebrow {
+  margin-bottom: 1.5rem;
+  animation: slideUpFade 700ms var(--ease-reveal) 500ms both;
+}
+
+.heroHeadline {
+  max-width: 16ch;
+  margin-bottom: 1.5rem;
+  animation: slideUpFade 900ms var(--ease-reveal) 700ms both;
+}
+
+.heroSub {
+  max-width: 52ch;
+  font-size: 1.15rem;
+  color: var(--color-cream);
+  margin-bottom: 2.5rem;
+  animation: slideUpFade 700ms var(--ease-reveal) 900ms both;
+}
+
+.trustBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+  animation: slideUpFade 700ms var(--ease-reveal) 1000ms both;
+}
+
+.heroCta {
+  animation: fadeIn 600ms var(--ease-luxury) 1100ms both;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.trustBar span:not(:last-child)::after {
+  content: "·";
+  margin-left: 1.25rem;
+  color: rgba(245, 241, 236, 0.4);
+}
+
+/* Scroll indicator (design.md §15) */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-cream);
+  opacity: 0.6;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  animation: scrollFadeIn 600ms var(--ease-luxury) 1500ms both,
+    scrollBounce 2s var(--ease-luxury) 1500ms infinite;
+  transition: opacity var(--duration-base) var(--ease-luxury),
+    visibility var(--duration-base) var(--ease-luxury);
+}
+
+.scrollIndicator span {
+  display: block;
+  width: 1px;
+  height: 2.5rem;
+  background: linear-gradient(
+    to bottom,
+    var(--color-cream),
+    rgba(245, 241, 236, 0)
+  );
+}
+
+/* Fades out after the user scrolls past 200px. */
+.scrollIndicatorHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes scrollFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+/* Shared warm cover-image treatment for all home imagery. */
+.coverImage {
+  object-fit: cover;
+  filter: sepia(0.08) saturate(0.96) brightness(0.99);
+  transition: transform 700ms var(--ease-luxury);
+}
+
+.intro {
+  background-color: var(--color-cream);
+  color: var(--color-text-dark);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.introHeading {
+  margin-bottom: 2rem;
+  max-width: 18ch;
+}
+
+.introBody p + p {
+  margin-top: 1.5rem;
+}
+
+.introFigure {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .introGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+  }
+
+  .introFigure {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+.sectionEyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.sectionHeading {
+  margin-bottom: 3.5rem;
+  max-width: 20ch;
+}
+
+/* --- Services overview --- */
+.services {
+  background-color: var(--color-cream);
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem 4rem;
+}
+
+.serviceTile {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-dark);
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.serviceTile:hover {
+  color: var(--color-primary);
+}
+
+.serviceImage {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.serviceTile:hover .serviceImage .coverImage {
+  transform: scale(1.05);
+}
+
+.serviceTileTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+.serviceTileText {
+  color: var(--color-stone);
+  margin-bottom: 1rem;
+}
+
+.serviceTileArrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  color: var(--color-clay);
+}
+
+.serviceTileArrow span {
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--ease-luxury);
+}
+
+.serviceTile:hover .serviceTileArrow span {
+  transform: translateX(6px);
+}
+
+/* --- Selected work showcase --- */
+.showcase {
+  background-color: var(--color-cream);
+}
+
+.showcaseHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.showcaseHeading {
+  max-width: 16ch;
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.showcaseItem {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.showcaseItem:hover .coverImage {
+  transform: scale(1.05);
+}
+
+.showcaseCaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2.5rem 1.25rem 1.1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 15, 13, 0) 0%,
+    rgba(20, 15, 13, 0.78) 100%
+  );
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .showcaseHead {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .showcaseGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Why choose us (dark, asymmetric) --- */
+.why {
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+}
+
+.whyImage {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.whyHeading {
+  max-width: 14ch;
+  margin-bottom: 0;
+}
+
+.whyList {
+  display: flex;
+  flex-direction: column;
+}
+
+.whyItem {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(245, 241, 236, 0.14);
+  color: var(--color-cream);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.whyItem:last-child {
+  border-bottom: 1px solid rgba(245, 241, 236, 0.14);
+}
+
+/* --- Testimonials --- */
+.testimonials {
+  background-color: var(--color-cream);
+}
+
+/* --- FAQ --- */
+.faq {
+  background-color: var(--color-cream);
+}
+
+.faqInner {
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+/* --- Closing CTA (dark) --- */
+.cta {
+  position: relative;
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+  text-align: center;
+  overflow: hidden;
+}
+
+.ctaImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  filter: sepia(0.1) saturate(0.95) brightness(0.95);
+}
+
+/* Gradient behind the words keeps the centred copy legible over the brick. */
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 15, 13, 0.72) 0%,
+    rgba(20, 15, 13, 0.82) 55%,
+    rgba(20, 15, 13, 0.88) 100%
+  );
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 2;
+}
+
+.ctaHeading {
+  margin-bottom: 1.5rem;
+}
+
+.ctaSub {
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  color: var(--color-cream);
+  max-width: 60ch;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctaPhone {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  color: var(--color-clay);
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.ctaPhone:hover,
+.ctaPhone:focus-visible {
+  color: var(--color-cream);
+}
+
+@media (min-width: 768px) {
+  .serviceGrid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .whyGrid {
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
