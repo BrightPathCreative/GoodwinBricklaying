@@ -100,7 +100,7 @@ export default function ServicesPage() {
                 href={service.href}
                 className={styles.serviceCard}
               >
-                <span className={styles.serviceCardImage}>
+                <span className={`${styles.serviceCardImage} image-shape`}>
                   <Image
                     src={service.image}
                     alt={service.alt}

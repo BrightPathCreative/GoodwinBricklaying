@@ -9,12 +9,16 @@
   overflow: hidden;
 }
 
-/* Hero photograph, warm-treated, full bleed and clearly visible. */
+/* Hero photograph, warm-treated, full bleed and clearly visible.
+   Mirrored so the lighter, open side of the arch sits to the right,
+   away from the headline. */
 .heroImage {
   position: absolute;
   inset: 0;
   z-index: 0;
   object-fit: cover;
+  object-position: center;
+  transform: scaleX(-1);
   filter: sepia(0.1) saturate(0.95) brightness(1);
 }
 
@@ -26,10 +30,11 @@
   z-index: 1;
   background: linear-gradient(
     95deg,
-    rgba(20, 15, 13, 0.9) 0%,
-    rgba(20, 15, 13, 0.7) 28%,
-    rgba(20, 15, 13, 0.35) 50%,
-    rgba(20, 15, 13, 0) 72%
+    rgba(20, 15, 13, 0.97) 0%,
+    rgba(20, 15, 13, 0.88) 30%,
+    rgba(20, 15, 13, 0.62) 52%,
+    rgba(20, 15, 13, 0.25) 72%,
+    rgba(20, 15, 13, 0) 90%
   );
 }
 
@@ -78,6 +83,19 @@
   animation: slideUpFade 900ms var(--ease-reveal) 700ms both;
 }
 
+/* Tonal three-tone headline: cream, champagne gold, warm clay. */
+.heroLineOne {
+  color: var(--color-cream);
+}
+
+.heroLineTwo {
+  color: #d4b485;
+}
+
+.heroLineThree {
+  color: #c07d4f;
+}
+
 .heroSub {
   max-width: 52ch;
   font-size: 1.15rem;
@@ -97,6 +115,18 @@
   text-transform: uppercase;
   color: var(--color-clay);
   animation: slideUpFade 700ms var(--ease-reveal) 1000ms both;
+}
+
+.awardBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.awardBadgeImg {
+  width: 2rem;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .heroCta {

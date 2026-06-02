@@ -139,8 +139,8 @@ export default function HomePage() {
 
       <section className={styles.hero} aria-label="Introduction">
         <Image
-          src="/images/hero-fitzroy-brick-arch-tunnel-melbourne.jpg"
-          alt="Curved heritage brick archway and tunnel handcrafted by Goodwin Bricklaying in Fitzroy, Melbourne"
+          src="/images/hero-goodwin-bricklaying-lit-brick-arch-tunnel-melbourne.jpg"
+          alt="Warmly lit heritage brick archway and vaulted tunnel handcrafted by Goodwin Bricklaying in Melbourne"
           fill
           sizes="100vw"
           priority
@@ -151,14 +151,27 @@ export default function HomePage() {
             Heritage Masonry · Inner Melbourne
           </span>
           <h1 className={styles.heroHeadline}>
-            Luxury Masonry. Heritage Restoration. Architectural Craftsmanship.
+            <span className={styles.heroLineOne}>Luxury Masonry.</span>{" "}
+            <span className={styles.heroLineTwo}>Heritage Restoration.</span>{" "}
+            <span className={styles.heroLineThree}>
+              Architectural Craftsmanship.
+            </span>
           </h1>
           <p className={styles.heroSub}>
             Twenty-five years of bespoke brickwork across Melbourne&apos;s and
             England&apos;s finest homes and most significant heritage buildings.
           </p>
           <div className={styles.trustBar}>
-            <span>2026 Quality Business Award Winner</span>
+            <span className={styles.awardBadge}>
+              <Image
+                src="/images/quality-business-award-2026-badge.png"
+                alt="2026 Quality Business Award winner badge"
+                width={32}
+                height={32}
+                className={styles.awardBadgeImg}
+              />
+              2026 Quality Business Award Winner
+            </span>
             <span>25 Years Experience</span>
             <span>Public Liability &amp; WorkCover Insured</span>
             <span>Heritage Specialists</span>
@@ -191,10 +204,10 @@ export default function HomePage() {
               </p>
             </div>
           </Reveal>
-          <Reveal variant="right" className={styles.introFigure}>
+          <Reveal variant="right" className={`${styles.introFigure} image-shape`}>
             <Image
-              src="/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-43.jpg"
-              alt="Hand-laid brick vaulted ceiling crafted by Goodwin Bricklaying in a Fitzroy residence"
+              src="/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-47-3.jpg"
+              alt="Hand-laid brick fan vaulted ceiling crafted by Goodwin Bricklaying in a Fitzroy residence"
               fill
               sizes="(min-width: 960px) 45vw, 100vw"
               className={styles.coverImage}
@@ -214,7 +227,7 @@ export default function HomePage() {
           <Reveal variant="grid" className={styles.serviceGrid}>
             {services.map((service) => (
               <Link key={service.href} href={service.href} className={styles.serviceTile}>
-                <span className={styles.serviceImage}>
+                <span className={`${styles.serviceImage} image-shape`}>
                   <Image
                     src={service.image}
                     alt={service.alt}
@@ -253,7 +266,7 @@ export default function HomePage() {
           </div>
           <Reveal variant="grid" className={styles.showcaseGrid}>
             {showcase.map((item) => (
-              <Link key={item.image} href="/projects" className={styles.showcaseItem}>
+              <Link key={item.image} href="/projects" className={`${styles.showcaseItem} image-shape`}>
                 <Image
                   src={item.image}
                   alt={item.alt}
@@ -275,10 +288,10 @@ export default function HomePage() {
             <h2 id="why-heading" className={styles.whyHeading}>
               A craftsman who works with those who want the best.
             </h2>
-            <span className={styles.whyImage}>
+            <span className={`${styles.whyImage} image-shape`}>
               <Image
-                src="/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-rebuild-bricklayer-at-height.jpg"
-                alt="Goodwin Bricklaying craftsman rebuilding the Old Licorice Factory chimney crown at height in Brunswick"
+                src="/images/architectural-masonry/dental-pattern/goodwin-bricklaying-dental-brick-pattern-two-storey-contemporary-home-exterior.jpg"
+                alt="Bright contemporary two-storey home with white dental-pattern brickwork by Goodwin Bricklaying"
                 fill
                 sizes="(min-width: 960px) 40vw, 100vw"
                 className={styles.coverImage}

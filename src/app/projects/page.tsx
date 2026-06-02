@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                   index % 2 === 1 ? styles.featuredReverse : ""
                 }`}
               >
-                <div className={styles.media}>
+                <div className={`${styles.media} image-shape`}>
                   <Image
                     src={project.image}
                     alt={project.alt}

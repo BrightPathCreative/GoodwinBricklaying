@@ -56,7 +56,7 @@ export function ProjectGallery() {
           <li key={image.src} className={styles.item}>
             <button
               type="button"
-              className={styles.tile}
+              className={`${styles.tile} image-shape`}
               onClick={() => setLightbox(image)}
               aria-label={`Enlarge image: ${image.alt}`}
             >

@@ -33,7 +33,7 @@ export function ServiceGallery({
         </Reveal>
         <Reveal variant="grid" className={styles.grid}>
           {items.map((item) => (
-            <figure key={item.src} className={styles.item}>
+            <figure key={item.src} className={`${styles.item} image-shape`}>
               <Image
                 src={item.src}
                 alt={item.alt}

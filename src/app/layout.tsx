@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { DM_Serif_Display, Inter } from "next/font/google";
 import { site } from "@/lib/site";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -7,18 +7,19 @@ import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const dmSerifDisplay = DM_Serif_Display({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["400"],
+  style: ["normal", "italic"],
   display: "swap",
-  variable: "--font-cormorant",
+  variable: "--font-dm-serif",
 });
 
-const jost = Jost({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
-  variable: "--font-jost",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -57,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-AU" className={`${cormorant.variable} ${jost.variable}`}>
+    <html lang="en-AU" className={`${dmSerifDisplay.variable} ${inter.variable}`}>
       <head>
         {/* Reveal content immediately when JavaScript is unavailable. */}
         <noscript>
