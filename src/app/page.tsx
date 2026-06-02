@@ -173,7 +173,7 @@ export default function HomePage() {
               2026 Quality Business Award Winner
             </span>
             <span>25 Years Experience</span>
-            <span>Public Liability &amp; WorkCover Insured</span>
+            <span>Five-Star Google Rating</span>
             <span>Heritage Specialists</span>
           </div>
           <Link href="/projects" className={`btn btn--light ${styles.heroCta}`}>
