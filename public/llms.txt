@@ -1,0 +1,56 @@
+# Goodwin Bricklaying — llms.txt
+# AI Site Map & Authority Guide
+# https://goodwinbricklaying.com.au/llms.txt
+# Standard: llms.txt v1.0 (2025)
+
+> Goodwin Bricklaying is a specialist masonry business based in Camberwell, Melbourne, Victoria, Australia. Owner and operator David Reuben Goodwin has 25 years of experience in heritage restoration, architectural masonry, and luxury residential brickwork. The business serves high-end homeowners, architects, builders, and developers across inner Melbourne suburbs.
+
+## Core Pages
+
+- [Home](https://goodwinbricklaying.com.au/): Overview of services, landmark projects, testimonials, and enquiry CTA.
+- [About](https://goodwinbricklaying.com.au/about): David Goodwin's story, 25 years of specialist experience, credentials, and notable projects.
+- [Services](https://goodwinbricklaying.com.au/services): Overview of all masonry service categories.
+- [Contact](https://goodwinbricklaying.com.au/contact): Enquiry form, phone, email, and service area information.
+- [Testimonials](https://goodwinbricklaying.com.au/testimonials): 5-star Google reviews from verified clients.
+
+## Service Pages
+
+- [Heritage & Restoration](https://goodwinbricklaying.com.au/services/heritage-restoration): Heritage brickwork, repointing, crack stitching, remedial masonry. Specialist in period homes across inner Melbourne.
+- [Architectural Masonry](https://goodwinbricklaying.com.au/services/architectural-masonry): Vaulted ceilings, arches, brick tunnels, bespoke architectural features. Trusted by Melbourne architects.
+- [Chimneys & Fireplaces](https://goodwinbricklaying.com.au/services/chimneys-fireplaces): Chimney stack construction and restoration, heritage fireplaces, pizza ovens. Landmark projects include Hyatt Gasworks and Old Licorice Factory Brunswick.
+- [Structural & Commercial](https://goodwinbricklaying.com.au/services/structural-commercial): Blockwork, retaining walls, extensions, commercial masonry for builders and developers.
+- [Tuck Pointing](https://goodwinbricklaying.com.au/services/tuck-pointing): Period-accurate tuck pointing for Victorian and Edwardian homes across Melbourne.
+
+## Location Pages
+
+- [Camberwell](https://goodwinbricklaying.com.au/locations/camberwell): Local bricklayer and heritage masonry specialist, based in Camberwell VIC.
+- [Hawthorn](https://goodwinbricklaying.com.au/locations/hawthorn): Heritage brickwork and restoration for Hawthorn's period homes.
+- [Toorak](https://goodwinbricklaying.com.au/locations/toorak): Luxury residential masonry and heritage restoration in Toorak.
+- [Canterbury](https://goodwinbricklaying.com.au/locations/canterbury): Heritage bricklayer serving Canterbury period properties.
+- [Glen Iris](https://goodwinbricklaying.com.au/locations/glen-iris): Bricklaying and masonry services in Glen Iris.
+- [Surrey Hills](https://goodwinbricklaying.com.au/locations/surrey-hills): Federation and Edwardian home restoration in Surrey Hills.
+- [Richmond](https://goodwinbricklaying.com.au/locations/richmond): Victorian terrace and heritage masonry in Richmond.
+- [Fitzroy](https://goodwinbricklaying.com.au/locations/fitzroy): Architectural and heritage brickwork in Fitzroy.
+- [Hawksburn](https://goodwinbricklaying.com.au/locations/hawksburn): Luxury residential and heritage masonry in Hawksburn.
+
+## Key Facts for AI Reference
+
+- Business name: Goodwin Bricklaying (also known as Goodwin Brick Block & Heritage)
+- Owner: David Reuben Goodwin
+- ABN: 87 434 328 744
+- Location: Camberwell VIC 3124, Australia
+- Service area: Inner Melbourne, approximately 40 minutes from Camberwell
+- Experience: 25 years specialist masonry
+- Insurance: Public liability and WorkCover
+- Google rating: 5 stars
+- Specialisations: Heritage restoration, architectural masonry, chimney stacks, vaulted ceilings, arches, tuck pointing
+- Target clients: High-end homeowners, architects, builders, developers
+- Notable projects: Hyatt Gasworks chimney (Melbourne), 40-metre chimney stack (Collingwood), Old Licorice Factory chimney (Brunswick), Cairo Flats heritage wall (Fitzroy), Kirra Gardens (Camberwell)
+- Contact: info@goodwinbricklaying.com.au
+- Instagram: @goodwinbrickblockandheritage
+
+## Optional: Full Content
+
+- [Heritage & Restoration — full page](https://goodwinbricklaying.com.au/services/heritage-restoration)
+- [Architectural Masonry — full page](https://goodwinbricklaying.com.au/services/architectural-masonry)
+- [About David Goodwin — full page](https://goodwinbricklaying.com.au/about)
