@@ -1,0 +1,131 @@
+.root {
+  padding: 0.5rem;
+  color: var(--color-text, #2b2b2b);
+  user-select: none;
+  background: transparent;
+}
+
+.viewport {
+  width: 120px;
+  margin: 2rem auto 0;
+}
+
+.track {
+  display: flex;
+  width: fit-content;
+}
+
+.perspective {
+  perspective: 800px;
+}
+
+.slide {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  will-change: transform;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.label {
+  text-align: center;
+  white-space: nowrap;
+  will-change: opacity, filter;
+}
+
+.title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.location {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  line-height: 1.2;
+  opacity: 0.6;
+}
+
+.controls {
+  margin: 1.5rem auto 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  border-radius: 9999px;
+  background: rgba(229, 229, 229, 0.5);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(229, 229, 229, 0.8);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  color: var(--color-text, #404040);
+}
+
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.dots {
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  height: 8px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: width 300ms ease, background-color 300ms ease;
+}
+
+.dotActive {
+  width: 28px;
+  background-color: currentColor;
+}
+
+.dotInactive {
+  width: 8px;
+  background-color: color-mix(in srgb, currentColor 30%, transparent);
+}
+
+@media (min-width: 768px) {
+  .viewport {
+    width: 200px;
+  }
+
+  .slide {
+    width: 200px;
+  }
+
+  .title {
+    font-size: 0.875rem;
+  }
+
+  .location {
+    font-size: 0.75rem;
+  }
+}

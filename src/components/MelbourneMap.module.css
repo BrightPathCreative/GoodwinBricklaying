@@ -1,0 +1,109 @@
+:root {
+  --map-terracotta: #b5563a;
+  --map-terracotta-deep: #8f3f29;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 560px;
+  margin: 2.5rem auto 0;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.river {
+  stroke: var(--color-clay, #8a7a70);
+  stroke-width: 8;
+  stroke-linecap: round;
+  opacity: 0.35;
+}
+
+.suburb {
+  cursor: pointer;
+  outline: none;
+}
+
+.region {
+  stroke: var(--color-cream, #f5f1ec);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  transition: fill 250ms ease, transform 250ms ease, filter 250ms ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.neutral {
+  fill: #ded6cc;
+}
+
+.highlighted {
+  fill: #b5563a;
+}
+
+.suburb:hover .neutral,
+.suburb:focus-visible .neutral {
+  fill: #cdc3b6;
+}
+
+.suburb:hover .highlighted,
+.suburb:focus-visible .highlighted {
+  fill: #8f3f29;
+}
+
+.regionActive {
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 10px rgba(44, 36, 32, 0.25));
+}
+
+.suburb:focus-visible .region {
+  stroke: var(--color-text-dark, #2c2420);
+}
+
+.tooltipBg {
+  fill: var(--color-text-dark, #2c2420);
+}
+
+.tooltipText {
+  fill: var(--color-cream, #f5f1ec);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.legend {
+  list-style: none;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-stone, #74665d);
+}
+
+.swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.swatchHighlight {
+  background: #b5563a;
+}
+
+.swatchNeutral {
+  background: #ded6cc;
+}

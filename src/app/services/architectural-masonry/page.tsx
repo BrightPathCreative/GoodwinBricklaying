@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ServiceList } from "@/components/ServiceList";
@@ -6,6 +7,8 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceGallery } from "@/components/ServiceGallery";
+import TiltedCarousel from "@/components/TiltedCarousel";
+import MelbourneMap from "@/components/MelbourneMap";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
@@ -26,18 +29,34 @@ const architecturalServices = [
   {
     title: "Vaulted Ceilings",
     text: "Structural brick and masonry vaulted ceiling construction for high-end residential and architectural projects. Each vault is engineered for permanence and designed to form.",
+    image: {
+      src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-32.jpg",
+      alt: "Brick vaulted ceiling under construction in a Fitzroy residence by Goodwin Bricklaying",
+    },
   },
   {
     title: "Arches",
     text: "Custom arch construction in a range of styles, including segmental, semi-circular, gothic, and flat. Built to architectural specification or designed in collaboration with David and your architect.",
+    image: {
+      src: "/images/architectural-masonry/prahran-park/goodwin-bricklaying-architectural-curved-brick-retaining-wall-prahran-council-park-completed.jpg",
+      alt: "Completed curved architectural brick retaining wall at a Prahran council park by Goodwin Bricklaying",
+    },
   },
   {
     title: "Brick Tunnels",
     text: "Bespoke brick tunnel construction for architectural entrances, undercroft spaces, wine cellars, and statement features.",
+    image: {
+      src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-47.jpg",
+      alt: "Curved brick tunnel vault detail handcrafted by Goodwin Bricklaying in Fitzroy",
+    },
   },
   {
     title: "Bespoke Masonry",
     text: "Custom masonry features for luxury residential builds, including garden walls, feature brick installations, and statement facades.",
+    image: {
+      src: "/images/architectural-masonry/dental-pattern/goodwin-bricklaying-dental-brick-pattern-close-up-detail-textured-facade.jpg",
+      alt: "Close-up of dental-pattern brickwork detail on a textured facade by Goodwin Bricklaying",
+    },
   },
 ];
 
@@ -77,6 +96,33 @@ const gallery = [
   {
     src: "/images/architectural-masonry/dental-pattern/goodwin-bricklaying-dental-brick-pattern-two-storey-contemporary-home-exterior.jpg",
     alt: "Two-storey contemporary home with a dental-pattern brick exterior by Goodwin Bricklaying",
+  },
+];
+
+const fitzroyTunnelImages = [
+  {
+    src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-32.jpg",
+    alt: "Brick vaulted ceiling under construction in a Fitzroy residence by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-34.jpg",
+    alt: "Hand-laid brickwork forming the Fitzroy tunnel vault by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-35.jpg",
+    alt: "Curved brick vault springing detail in the Fitzroy tunnel by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-36.jpg",
+    alt: "Progress view of the handcrafted Fitzroy brick tunnel by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-38.jpg",
+    alt: "Interior of the curved brick tunnel vault in Fitzroy by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-42.jpg",
+    alt: "Detail of the completed Fitzroy brick tunnel vault by Goodwin Bricklaying",
   },
 ];
 
@@ -154,6 +200,7 @@ export default function ArchitecturalMasonryPage() {
               matters.
             </p>
           </Reveal>
+          <TiltedCarousel />
         </div>
       </section>
 
@@ -188,20 +235,88 @@ export default function ArchitecturalMasonryPage() {
             Goodwin Bricklaying portfolio. The kind of work that takes weeks and
             lasts centuries.
           </Reveal>
+          <Reveal>
+            <div
+              style={{
+                display: "flex",
+                gap: "1rem",
+                overflowX: "auto",
+                marginTop: "2.5rem",
+                paddingBottom: "1rem",
+                scrollSnapType: "x mandatory",
+                WebkitOverflowScrolling: "touch",
+              }}
+            >
+              {fitzroyTunnelImages.map((image) => (
+                <div
+                  key={image.src}
+                  style={{
+                    position: "relative",
+                    flex: "0 0 auto",
+                    width: "min(80vw, 360px)",
+                    height: "260px",
+                    borderRadius: "0.5rem",
+                    overflow: "hidden",
+                    scrollSnapAlign: "start",
+                  }}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 768px) 360px, 80vw"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="section section--cream" aria-labelledby="arch-who">
-        <div className="container-narrow">
-          <Reveal as="h2" id="arch-who" className={styles.headingTight}>
-            Trusted by Architects and Designers
-          </Reveal>
-          <Reveal as="p" className={styles.note}>
-            David regularly works alongside architects, interior designers, and
-            premium builders on residential and commercial projects across inner
-            Melbourne. His approach, including detailed quoting, clear
-            communication, and a refusal to compromise on outcome, makes him a
-            preferred tradesperson for projects where the standard must be right.
+        <div className="container">
+          <Reveal>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "clamp(1.5rem, 4vw, 3rem)",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  flex: "1 1 360px",
+                  minWidth: "min(100%, 360px)",
+                  aspectRatio: "4 / 3",
+                  borderRadius: "0.5rem",
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src="/images/architectural-masonry/prahran-park/goodwin-bricklaying-architectural-masonry-curved-wall-timber-seating-prahran-park.jpg"
+                  alt="Curved architectural masonry wall with timber seating at a Prahran park by Goodwin Bricklaying"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div style={{ flex: "1 1 360px" }}>
+                <h2 id="arch-who" className={styles.headingTight}>
+                  Trusted by Architects and Designers
+                </h2>
+                <p className={styles.note}>
+                  David regularly works alongside architects, interior
+                  designers, and premium builders on residential and commercial
+                  projects across inner Melbourne. His approach, including
+                  detailed quoting, clear communication, and a refusal to
+                  compromise on outcome, makes him a preferred tradesperson for
+                  projects where the standard must be right.
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -238,6 +353,9 @@ export default function ArchitecturalMasonryPage() {
             Goodwin Bricklaying delivers architectural masonry in Toorak,
             Hawthorn, Camberwell, Canterbury, Glen Iris, Surrey Hills, Richmond,
             Fitzroy, and surrounding inner Melbourne suburbs.
+          </Reveal>
+          <Reveal>
+            <MelbourneMap />
           </Reveal>
         </div>
       </section>
