@@ -65,10 +65,6 @@ const gallery = [
     src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-3.jpg",
     alt: "Crisp tuck pointing lines across a heritage brick wall by Goodwin Bricklaying",
   },
-  {
-    src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
-    alt: "Detail of period-accurate tuck pointing on Edwardian brickwork by Goodwin Bricklaying",
-  },
 ];
 
 const reviews = [
@@ -115,8 +111,8 @@ export default function TuckPointingPage() {
           { name: "Tuck Pointing" },
         ]}
         image={{
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-01.jpg",
-          alt: "Specialist tuck pointing in progress on weathered red brickwork with fresh lime mortar by Goodwin Bricklaying",
+          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
+          alt: "Tradesperson hand-finishing tuck pointing on a weathered heritage brick facade by Goodwin Bricklaying",
         }}
       />
 

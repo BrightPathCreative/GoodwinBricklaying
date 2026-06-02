@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceGallery } from "@/components/ServiceGallery";
+import { CairoShowcase } from "@/components/CairoShowcase";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
@@ -42,40 +43,52 @@ const heritageServices = [
 
 const gallery = [
   {
-    src: "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-22.jpg",
-    alt: "Restored heritage polychrome brick garden wall in Carlton by Goodwin Bricklaying",
-  },
-  {
-    src: "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-28.jpg",
-    alt: "Reclaimed brick detailing and capped pier on a restored Carlton garden wall",
-  },
-  {
     src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-23.jpg",
-    alt: "Remedial brickwork repair on a Melbourne period home by Goodwin Bricklaying",
+    alt: "Cracked and spalling heritage chimney crown before remedial repair by Goodwin Bricklaying, Melbourne",
   },
   {
-    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-27.jpg",
-    alt: "Repaired heritage masonry after remedial works by Goodwin Bricklaying",
-  },
-  {
-    src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-33.jpg",
-    alt: "Heritage home renovation with matched brickwork by Goodwin Bricklaying",
-  },
-  {
-    src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-36.jpg",
-    alt: "Period home renovation brickwork blended with the original masonry",
-  },
-  {
-    src: "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-24.jpg",
-    alt: "Detail of a rebuilt heritage brick garden wall in Carlton by Goodwin Bricklaying",
+    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-24.jpg",
+    alt: "Heritage chimney rebuilt with a new rounded cement capping by Goodwin Bricklaying, Melbourne",
   },
   {
     src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-25.jpg",
-    alt: "Remedial repointing on a Melbourne period home by Goodwin Bricklaying",
+    alt: "Bricklayer rebuilding a tall red-brick heritage chimney on a tiled Melbourne roof by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-25-1.jpg",
+    alt: "The Goodwin name carved into the new cement capping of a restored twin-pot heritage chimney",
+  },
+  {
+    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-26-1.jpg",
+    alt: "Restored heritage red-brick garden wall with a curved end and matched reclaimed brick by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-26-3.jpg",
+    alt: "Reclaimed Glen Iris frog-marked brick laid into a restored heritage wall by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-27.jpg",
+    alt: "Completed heritage red-brick front garden wall with the Goodwin Bricklaying sign, Melbourne",
+  },
+  {
+    src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-36.jpg",
+    alt: "Heritage brickwork restoration to the porch and front fence of a period home by Goodwin Bricklaying, Melbourne",
+  },
+  {
+    src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-36-1.jpg",
+    alt: "New arched brick opening built into a period home during renovation by Goodwin Bricklaying, Melbourne",
+  },
+  {
+    src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-35-2.jpg",
+    alt: "Steel beam and new structural opening in heritage brickwork during a period home renovation by Goodwin Bricklaying",
   },
   {
     src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-34.jpg",
-    alt: "Heritage renovation brickwork matched to the original construction by Goodwin Bricklaying",
+    alt: "Reclaimed brickwork rebuilt over a new opening in a heritage wall by Goodwin Bricklaying, Melbourne",
+  },
+  {
+    src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-33.jpg",
+    alt: "Structural opening propped and rebuilt in original brickwork during a heritage renovation by Goodwin Bricklaying",
   },
 ];
 
@@ -130,8 +143,8 @@ export default function HeritageRestorationPage() {
           { name: "Heritage & Restoration" },
         ]}
         image={{
-          src: "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-26.jpg",
-          alt: "Restored heritage polychrome brick garden wall with capped pier by Goodwin Bricklaying in Carlton, Melbourne",
+          src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
+          alt: "Restored heritage brick boundary wall with sandstone-capped pier by Goodwin Bricklaying on Hanover Street, Fitzroy, Melbourne",
         }}
       />
 
@@ -185,9 +198,11 @@ export default function HeritageRestorationPage() {
           <Reveal className={styles.lead}>
             <p>
               On the Hanover Street side of the iconic, heritage-listed Cairo
-              Apartments in Fitzroy, directly opposite the Royal Exhibition
-              Building, stood a brick boundary wall more than 150 years old. It
-              was a surviving feature of the site&apos;s nineteenth-century origins.
+              flats in Fitzroy, directly opposite the Royal Exhibition Building,
+              stood a brick boundary wall more than 150 years old. It is the last
+              surviving feature of Uxbridge House &mdash; an 1860s residence that
+              served as a private hospital from 1895 to 1934, before it was
+              demolished to make way for the modernist Cairo flats in 1935.
             </p>
             <p>
               Goodwin Bricklaying carefully deconstructed the ageing wall, fitted
@@ -198,6 +213,9 @@ export default function HeritageRestorationPage() {
               Fitzroy community.
             </p>
           </Reveal>
+        </div>
+        <div className="container">
+          <CairoShowcase />
         </div>
       </section>
 

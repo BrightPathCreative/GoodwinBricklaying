@@ -57,6 +57,7 @@ export const primaryNav: ReadonlyArray<NavItem> = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services", children: serviceNav },
   { label: "Projects", href: "/projects" },
+  { label: "Testimonials", href: "/testimonials" },
 ];
 
 /** Primary call-to-action in the header (and mobile menu). */

@@ -1,0 +1,83 @@
+.eyebrowSpace {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  max-width: 22ch;
+  margin-bottom: 2rem;
+}
+
+.lead p {
+  font-size: 1.15rem;
+  line-height: var(--leading-body);
+}
+
+.lead p + p {
+  margin-top: 1.5rem;
+}
+
+.leadDark p {
+  color: var(--color-cream);
+}
+
+/* Story two-column layout: copy + portrait image */
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .storyGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4.5rem;
+  }
+}
+
+.storyFigure {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.coverImage {
+  object-fit: cover;
+  filter: var(--image-treatment);
+}
+
+/* Credentials + landmark lists side by side */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--color-divider);
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.35;
+}
+
+.listItem:last-child {
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.faqWrap {
+  max-width: 920px;
+}

@@ -1,0 +1,171 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared control base */
+.input,
+.textarea,
+.select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-divider);
+  background: transparent;
+  color: var(--color-text-dark);
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  padding: 0.65rem 0 0.6rem;
+  transition: border-color var(--duration-fast) var(--ease-luxury);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-bottom-color: var(--color-primary);
+}
+
+/* Floating label (design.md §10) */
+.label {
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: var(--weight-light);
+  color: var(--color-stone);
+  pointer-events: none;
+  transform-origin: left top;
+  transition: transform var(--duration-fast) var(--ease-luxury),
+    color var(--duration-fast) var(--ease-luxury);
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label,
+.textarea:focus + .label,
+.textarea:not(:placeholder-shown) + .label {
+  transform: translateY(-1.4rem) scale(0.78);
+  color: var(--color-clay);
+}
+
+/* The select always shows a value/placeholder, so its label stays raised. */
+.labelStatic {
+  display: block;
+  order: -1;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+}
+
+.select {
+  appearance: none;
+  padding-right: 1.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%238a7a70' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.25rem center;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-clay);
+}
+
+.formError {
+  font-size: 0.95rem;
+  color: var(--color-clay);
+}
+
+.submit {
+  align-self: flex-start;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Success state */
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 2.5rem 0;
+  animation: fadeIn 600ms var(--ease-luxury) both;
+}
+
+.successMark {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-clay);
+  position: relative;
+}
+
+.successMark::after {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 11px;
+  width: 9px;
+  height: 18px;
+  border-right: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  transform: rotate(45deg);
+}
+
+.successHeading {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.successText {
+  color: var(--color-stone);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .success {
+    animation: none;
+  }
+}

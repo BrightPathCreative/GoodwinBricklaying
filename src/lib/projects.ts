@@ -44,8 +44,8 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
     blurb:
       "The heritage-listed boundary wall along Hanover Street, opposite the Royal Exhibition Building, is more than 150 years old. It was carefully deconstructed, given new footings and drainage, then historically reconstructed brick by brick under expert heritage guidance across an eight-month project.",
     image:
-      "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-26.jpg",
-    alt: "Restored 10,000-brick heritage garden wall with capped pier by Goodwin Bricklaying, Fitzroy Melbourne",
+      "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
+    alt: "Restored heritage garden wall with capped pier by Goodwin Bricklaying, Fitzroy Melbourne",
   },
   {
     title: "Highett Gasworks Chimney",
@@ -83,8 +83,8 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
     category: "Tuck Pointing",
     blurb:
       "Period-accurate repointing on weathered heritage brickwork, raked out by hand and finished to the original mortar profile.",
-    image: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-01.jpg",
-    alt: "Heritage brickwork repointing and tuck pointing detail, Goodwin Bricklaying Melbourne",
+    image: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
+    alt: "Tradesperson hand-finishing tuck pointing on weathered heritage brickwork, Goodwin Bricklaying Melbourne",
   },
 ];
 
@@ -102,13 +102,13 @@ export const galleryFilters = [
 export const galleryImages: ReadonlyArray<GalleryImage> = [
   // --- Heritage & Restoration ---
   {
-    src: "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-22.jpg",
-    alt: "Heritage garden wall rebuild in progress by Goodwin Bricklaying, Fitzroy Melbourne",
+    src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26-1.jpg",
+    alt: "Restored heritage boundary wall along Hanover Street with the Cairo flats behind, by Goodwin Bricklaying, Fitzroy Melbourne",
     category: "Heritage",
   },
   {
-    src: "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-28.jpg",
-    alt: "Rebuilt heritage brick pier with stone capping by Goodwin Bricklaying, Fitzroy Melbourne",
+    src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-28.jpg",
+    alt: "Rebuilt heritage brick pier with stone capping on the corner of Hanover Street by Goodwin Bricklaying, Fitzroy Melbourne",
     category: "Heritage",
   },
   {
@@ -117,8 +117,8 @@ export const galleryImages: ReadonlyArray<GalleryImage> = [
     category: "Heritage",
   },
   {
-    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-26.jpg",
-    alt: "Remedial heritage brickwork repair by Goodwin Bricklaying, Melbourne",
+    src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-26-1.jpg",
+    alt: "Restored heritage red-brick garden wall with curved end by Goodwin Bricklaying, Melbourne",
     category: "Heritage",
   },
   {

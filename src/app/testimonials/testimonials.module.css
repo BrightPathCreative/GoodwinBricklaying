@@ -1,0 +1,15 @@
+.eyebrowSpace {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  max-width: 24ch;
+  margin-bottom: 1.5rem;
+}
+
+.intro {
+  max-width: 52ch;
+  color: var(--color-stone);
+  margin-bottom: 3rem;
+}

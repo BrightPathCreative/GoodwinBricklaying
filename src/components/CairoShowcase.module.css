@@ -1,0 +1,103 @@
+.showcase {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* --- Lead image ------------------------------------------------------------ */
+.lead {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.leadFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+
+@media (min-width: 760px) {
+  .leadFrame {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* --- Chapters -------------------------------------------------------------- */
+.chapter + .chapter {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.chapterHead {
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.chapterLabel {
+  display: block;
+  margin-bottom: 0.85rem;
+}
+
+.chapterTitle {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  max-width: 22ch;
+  color: var(--color-text-dark);
+}
+
+/* --- Image rows ------------------------------------------------------------ */
+.duo,
+.trio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.duo + .duo,
+.trio + .trio,
+.duo + .trio,
+.trio + .duo {
+  margin-top: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+@media (min-width: 760px) {
+  .duo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Figures --------------------------------------------------------------- */
+.figure {
+  margin: 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+/* Wider, shorter crop for the two-up rows reads as more architectural. */
+.duo .frame {
+  aspect-ratio: 4 / 3;
+}
+
+.image {
+  object-fit: cover;
+  filter: var(--image-treatment);
+  transition: transform 700ms var(--ease-luxury);
+}
+
+.figure:hover .image {
+  transform: scale(1.04);
+}
+
+.caption {
+  margin-top: 0.9rem;
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-stone);
+  max-width: 42ch;
+}

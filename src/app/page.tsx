@@ -16,8 +16,8 @@ const services = [
     text: "Repointing, crack stitching, heritage brickwork, and remedial work that honours the original.",
     href: "/services/heritage-restoration",
     image:
-      "/images/heritage-restoration/carlton-garden-wall/photo-2026-05-23-10-34-26.jpg",
-    alt: "Restored heritage garden wall in Carlton rebuilt by Goodwin Bricklaying using reclaimed brick",
+      "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
+    alt: "Restored heritage garden wall in Fitzroy rebuilt by Goodwin Bricklaying using reclaimed brick",
   },
   {
     title: "Architectural Masonry",
@@ -60,7 +60,7 @@ const showcase = [
   },
   {
     image:
-      "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-01.jpg",
+      "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
     caption: "Traditional tuck pointing",
     alt: "Close-up of traditional tuck pointing on heritage brickwork by Goodwin Bricklaying",
   },
