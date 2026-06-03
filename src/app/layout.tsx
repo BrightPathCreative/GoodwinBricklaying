@@ -5,6 +5,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
+import { Analytics } from "@/components/Analytics";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -74,6 +75,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );
