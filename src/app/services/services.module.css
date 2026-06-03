@@ -80,6 +80,50 @@
   border-bottom: 1px solid var(--color-divider);
 }
 
+/* Landmark project intro — text beside the historical article clipping */
+.cairoIntro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 3rem);
+  align-items: start;
+}
+
+.cairoIntroText {
+  max-width: var(--max-width-narrow);
+}
+
+.cairoIntroFigure {
+  margin: 0;
+  justify-self: center;
+  max-width: 420px;
+}
+
+.cairoIntroImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-divider);
+  box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.45);
+}
+
+.cairoIntroCaption {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--color-stone);
+}
+
+@media (min-width: 900px) {
+  .cairoIntro {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+
+  .cairoIntroFigure {
+    justify-self: end;
+  }
+}
+
 /* Services overview cards */
 .serviceGrid {
   display: grid;

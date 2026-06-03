@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ServiceList } from "@/components/ServiceList";
@@ -204,31 +205,51 @@ export default function HeritageRestorationPage() {
       </section>
 
       <section className="section section--cream" aria-labelledby="heritage-cairo">
-        <div className="container-narrow">
-          <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
-            Landmark Project
-          </Reveal>
-          <Reveal as="h2" id="heritage-cairo" className={styles.headingTight}>
-            The Cairo Flats Heritage Wall, Fitzroy
-          </Reveal>
-          <Reveal className={styles.lead}>
-            <p>
-              On the Hanover Street side of the iconic, heritage-listed Cairo
-              flats in Fitzroy, directly opposite the Royal Exhibition Building,
-              stood a brick boundary wall more than 150 years old. It is the last
-              surviving feature of Uxbridge House &mdash; an 1860s residence that
-              served as a private hospital from 1895 to 1934, before it was
-              demolished to make way for the modernist Cairo flats in 1935.
-            </p>
-            <p>
-              Goodwin Bricklaying carefully deconstructed the ageing wall, fitted
-              new footings and drainage, and then historically reconstructed it
-              brick by brick under expert heritage guidance, preserving both its
-              structural integrity and its original character. The extensive
-              eight-month project was completed and proudly unveiled to the
-              Fitzroy community.
-            </p>
-          </Reveal>
+        <div className="container">
+          <div className={styles.cairoIntro}>
+            <div className={styles.cairoIntroText}>
+              <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
+                Landmark Project
+              </Reveal>
+              <Reveal as="h2" id="heritage-cairo" className={styles.headingTight}>
+                The Cairo Flats Heritage Wall, Fitzroy
+              </Reveal>
+              <Reveal className={styles.lead}>
+                <p>
+                  On the Hanover Street side of the iconic, heritage-listed Cairo
+                  flats in Fitzroy, directly opposite the Royal Exhibition
+                  Building, stood a brick boundary wall more than 150 years old.
+                  It is the last surviving feature of Uxbridge House &mdash; an
+                  1860s residence that served as a private hospital from 1895 to
+                  1934, before it was demolished to make way for the modernist
+                  Cairo flats in 1935.
+                </p>
+                <p>
+                  Goodwin Bricklaying carefully deconstructed the ageing wall,
+                  fitted new footings and drainage, and then historically
+                  reconstructed it brick by brick under expert heritage guidance,
+                  preserving both its structural integrity and its original
+                  character. The extensive eight-month project was completed and
+                  proudly unveiled to the Fitzroy community.
+                </p>
+              </Reveal>
+            </div>
+            <Reveal as="figure" variant="up" className={styles.cairoIntroFigure}>
+              <Image
+                src="/images/heritage-restoration/cairo-flats-wall/uxbridge-house-history.jpg"
+                alt="Heritage article describing Uxbridge House, the 1860s Fitzroy residence and private hospital whose Hanover Street brick boundary wall survives at the Cairo flats"
+                width={738}
+                height={1362}
+                sizes="(min-width: 900px) 420px, 100vw"
+                className={styles.cairoIntroImage}
+              />
+              <figcaption className={styles.cairoIntroCaption}>
+                The wall&apos;s recorded history &mdash; a surviving feature of
+                Uxbridge House, the 1860s residence that once stood on the Cairo
+                site.
+              </figcaption>
+            </Reveal>
+          </div>
         </div>
         <div className="container">
           <CairoShowcase />
