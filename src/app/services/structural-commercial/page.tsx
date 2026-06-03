@@ -25,10 +25,18 @@ const structuralServices = [
   {
     title: "Blockwork",
     text: "Concrete and cement block construction for commercial and residential applications, precision-laid and structurally sound.",
+    image: {
+      src: "/images/structural-commercial/goodwin-bricklaying-commercial-structural-blockwork-steel-reinforcement-scaffolding.jpg",
+      alt: "Precision-laid structural blockwork with steel reinforcement and scaffolding on a Melbourne build by Goodwin Bricklaying",
+    },
   },
   {
     title: "Retaining Walls",
     text: "Engineered retaining wall construction in brick and block for residential and commercial sites.",
+    image: {
+      src: "/images/structural-commercial/goodwin-bricklaying-commercial-blockwork-retaining-walls-construction-site-melbourne.jpg",
+      alt: "Engineered commercial blockwork retaining walls on a Melbourne construction site by Goodwin Bricklaying",
+    },
   },
   {
     title: "Extensions",
@@ -37,6 +45,10 @@ const structuralServices = [
   {
     title: "Commercial Projects",
     text: "Large-scale commercial masonry for builders, developers, and government contracts delivered through principal builders.",
+    image: {
+      src: "/images/structural-commercial/goodwin-bricklaying-commercial-geometric-blockwork-walls-aerial-view-construction.jpg",
+      alt: "Aerial view of large-scale geometric commercial blockwork walls under construction by Goodwin Bricklaying",
+    },
   },
 ];
 

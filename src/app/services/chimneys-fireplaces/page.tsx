@@ -26,6 +26,10 @@ const chimneyServices = [
   {
     title: "Chimney Stack Construction and Restoration",
     text: "New chimney stack construction and full heritage restoration, from domestic residential stacks to large-scale commercial and industrial chimneys.",
+    image: {
+      src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-completed-restoration-red-brick.jpg",
+      alt: "Completed red-brick restoration of the heritage Highett Gasworks chimney stack by Goodwin Bricklaying",
+    },
   },
   {
     title: "Heritage Fireplace Restoration",

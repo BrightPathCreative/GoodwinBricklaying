@@ -25,14 +25,26 @@ const tuckServices = [
   {
     title: "Heritage Tuck Pointing",
     text: "Period-accurate tuck pointing for Victorian and Edwardian homes across inner Melbourne.",
+    image: {
+      src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-58.jpg",
+      alt: "Fine tuck pointing detail with a contrasting mortar ribbon on heritage red brickwork by Goodwin Bricklaying",
+    },
   },
   {
     title: "Restoration Tuck Pointing",
     text: "Replacement and restoration of deteriorated tuck pointing as part of broader heritage restoration projects.",
+    image: {
+      src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00.jpg",
+      alt: "Restored tuck pointing on a Victorian-era brick wall by Goodwin Bricklaying",
+    },
   },
   {
     title: "Matched Tuck Pointing",
     text: "Colour and profile matching to blend new tuck pointing with original work on period properties.",
+    image: {
+      src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-2.jpg",
+      alt: "Close-up of colour-matched tuck pointing blended seamlessly into original heritage masonry by Goodwin Bricklaying",
+    },
   },
 ];
 

@@ -26,18 +26,34 @@ const heritageServices = [
   {
     title: "Heritage Brickwork",
     text: "Matching and rebuilding original brickwork on period homes and listed buildings, maintaining architectural character and structural integrity.",
+    image: {
+      src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-27.jpg",
+      alt: "Heritage red-brick boundary wall rebuilt brick by brick with a sandstone-capped pier by Goodwin Bricklaying, Fitzroy",
+    },
   },
   {
     title: "Repointing and Pointing Styles",
     text: "Raking out and replacing deteriorated mortar using period-appropriate profiles and materials. Profiles include flush, struck, weathered, raised ribbon, bird's beak, penny rolled, and recessed pointing to match original construction.",
+    image: {
+      src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+      alt: "Period-accurate mortar joint profile raked and repointed on heritage red brickwork by Goodwin Bricklaying",
+    },
   },
   {
     title: "Crack Stitching",
     text: "Structural repair of cracked masonry using specialist reinforcement techniques that stabilise the wall without compromising heritage aesthetics.",
+    image: {
+      src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-35-2.jpg",
+      alt: "Steel beams installed to stabilise and reinforce heritage brickwork during structural repair by Goodwin Bricklaying",
+    },
   },
   {
     title: "Remedial Work",
     text: "Diagnosis and repair of failing brickwork, spalling, moisture ingress, and structural movement in heritage and modern buildings.",
+    image: {
+      src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-23.jpg",
+      alt: "Cracked and spalling heritage chimney crown showing failing masonry before remedial repair by Goodwin Bricklaying",
+    },
   },
 ];
 
