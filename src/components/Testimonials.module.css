@@ -24,7 +24,7 @@
   font-family: var(--font-display);
   font-size: 5rem;
   line-height: 1;
-  color: var(--color-clay);
+  color: var(--color-cream);
   opacity: 0.4;
   pointer-events: none;
 }
@@ -53,7 +53,7 @@
   font-weight: var(--weight-light);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--color-cream);
 }
 
 @media (min-width: 768px) {

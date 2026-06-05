@@ -59,8 +59,8 @@ Read docs/brief.md and docs/content-notes.md before generating any code.
 
 ## File & Asset Conventions
 - Images: /public/images/[service]-[description]-[suburb]-[number].webp
-- Logo: /public/logo/goodwin-logo-white-transparent.png (white version)
-- Never recreate or alter the logo in code — use the PNG asset only
+- Logo: /public/logo/goodwin-logo.svg (white version); goodwin-logo-grey-brown.svg (dark version); goodwin-logo-seo.png (raster for SEO schema)
+- Never recreate or alter the logo in code — use the SVG asset only
 - Placeholder images: earthy brown solid (#5B4F47) until real photography supplied
 
 ## Placeholders in Copy

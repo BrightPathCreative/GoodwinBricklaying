@@ -12,6 +12,7 @@
   margin-inline: auto;
   margin-bottom: 2.5rem;
   color: var(--color-cream);
+  font-weight: var(--weight-regular);
   max-width: 60ch;
 }
 
@@ -28,11 +29,11 @@
   font-size: 0.8rem;
   letter-spacing: var(--tracking-button);
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--color-cream);
   transition: color var(--duration-fast) var(--ease-luxury);
 }
 
 .phone:hover,
 .phone:focus-visible {
-  color: var(--color-cream);
+  color: var(--color-deep);
 }

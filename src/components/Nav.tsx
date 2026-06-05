@@ -56,12 +56,13 @@ export function Nav() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logoLink} aria-label={`${site.name} home`}>
           <Image
-            src="/logo/goodwin-logo-white-transparent.png"
+            src="/logo/goodwin-logo.svg"
             alt="Goodwin Bricklaying logo"
-            width={500}
-            height={500}
+            width={1671}
+            height={413}
             className={styles.logo}
             priority
+            unoptimized
           />
         </Link>
 

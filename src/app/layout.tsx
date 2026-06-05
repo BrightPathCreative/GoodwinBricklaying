@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Inter } from "next/font/google";
+import { DM_Serif_Display, Inter, Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import { site } from "@/lib/site";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
@@ -21,6 +22,24 @@ const inter = Inter({
   weight: ["300", "400", "500", "600"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
+
+// TAN Twinkle — licensed Canva/foundry display font (webfont licence purchased).
+// Self-hosted from src/app/fonts; used for the H1 / logo-style display headings.
+const tanTwinkle = localFont({
+  src: [
+    { path: "./fonts/TanTwinkle.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/TanTwinkle.woff", weight: "400", style: "normal" },
+  ],
+  display: "swap",
+  variable: "--font-tan-twinkle",
 });
 
 export const metadata: Metadata = {
@@ -59,7 +78,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-AU" className={`${dmSerifDisplay.variable} ${inter.variable}`}>
+    <html
+      lang="en-AU"
+      className={`${dmSerifDisplay.variable} ${inter.variable} ${montserrat.variable} ${tanTwinkle.variable}`}
+    >
       <head>
         {/* Reveal content immediately when JavaScript is unavailable. */}
         <noscript>

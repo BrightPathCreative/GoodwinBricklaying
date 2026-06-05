@@ -18,7 +18,7 @@ export function localBusinessSchema(): Record<string, unknown> {
     // telephone and email omitted intentionally — enquiries route through the
     // GHL form / click-to-call. Restore telephone once the CRM number is live.
     image: `${site.url}/og/og-default.jpg`,
-    logo: `${site.url}/logo/goodwin-logo-white-transparent.png`,
+    logo: `${site.url}/logo/goodwin-logo-seo.png`,
     // Street address and postcode intentionally omitted (private). Modelled as
     // a service-area business with locality/region only.
     address: {

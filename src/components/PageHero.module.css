@@ -48,15 +48,42 @@
   animation: heroIn 700ms var(--ease-reveal) 100ms both;
 }
 
+/* Cream accent on the brown hero surface (overrides the global clay eyebrow). */
+.inner .eyebrow {
+  color: var(--color-cream);
+}
+
 .title {
   max-width: 20ch;
   margin-bottom: 1.5rem;
   animation: heroIn 800ms var(--ease-reveal) 200ms both;
 }
 
+/* First sentence — TAN Twinkle display font, capitalised (matches home hero). */
+.titleLead {
+  display: block;
+  font-family: var(--font-twinkle);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-cream);
+}
+
+/* Following sentence(s) — Montserrat secondary heading, a step smaller. */
+.titleRest {
+  display: block;
+  margin-top: 0.35em;
+  font-family: var(--font-heading-alt);
+  font-weight: var(--weight-regular);
+  font-size: clamp(1.375rem, 2.6vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-cream);
+}
+
 .subtext {
   max-width: 56ch;
   font-size: 1.15rem;
+  font-weight: var(--weight-regular);
   color: var(--color-cream);
   animation: heroIn 700ms var(--ease-reveal) 350ms both;
 }

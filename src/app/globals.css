@@ -10,7 +10,11 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-taupe: #66574f; /* Warm Taupe Brown */
-  --color-heritage: #4e433d; /* Deep Heritage Brown — dark sections */
+  /* Brown surface for all dark sections, heroes, nav, footer & buttons.
+     Client-approved Clay Beige (#8A7A70). Deep Heritage Brown (#4e433d) is
+     retained below as a contrast/accent tone (--color-deep). */
+  --color-heritage: #8a7a70;
+  --color-deep: #4e433d; /* Deep Heritage Brown — accents/contrast */
   --color-stone: #74665d; /* Soft Stone Brown */
   --color-clay: #8a7a70; /* Clay Beige — labels, accents */
   --color-cream: #f5f1ec; /* Warm Cream — light backgrounds */
@@ -24,6 +28,11 @@
   /* --- Typography --- */
   --font-display: var(--font-dm-serif), Georgia, "Times New Roman", serif;
   --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+  /* TAN Twinkle — logo/display font for H1 (self-hosted, webfont licensed). */
+  --font-twinkle: var(--font-tan-twinkle), var(--font-dm-serif), Georgia, serif;
+  /* Montserrat — capitalised secondary heading font for H2. */
+  --font-heading-alt: var(--font-montserrat), var(--font-inter), system-ui,
+    sans-serif;
 
   --weight-light: 300;
   --weight-regular: 400;
@@ -137,11 +146,24 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  /* TAN Twinkle — decorative logo font. Slightly larger + looser tracking to
+     suit the display letterforms. The font is wide, so the mobile minimum is
+     kept modest and long words are allowed to wrap rather than clip. */
+  font-family: var(--font-twinkle);
+  font-size: clamp(1.875rem, 5.5vw, 4.25rem);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 h2 {
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  /* Montserrat in capitals for the secondary heading style. */
+  font-family: var(--font-heading-alt);
+  font-size: clamp(1.625rem, 3vw, 2.375rem);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 h3 {
@@ -198,6 +220,11 @@ b {
 .section--dark {
   background-color: var(--color-heritage);
   color: var(--color-text-light);
+}
+
+/* On the brown surface, clay accents would vanish — eyebrows go cream. */
+.section--dark .eyebrow {
+  color: var(--color-cream);
 }
 
 .section--cream {
