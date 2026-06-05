@@ -152,11 +152,18 @@ export default function AboutPage() {
 
       <section className="section section--cream" aria-labelledby="credentials-heading">
         <div className="container">
-          <div className={styles.columns}>
-            <Reveal>
-              <span className={`eyebrow ${styles.eyebrowSpace}`}>
-                Experience &amp; Credentials
-              </span>
+          <div className={styles.credGrid}>
+            <Reveal variant="left" className={`${styles.credFigure} image-shape`}>
+              <Image
+                src="/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-rebuild-bricklayer-at-height.jpg"
+                alt="David Goodwin rebuilding the Old Licorice Factory chimney crown at height in Brunswick, Melbourne"
+                fill
+                sizes="(min-width: 960px) 42vw, 100vw"
+                className={styles.coverImage}
+              />
+            </Reveal>
+            <Reveal variant="right">
+              <span className={`eyebrow ${styles.eyebrowSpace}`}>Background</span>
               <h2 id="credentials-heading" className={styles.heading}>
                 Experience &amp; Credentials
               </h2>
@@ -168,18 +175,39 @@ export default function AboutPage() {
                 ))}
               </ul>
             </Reveal>
-            <Reveal>
-              <span className={`eyebrow ${styles.eyebrowSpace}`}>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--dark" aria-labelledby="landmarks-heading">
+        <div className="container">
+          <div className={styles.landmarkGrid}>
+            <Reveal variant="left">
+              <span className={`eyebrow ${styles.eyebrowSpace}`}>Selected Work</span>
+              <h2 id="landmarks-heading" className={styles.heading}>
                 Landmark Projects
-              </span>
-              <h2 className={styles.heading}>Landmark Projects</h2>
-              <ul className={styles.list}>
+              </h2>
+              <p className={styles.landmarkIntro}>
+                From commercial chimney stacks to heritage boundary walls, these
+                are the projects that define David&apos;s reputation across
+                inner Melbourne.
+              </p>
+              <ul className={`${styles.list} ${styles.listDark}`}>
                 {landmarks.map((item) => (
                   <li key={item} className={styles.listItem}>
                     {item}
                   </li>
                 ))}
               </ul>
+            </Reveal>
+            <Reveal variant="right" className={`${styles.landmarkFigure} image-shape`}>
+              <Image
+                src="/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-27-metre-heritage-landmark-1938.jpg"
+                alt="The 27-metre 1938 Highett Gasworks heritage chimney landmark restored by Goodwin Bricklaying, Melbourne"
+                fill
+                sizes="(min-width: 960px) 42vw, 100vw"
+                className={styles.coverImage}
+              />
             </Reveal>
           </div>
         </div>
