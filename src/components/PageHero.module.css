@@ -48,6 +48,11 @@
   animation: heroIn 700ms var(--ease-reveal) 100ms both;
 }
 
+/* Cream accent on the brown hero surface (overrides the global clay eyebrow). */
+.inner .eyebrow {
+  color: var(--color-cream);
+}
+
 .title {
   max-width: 20ch;
   margin-bottom: 1.5rem;
@@ -57,6 +62,7 @@
 .subtext {
   max-width: 56ch;
   font-size: 1.15rem;
+  font-weight: var(--weight-regular);
   color: var(--color-cream);
   animation: heroIn 700ms var(--ease-reveal) 350ms both;
 }

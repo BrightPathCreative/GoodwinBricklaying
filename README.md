@@ -42,7 +42,9 @@ goodwin-bricklaying/
 │           └── hawksburn.md
 └── public/
     ├── logo/
-    │   └── goodwin-logo-white-transparent.png
+    │   ├── goodwin-logo.svg              ← white wordmark (nav/footer)
+    │   ├── goodwin-logo-grey-brown.svg   ← dark wordmark (light backgrounds)
+    │   └── goodwin-logo-seo.png          ← raster logo for SEO schema
     └── images/                  ← Drop client photos here when received
 ```
 

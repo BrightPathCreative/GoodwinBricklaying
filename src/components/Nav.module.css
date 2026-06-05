@@ -114,7 +114,7 @@
 
 .navLinkActive::after {
   width: 100%;
-  background-color: var(--color-clay);
+  background-color: var(--color-cream);
 }
 
 /* --- Items with a dropdown --- */
@@ -197,7 +197,7 @@
 }
 
 .dropdownLinkActive {
-  color: var(--color-clay);
+  color: var(--color-cream);
 }
 
 /* --- Header CTA button --- */
@@ -219,7 +219,7 @@
 
 .cta:hover,
 .cta:focus-visible {
-  background-color: var(--color-clay);
+  background-color: var(--color-deep);
   color: var(--color-cream);
 }
 
@@ -334,7 +334,7 @@
 }
 
 .overlayLinkActive {
-  color: var(--color-clay);
+  color: var(--color-deep);
 }
 
 .overlaySubList {
@@ -351,13 +351,13 @@
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--color-cream);
   transition: color var(--transition);
 }
 
 .overlaySubLink:hover,
 .overlaySubLink:focus-visible {
-  color: var(--color-cream);
+  color: var(--color-deep);
 }
 
 .overlayCta {
@@ -375,7 +375,7 @@
 
 .overlayCta:hover,
 .overlayCta:focus-visible {
-  background-color: var(--color-clay);
+  background-color: var(--color-deep);
   color: var(--color-cream);
 }
 

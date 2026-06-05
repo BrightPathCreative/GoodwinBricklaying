@@ -105,7 +105,7 @@ Read before building. Refer back often.
 
 - Transparent over hero → solid `var(--color-heritage)` after 80px scroll
 - Sticky / fixed on scroll
-- Logo: white PNG `/public/logo/goodwin-logo-white-transparent.png`
+- Logo: white SVG `/public/logo/goodwin-logo.svg` (grey-brown variant: `goodwin-logo-grey-brown.svg`)
 - Nav links: uppercase, letter-spacing: 0.15em, font-size: 0.75rem, weight 300
 - Menu items: HOME · PROJECTS · HERITAGE · SERVICES · ABOUT · CONTACT
 - Mobile: hamburger, full-screen overlay, earthy dark background

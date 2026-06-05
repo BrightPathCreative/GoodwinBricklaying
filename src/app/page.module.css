@@ -30,11 +30,11 @@
   z-index: 1;
   background: linear-gradient(
     95deg,
-    rgba(20, 15, 13, 0.97) 0%,
-    rgba(20, 15, 13, 0.88) 30%,
-    rgba(20, 15, 13, 0.62) 52%,
-    rgba(20, 15, 13, 0.25) 72%,
-    rgba(20, 15, 13, 0) 90%
+    rgba(28, 23, 20, 0.97) 0%,
+    rgba(28, 23, 20, 0.88) 30%,
+    rgba(28, 23, 20, 0.62) 52%,
+    rgba(28, 23, 20, 0.25) 72%,
+    rgba(28, 23, 20, 0) 90%
   );
 }
 
@@ -46,10 +46,10 @@
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(20, 15, 13, 0.18) 0%,
-    rgba(20, 15, 13, 0) 22%,
-    rgba(20, 15, 13, 0) 62%,
-    rgba(20, 15, 13, 0.45) 100%
+    rgba(28, 23, 20, 0.18) 0%,
+    rgba(28, 23, 20, 0) 22%,
+    rgba(28, 23, 20, 0) 62%,
+    rgba(28, 23, 20, 0.45) 100%
   );
   animation: heroOverlay 1000ms var(--ease-luxury) 300ms both;
 }
@@ -65,8 +65,8 @@
   .hero::before {
     background: linear-gradient(
       180deg,
-      rgba(20, 15, 13, 0.55) 0%,
-      rgba(20, 15, 13, 0.78) 100%
+      rgba(28, 23, 20, 0.55) 0%,
+      rgba(28, 23, 20, 0.78) 100%
     );
   }
 }
@@ -83,17 +83,35 @@
   animation: slideUpFade 900ms var(--ease-reveal) 700ms both;
 }
 
-/* Tonal three-tone headline: cream, champagne gold, warm clay. */
+/* Headline hierarchy — strictly brand palette.
+   Line 1: TAN Twinkle display font, capitalised, warm cream.
+   Lines 2–3: Montserrat (brand secondary heading), capitalised; brand gold
+   accent on line 2, cream on line 3. */
 .heroLineOne {
+  display: block;
+  font-family: var(--font-twinkle);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: var(--color-cream);
 }
 
+.heroLineTwo,
+.heroLineThree {
+  display: block;
+  font-family: var(--font-heading-alt);
+  font-weight: var(--weight-regular);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.35em;
+}
+
 .heroLineTwo {
-  color: #d4b485;
+  color: var(--color-star);
 }
 
 .heroLineThree {
-  color: #c07d4f;
+  color: var(--color-cream);
 }
 
 .heroSub {
@@ -412,6 +430,12 @@
   color: var(--color-text-light);
 }
 
+/* Clay eyebrows would disappear on the brown surface — go cream here. */
+.why .sectionEyebrow,
+.cta .sectionEyebrow {
+  color: var(--color-cream);
+}
+
 .whyImage {
   position: relative;
   display: block;
@@ -440,6 +464,7 @@
   padding: 1.5rem 0;
   border-top: 1px solid rgba(245, 241, 236, 0.14);
   color: var(--color-cream);
+  font-weight: var(--weight-regular);
   font-size: 1.05rem;
   line-height: 1.6;
   max-width: 60ch;
@@ -524,7 +549,7 @@
   font-size: 0.8rem;
   letter-spacing: var(--tracking-button);
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--color-cream);
   transition: color var(--duration-fast) var(--ease-luxury);
 }
 
