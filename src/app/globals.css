@@ -150,9 +150,9 @@ h1 {
      suit the display letterforms. The font is wide, so the mobile minimum is
      kept modest and long words are allowed to wrap rather than clip. */
   font-family: var(--font-twinkle);
-  font-size: clamp(1.875rem, 5.5vw, 4.25rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.75rem);
   letter-spacing: 0.01em;
-  line-height: 1.1;
+  line-height: 1.15;
   overflow-wrap: break-word;
   hyphens: auto;
 }
