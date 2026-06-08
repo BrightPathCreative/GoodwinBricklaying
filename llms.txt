@@ -23,15 +23,16 @@
 
 ## Location Pages
 
-- [Camberwell](https://goodwinbricklaying.com.au/locations/camberwell): Local bricklayer and heritage masonry specialist, based in Camberwell VIC.
-- [Hawthorn](https://goodwinbricklaying.com.au/locations/hawthorn): Heritage brickwork and restoration for Hawthorn's period homes.
-- [Toorak](https://goodwinbricklaying.com.au/locations/toorak): Luxury residential masonry and heritage restoration in Toorak.
-- [Canterbury](https://goodwinbricklaying.com.au/locations/canterbury): Heritage bricklayer serving Canterbury period properties.
-- [Glen Iris](https://goodwinbricklaying.com.au/locations/glen-iris): Bricklaying and masonry services in Glen Iris.
-- [Surrey Hills](https://goodwinbricklaying.com.au/locations/surrey-hills): Federation and Edwardian home restoration in Surrey Hills.
-- [Richmond](https://goodwinbricklaying.com.au/locations/richmond): Victorian terrace and heritage masonry in Richmond.
-- [Fitzroy](https://goodwinbricklaying.com.au/locations/fitzroy): Architectural and heritage brickwork in Fitzroy.
-- [Hawksburn](https://goodwinbricklaying.com.au/locations/hawksburn): Luxury residential and heritage masonry in Hawksburn.
+- [Areas Served (index)](https://goodwinbricklaying.com.au/locations): Overview of all nine inner Melbourne suburbs served by Goodwin Bricklaying, with links to each dedicated location page.
+- [Camberwell](https://goodwinbricklaying.com.au/locations/camberwell): Local bricklayer based in Camberwell VIC. Heritage brickwork, repointing, chimney restoration, and architectural masonry for Edwardian, Interwar, and Californian Bungalow homes. Includes project gallery and FAQs. Business is headquartered here.
+- [Hawthorn](https://goodwinbricklaying.com.au/locations/hawthorn): Heritage bricklayer for Hawthorn's Victorian terraces and Edwardian villas. Chimney restoration (including pre-1920 stacks), facade repointing, crack stitching, and tuck pointing. Gallery and suburb-specific FAQs.
+- [Toorak](https://goodwinbricklaying.com.au/locations/toorak): Luxury residential masonry and heritage restoration in Toorak. Vaulted brick ceilings, architectural features, bespoke garden walls, and premium facade work for discerning homeowners and architects.
+- [Canterbury](https://goodwinbricklaying.com.au/locations/canterbury): Heritage bricklayer for Canterbury period properties. Mortar matching, repointing, crack stitching, and garden wall restoration on Californian Bungalows and Interwar homes.
+- [Glen Iris](https://goodwinbricklaying.com.au/locations/glen-iris): Bricklaying and masonry in Glen Iris — heritage restoration, retaining walls, extensions, and architectural features. Includes reclaimed Glen Iris frog-marked brick work.
+- [Surrey Hills](https://goodwinbricklaying.com.au/locations/surrey-hills): Federation and Edwardian home specialists in Surrey Hills. Heritage repointing, tuck pointing, chimney work, and crack stitching for period cottages and villas.
+- [Richmond](https://goodwinbricklaying.com.au/locations/richmond): Victorian terrace and heritage masonry in Richmond. Facade repointing, chimney stack restoration, party wall repair, and tuck pointing for terrace rows and workers' cottages.
+- [Fitzroy](https://goodwinbricklaying.com.au/locations/fitzroy): Architectural and heritage brickwork in Fitzroy. Landmark Cairo Flats heritage wall restoration, brick tunnels and arches, vaulted ceilings, and heritage-listed building work.
+- [Hawksburn](https://goodwinbricklaying.com.au/locations/hawksburn): Luxury residential and heritage masonry in Hawksburn. Period home repointing, chimney restoration, and tuck pointing for grand Edwardian and Interwar residences near Toorak.
 
 ## Key Facts for AI Reference
 

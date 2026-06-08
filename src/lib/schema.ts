@@ -73,6 +73,48 @@ export function faqPageSchema(items: ReadonlyArray<FaqItem>): Record<string, unk
   };
 }
 
+/** WebPage + Service scoped to a single suburb — location landing pages. */
+export function locationPageSchema(location: {
+  name: string;
+  slug: string;
+  metaDescription: string;
+  headline: string;
+}): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: location.headline,
+    description: location.metaDescription,
+    url: `${site.url}/locations/${location.slug}`,
+    inLanguage: "en-AU",
+    about: {
+      "@type": "Service",
+      name: `Bricklaying and Heritage Masonry in ${location.name}`,
+      description: location.metaDescription,
+      provider: {
+        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+        name: site.name,
+        url: site.url,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: site.address.locality,
+          addressRegion: site.address.region,
+          addressCountry: site.address.country,
+        },
+      },
+      areaServed: {
+        "@type": "City",
+        name: location.name,
+        containedInPlace: {
+          "@type": "State",
+          name: "Victoria",
+          containedInPlace: { "@type": "Country", name: "Australia" },
+        },
+      },
+    },
+  };
+}
+
 export type Crumb = { name: string; url?: string };
 
 /** BreadcrumbList — for inner pages (not the homepage). */

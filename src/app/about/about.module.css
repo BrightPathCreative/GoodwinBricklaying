@@ -58,7 +58,8 @@
 
 .bannerImage {
   object-fit: cover;
-  filter: sepia(0.12) saturate(0.92) brightness(0.88);
+  object-position: center 35%;
+  filter: sepia(0.04) saturate(0.85) brightness(0.96);
 }
 
 .bannerScrim {
@@ -79,10 +80,13 @@
 
 .bannerText {
   margin-inline: auto;
-  max-width: 32ch;
-  font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
-  line-height: 1.4;
+  max-width: 42ch;
+  font-family: var(--font-heading-alt);
+  font-size: clamp(0.95rem, 2vw, 1.35rem);
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.55;
 }
 
 /* --- Landmark Projects (dark, image right) --- */
@@ -134,8 +138,11 @@
 
   .landmarkPhoto:nth-child(1) {
     grid-row: span 2;
-    aspect-ratio: auto;
-    min-height: 100%;
+    aspect-ratio: 3 / 5;
+  }
+
+  .landmarkPhoto:nth-child(1) .coverImage {
+    object-position: center 20%;
   }
 }
 

@@ -4,8 +4,13 @@ import { notFound } from "next/navigation";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { EnquiryCta } from "@/components/EnquiryCta";
+import { ServiceGallery } from "@/components/ServiceGallery";
+import { ServiceCtaBand } from "@/components/ServiceCtaBand";
+import { Faq } from "@/components/Faq";
+import { JsonLd } from "@/components/JsonLd";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
+import { locationPageSchema } from "@/lib/schema";
 import { serviceNav } from "@/lib/site";
 import { getLocation, locationSlugs } from "@/lib/locations";
 import styles from "./locations.module.css";
@@ -46,24 +51,34 @@ export default async function LocationPage({
     .map((slug) => getLocation(slug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
 
+  const introParagraphs = [...location.body.slice(1), ...location.localContext];
+  const showIntro = introParagraphs.length > 0;
+
   return (
     <>
+      <JsonLd data={locationPageSchema(location)} />
+
       <PageHero
         eyebrow="Areas Served"
         title={location.headline}
         subtext={location.body[0]}
-        crumbs={[homeCrumb, { name: location.name }]}
+        crumbs={[
+          homeCrumb,
+          { name: "Areas Served", url: "/locations" },
+          { name: location.name },
+        ]}
         image={location.hero}
+        showCta
       />
 
-      {location.body.length > 1 ? (
+      {showIntro ? (
         <section className="section section--cream" aria-labelledby="loc-intro">
           <div className="container-narrow">
             <Reveal as="h2" id="loc-intro" className={styles.heading}>
-              Local Masonry, Done Properly
+              {location.introHeading}
             </Reveal>
             <Reveal className={styles.lead}>
-              {location.body.slice(1).map((para) => (
+              {introParagraphs.map((para) => (
                 <p key={para}>{para}</p>
               ))}
             </Reveal>
@@ -89,6 +104,19 @@ export default async function LocationPage({
         </div>
       </section>
 
+      <ServiceGallery
+        eyebrow={`Work in ${location.name}`}
+        heading={location.galleryHeading}
+        items={location.gallery}
+        tone="cream"
+      />
+
+      <ServiceCtaBand
+        heading={`Get a quote for your ${location.name} project`}
+        body="David provides detailed quotes with full construction specifics. If you're not sure what your property needs, he'll give you an honest assessment — no obligation, no sales pressure."
+        buttonLabel={`Enquire — ${location.name}`}
+      />
+
       <section className="section section--cream" aria-labelledby="loc-explore">
         <div className="container">
           <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
@@ -106,6 +134,20 @@ export default async function LocationPage({
                 </span>
               </Link>
             ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section section--cream" aria-labelledby="loc-faq">
+        <div className={`container ${styles.faqWrap}`}>
+          <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
+            {location.name}
+          </Reveal>
+          <Reveal as="h2" id="loc-faq" className={styles.heading}>
+            Frequently Asked Questions
+          </Reveal>
+          <Reveal>
+            <Faq items={location.faqs} />
           </Reveal>
         </div>
       </section>

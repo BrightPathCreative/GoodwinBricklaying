@@ -31,12 +31,12 @@ const landmarks = [
 
 const landmarkPhotos = [
   {
-    src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-completed-restoration-red-brick.jpg",
-    alt: "Completed red-brick restoration of the Highett Gasworks heritage chimney by Goodwin Bricklaying",
+    src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-completed-restoration-red-brick-cropped.jpg",
+    alt: "Completed restoration of the heritage Highett Gasworks chimney by Goodwin Bricklaying",
   },
   {
-    src: "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-40-metre-chimney-stack-full-height-ground-view.jpg",
-    alt: "40-metre heritage brick chimney stack in Collingwood restored by Goodwin Bricklaying",
+    src: "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-heritage-chimney-stacks-street-level-view-melbourne.jpg",
+    alt: "Heritage brick chimney stacks at street level in Collingwood, Melbourne, by Goodwin Bricklaying",
   },
   {
     src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-restoration-new-brickwork-corbelling.jpg",
@@ -170,7 +170,7 @@ export default function AboutPage() {
 
       <section className={styles.banner} aria-label="David Goodwin at work">
         <Image
-          src="/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-rebuild-bricklayer-at-height.jpg"
+          src="/images/architectural-masonry/hit-and-miss/goodwin-bricklaying-hit-and-miss-decorative-brick-screen-wall-melbourne.jpg"
           alt=""
           fill
           sizes="100vw"

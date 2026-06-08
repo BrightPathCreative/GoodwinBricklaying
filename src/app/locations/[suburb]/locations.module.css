@@ -122,3 +122,26 @@
   color: var(--color-cream);
   font-size: 1.1rem;
 }
+
+.faqWrap {
+  max-width: 720px;
+}
+
+.locationBlurb {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-stone);
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+  .locationBlurb {
+    display: inline;
+    margin-top: 0;
+    margin-left: 0.25rem;
+    font-size: 0.85rem;
+  }
+}
