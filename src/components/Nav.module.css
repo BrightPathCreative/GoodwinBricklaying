@@ -429,6 +429,35 @@
   .toggle span {
     height: 2px;
   }
+
+  .toggleOpen span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .toggleOpen span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .overlay {
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 5rem var(--gutter) 2rem;
+    overflow-y: auto;
+  }
+
+  .overlayList {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .overlaySubList {
+    align-items: flex-start;
+  }
+
+  .overlayCta,
+  .overlayPhone {
+    align-self: flex-start;
+  }
 }
 
 @media (min-width: 960px) {
