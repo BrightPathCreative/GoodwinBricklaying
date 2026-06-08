@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -41,8 +41,20 @@ const ASSETS = [
   { src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-47-3.jpg", title: "Vaulted Ceiling", location: "Fitzroy" },
 ];
 
+// Only slides within this many positions of the active one are rendered.
+const VISIBLE_RANGE = 3;
+
 export default function TiltedCarousel() {
   const [activeIndex, setActiveIndex] = useState(3);
+  const [spacing, setSpacing] = useState(64);
+
+  useEffect(() => {
+    const query = window.matchMedia("(min-width: 768px)");
+    const sync = () => setSpacing(query.matches ? 120 : 64);
+    sync();
+    query.addEventListener("change", sync);
+    return () => query.removeEventListener("change", sync);
+  }, []);
 
   const toPrev = () => setActiveIndex((prev) => Math.max(0, prev - 1));
   const toNext = () =>
@@ -52,50 +64,46 @@ export default function TiltedCarousel() {
   return (
     <div className={styles.root}>
       <div className={styles.viewport}>
-        <motion.div
-          className={styles.track}
-          animate={{ x: `${(-activeIndex * 100) / ASSETS.length}%` }}
-          transition={{ type: "spring", bounce: 0.2, duration: 0.8 }}
-        >
-          {ASSETS.map((item, i) => {
-            const isActive = activeIndex === i;
-            return (
-              <div className={styles.perspective} key={item.src}>
-                <motion.div
-                  className={styles.slide}
-                  animate={{
-                    rotateY: (activeIndex - i) * 60,
-                    scale: isActive ? 1 : 0.85,
-                  }}
-                  transition={{ type: "spring", bounce: 0.1, duration: 1 }}
-                >
-                  <div
-                    className={styles.imageWrap}
-                    onClick={() => toSlide(i)}
-                  >
-                    <Image
-                      src={item.src}
-                      alt={`${item.title}, ${item.location}`}
-                      fill
-                      sizes="(min-width: 768px) 200px, 120px"
-                      className={styles.image}
-                    />
-                  </div>
-                  <motion.div
-                    className={styles.label}
-                    animate={{
-                      filter: isActive ? "blur(0px)" : "blur(2px)",
-                      opacity: isActive ? 1 : 0,
-                    }}
-                  >
-                    <div className={styles.title}>{item.title}</div>
-                    <div className={styles.location}>{item.location}</div>
-                  </motion.div>
-                </motion.div>
+        {ASSETS.map((item, i) => {
+          const offset = i - activeIndex;
+          const distance = Math.abs(offset);
+          if (distance > VISIBLE_RANGE) return null;
+          const isActive = offset === 0;
+          return (
+            <motion.div
+              className={styles.slide}
+              key={item.src}
+              style={{ zIndex: VISIBLE_RANGE - distance }}
+              animate={{
+                x: offset * spacing,
+                rotateY: offset * -45,
+                scale: isActive ? 1 : 0.82,
+                opacity: distance > VISIBLE_RANGE - 1 ? 0 : 1,
+              }}
+              transition={{ type: "spring", bounce: 0.1, duration: 0.8 }}
+            >
+              <div className={styles.imageWrap} onClick={() => toSlide(i)}>
+                <Image
+                  src={item.src}
+                  alt={`${item.title}, ${item.location}`}
+                  fill
+                  sizes="(min-width: 768px) 200px, 120px"
+                  className={styles.image}
+                />
               </div>
-            );
-          })}
-        </motion.div>
+              <motion.div
+                className={styles.label}
+                animate={{
+                  filter: isActive ? "blur(0px)" : "blur(2px)",
+                  opacity: isActive ? 1 : 0,
+                }}
+              >
+                <div className={styles.title}>{item.title}</div>
+                <div className={styles.location}>{item.location}</div>
+              </motion.div>
+            </motion.div>
+          );
+        })}
       </div>
 
       <div className={styles.controls}>
