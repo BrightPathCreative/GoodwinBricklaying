@@ -4,7 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
-import { site } from "@/lib/site";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = buildMetadata({
@@ -32,63 +31,19 @@ export default function ContactPage() {
       />
 
       <section className="section section--cream" aria-labelledby="contact-heading">
-        <div className="container">
-          <div className={styles.layout}>
-            <div className={styles.formCol}>
-              <Reveal variant="left">
-                <h2 id="contact-heading" className={styles.heading}>
-                  Send an Enquiry
-                </h2>
-                <p className={styles.lead}>
-                  Tell David a little about your property and what you have in
-                  mind. There&apos;s no obligation, and no sales pressure.
-                </p>
-              </Reveal>
-              <Reveal variant="left">
-                <ContactForm />
-              </Reveal>
-            </div>
-
-            <Reveal variant="right" className={styles.detailsCol}>
-              <h2 className={styles.heading}>Contact Details</h2>
-              <address className={styles.detailList}>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Phone</span>
-                  <span className={styles.detailValue}>
-                    <a href={site.phoneHref}>{site.phoneLabel}</a>
-                  </span>
-                </div>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Instagram</span>
-                  <span className={styles.detailValue}>
-                    <a
-                      href={site.instagram.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {site.instagram.handle}
-                    </a>
-                  </span>
-                </div>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Based</span>
-                  <span className={styles.detailValue}>
-                    {site.address.locality} {site.address.region} 3124
-                  </span>
-                </div>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Serving</span>
-                  <span className={styles.detailValue}>
-                    Inner Melbourne and surrounding suburbs
-                  </span>
-                </div>
-              </address>
-              <p className={styles.responseNote}>
-                David responds to all enquiries within 24 hours. For urgent
-                requests, call or text directly.
-              </p>
-            </Reveal>
-          </div>
+        <div className={`container ${styles.inner}`}>
+          <Reveal variant="fade">
+            <h2 id="contact-heading" className={styles.heading}>
+              Send an Enquiry
+            </h2>
+            <p className={styles.lead}>
+              Tell David a little about your property and what you have in mind.
+              There&apos;s no obligation, and no sales pressure.
+            </p>
+          </Reveal>
+          <Reveal variant="fade">
+            <ContactForm />
+          </Reveal>
         </div>
       </section>
     </>
