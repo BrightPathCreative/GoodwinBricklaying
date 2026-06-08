@@ -52,7 +52,11 @@ export function Nav() {
     pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+    <header
+      className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${
+        menuOpen ? styles.menuOpen : ""
+      }`}
+    >
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logoLink} aria-label={`${site.name} home`}>
           <Image
