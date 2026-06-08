@@ -174,20 +174,22 @@ export function Nav() {
           </ul>
         </nav>
 
-        <Link
-          href={navCta.href}
-          className={styles.overlayCta}
-          tabIndex={menuOpen ? 0 : -1}
-        >
-          {navCta.label}
-        </Link>
-        <a
-          href={site.phoneHref}
-          className={styles.overlayPhone}
-          tabIndex={menuOpen ? 0 : -1}
-        >
-          {site.phoneLabel}
-        </a>
+        <div className={styles.overlayActions}>
+          <Link
+            href={navCta.href}
+            className={styles.overlayCta}
+            tabIndex={menuOpen ? 0 : -1}
+          >
+            {navCta.label}
+          </Link>
+          <a
+            href={site.phoneHref}
+            className={`btn btn--light ${styles.overlayPhone}`}
+            tabIndex={menuOpen ? 0 : -1}
+          >
+            {site.phoneLabel}
+          </a>
+        </div>
       </div>
     </header>
   );

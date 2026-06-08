@@ -191,6 +191,13 @@
   transform: translateX(6px);
 }
 
+@media (max-width: 768px) {
+  .heading,
+  .headingTight {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .serviceGrid {
     grid-template-columns: 1fr 1fr;

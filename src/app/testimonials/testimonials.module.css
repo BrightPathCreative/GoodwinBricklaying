@@ -13,3 +13,9 @@
   color: var(--color-stone);
   margin-bottom: 3rem;
 }
+
+@media (max-width: 768px) {
+  .heading {
+    max-width: 100%;
+  }
+}

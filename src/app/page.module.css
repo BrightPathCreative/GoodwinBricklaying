@@ -69,6 +69,28 @@
       rgba(28, 23, 20, 0.78) 100%
     );
   }
+
+  .heroHeadline {
+    max-width: 100%;
+  }
+
+  .heroLineOne {
+    font-size: clamp(1.1rem, 5.5vw, 1.45rem);
+    letter-spacing: 0.02em;
+  }
+
+  .heroLineTwo,
+  .heroLineThree {
+    font-size: clamp(1.15rem, 5.5vw, 1.5rem);
+    letter-spacing: 0.04em;
+  }
+
+  .introHeading,
+  .sectionHeading,
+  .showcaseHeading,
+  .whyHeading {
+    max-width: 100%;
+  }
 }
 
 /* Staggered hero entrance (design.md §2). */
@@ -93,6 +115,7 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: var(--color-cream);
+  text-wrap: pretty;
 }
 
 .heroLineTwo,
@@ -104,6 +127,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-top: 0.35em;
+  text-wrap: pretty;
 }
 
 .heroLineTwo {

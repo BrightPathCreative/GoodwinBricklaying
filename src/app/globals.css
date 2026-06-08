@@ -143,18 +143,21 @@ h6 {
   font-weight: var(--weight-regular);
   line-height: var(--leading-heading);
   letter-spacing: 0.005em;
+  /* Wrap at word boundaries only — never split words with hyphens. */
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
 }
 
 h1 {
   /* TAN Twinkle — decorative logo font. Slightly larger + looser tracking to
      suit the display letterforms. The font is wide, so the mobile minimum is
-     kept modest and long words are allowed to wrap rather than clip. */
+     kept modest and long phrases wrap onto the next line at spaces. */
   font-family: var(--font-twinkle);
   font-size: clamp(1.5rem, 3.5vw, 2.75rem);
   letter-spacing: 0.01em;
   line-height: 1.15;
-  overflow-wrap: break-word;
-  hyphens: auto;
 }
 
 h2 {

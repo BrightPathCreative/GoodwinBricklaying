@@ -8,6 +8,12 @@
   margin-bottom: 1.75rem;
 }
 
+@media (max-width: 768px) {
+  .heading {
+    max-width: 100%;
+  }
+}
+
 .lead p {
   font-size: 1.15rem;
   line-height: var(--leading-body);

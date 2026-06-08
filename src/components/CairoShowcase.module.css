@@ -40,6 +40,12 @@
   color: var(--color-text-dark);
 }
 
+@media (max-width: 768px) {
+  .chapterTitle {
+    max-width: 100%;
+  }
+}
+
 /* --- Image rows ------------------------------------------------------------ */
 .duo,
 .trio {

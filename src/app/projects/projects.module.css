@@ -91,6 +91,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .heading {
+    max-width: 100%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .image {
     transition: none;

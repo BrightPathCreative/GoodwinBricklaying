@@ -45,6 +45,12 @@
   color: var(--color-deep);
 }
 
+@media (max-width: 768px) {
+  .heading {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .inner {
     flex-direction: row;

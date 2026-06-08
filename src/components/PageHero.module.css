@@ -66,6 +66,7 @@
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: var(--color-cream);
+  text-wrap: pretty;
 }
 
 /* Following sentence(s) — Montserrat secondary heading, a step smaller. */
@@ -78,6 +79,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-cream);
+  text-wrap: pretty;
 }
 
 .subtext {
@@ -123,6 +125,22 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    max-width: 100%;
+  }
+
+  .titleLead {
+    font-size: clamp(1.1rem, 5.5vw, 1.45rem);
+    letter-spacing: 0.02em;
+  }
+
+  .titleRest {
+    font-size: clamp(1.15rem, 5.5vw, 1.5rem);
+    letter-spacing: 0.04em;
   }
 }
 

@@ -7,6 +7,12 @@
   max-width: 22ch;
 }
 
+@media (max-width: 768px) {
+  .heading {
+    max-width: 100%;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
