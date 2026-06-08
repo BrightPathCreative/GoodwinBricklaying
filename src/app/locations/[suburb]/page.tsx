@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceGallery } from "@/components/ServiceGallery";
+import { ServiceList } from "@/components/ServiceList";
 import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
@@ -94,13 +95,7 @@ export default async function LocationPage({
           <Reveal as="h2" id="loc-services" className={styles.heading}>
             What We Offer in {location.name}
           </Reveal>
-          <Reveal as="ul" variant="grid" className={styles.tags}>
-            {location.services.map((service) => (
-              <li key={service} className={styles.tag}>
-                {service}
-              </li>
-            ))}
-          </Reveal>
+          <ServiceList items={location.services} tone="dark" />
         </div>
       </section>
 
