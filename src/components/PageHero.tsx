@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { breadcrumbSchema, type Crumb } from "@/lib/schema";
+import { navCta, site } from "@/lib/site";
 import styles from "./PageHero.module.css";
 
 /**
@@ -39,12 +41,15 @@ export function PageHero({
   subtext,
   crumbs,
   image,
+  showCta = false,
 }: {
   eyebrow?: string;
   title: ReactNode;
   subtext?: ReactNode;
   crumbs: ReadonlyArray<Crumb>;
   image?: { src: string; alt: string };
+  /** Primary quote + call actions beneath the hero subtext. */
+  showCta?: boolean;
 }) {
   return (
     <header className={`${styles.hero} ${image ? styles.hasImage : ""}`}>
@@ -67,6 +72,16 @@ export function PageHero({
         ) : null}
         <h1 className={styles.title}>{renderTitle(title)}</h1>
         {subtext ? <p className={styles.subtext}>{subtext}</p> : null}
+        {showCta ? (
+          <div className={styles.actions}>
+            <Link href={navCta.href} className={`btn btn--light ${styles.ctaBtn}`}>
+              {navCta.label}
+            </Link>
+            <a href={site.phoneHref} className={styles.phone}>
+              {site.phoneLabel}
+            </a>
+          </div>
+        ) : null}
       </div>
     </header>
   );

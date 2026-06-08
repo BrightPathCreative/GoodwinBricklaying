@@ -1,0 +1,59 @@
+.band {
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.heading {
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  max-width: 28ch;
+  margin-bottom: 0.5rem;
+}
+
+.body {
+  max-width: 52ch;
+  color: var(--color-cream);
+  font-size: 1rem;
+  line-height: var(--leading-body);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.phone {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  color: var(--color-cream);
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.phone:hover,
+.phone:focus-visible {
+  color: var(--color-deep);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .actions {
+    flex-shrink: 0;
+  }
+}

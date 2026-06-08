@@ -5,6 +5,7 @@ import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
+import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
@@ -126,6 +127,7 @@ export default function TuckPointingPage() {
           src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
           alt: "Tradesperson hand-finishing tuck pointing on a weathered heritage brick facade by Goodwin Bricklaying",
         }}
+        showCta
       />
 
       <section className="section section--cream" aria-labelledby="tuck-intro">
@@ -164,6 +166,11 @@ export default function TuckPointingPage() {
       <ServiceGallery
         heading="Period-Accurate Tuck Pointing"
         items={gallery}
+      />
+
+      <ServiceCtaBand
+        heading="Not sure if your tuck pointing needs restoration?"
+        body="David will assess the condition of your existing work and advise on the right approach."
       />
 
       <section className="section section--cream" aria-labelledby="tuck-reviews">

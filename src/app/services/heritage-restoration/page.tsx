@@ -6,6 +6,7 @@ import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
+import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import { CairoShowcase } from "@/components/CairoShowcase";
 import { homeCrumb } from "@/components/Breadcrumbs";
@@ -163,6 +164,7 @@ export default function HeritageRestorationPage() {
           src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
           alt: "Restored heritage brick boundary wall with sandstone-capped pier by Goodwin Bricklaying on Hanover Street, Fitzroy, Melbourne",
         }}
+        showCta
       />
 
       <section className="section section--cream" aria-labelledby="heritage-intro">
@@ -259,6 +261,11 @@ export default function HeritageRestorationPage() {
       <ServiceGallery
         heading="Heritage Brickwork, Restored to Last"
         items={gallery}
+      />
+
+      <ServiceCtaBand
+        heading="Get an honest assessment of your heritage property"
+        body="David provides detailed quotes with full construction specifics — no obligation, no sales pressure."
       />
 
       <section className="section section--cream" aria-labelledby="heritage-reviews">

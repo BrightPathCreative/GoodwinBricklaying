@@ -6,9 +6,9 @@ import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
+import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import TiltedCarousel from "@/components/TiltedCarousel";
-import MelbourneMap from "@/components/MelbourneMap";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
@@ -179,6 +179,7 @@ export default function ArchitecturalMasonryPage() {
           src: "/images/architectural-masonry/prahran-park/goodwin-bricklaying-architectural-curved-brick-retaining-wall-prahran-council-park-completed.jpg",
           alt: "Completed curved architectural brick retaining wall with timber bench seating at a Prahran council park by Goodwin Bricklaying",
         }}
+        showCta
       />
 
       <section className="section section--cream" aria-labelledby="arch-intro">
@@ -219,6 +220,11 @@ export default function ArchitecturalMasonryPage() {
       <ServiceGallery
         heading="Vaults, Arches & Bespoke Brickwork"
         items={gallery}
+      />
+
+      <ServiceCtaBand
+        heading="Planning an architectural masonry feature?"
+        body="From a single arch to a vaulted ceiling — David works from your drawings or collaborates on the design."
       />
 
       <section className="section section--cream" aria-labelledby="arch-highlight">
@@ -353,9 +359,6 @@ export default function ArchitecturalMasonryPage() {
             Goodwin Bricklaying delivers architectural masonry in Toorak,
             Hawthorn, Camberwell, Canterbury, Glen Iris, Surrey Hills, Richmond,
             Fitzroy, and surrounding inner Melbourne suburbs.
-          </Reveal>
-          <Reveal>
-            <MelbourneMap />
           </Reveal>
         </div>
       </section>

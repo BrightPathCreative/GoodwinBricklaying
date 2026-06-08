@@ -5,6 +5,7 @@ import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
+import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
@@ -137,6 +138,7 @@ export default function ChimneysFireplacesPage() {
           src: "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-40-metre-chimney-stack-full-height-ground-view.jpg",
           alt: "Restored 40-metre heritage brick chimney stack in Collingwood, Melbourne by Goodwin Bricklaying",
         }}
+        showCta
       />
 
       <section className="section section--cream" aria-labelledby="chimney-intro">
@@ -177,6 +179,11 @@ export default function ChimneysFireplacesPage() {
       <ServiceGallery
         heading="Landmark Stacks & Heritage Chimneys"
         items={gallery}
+      />
+
+      <ServiceCtaBand
+        heading="Discuss your chimney or fireplace project"
+        body="From heritage stacks to pizza ovens — get a detailed quote with full construction specifics."
       />
 
       <section className="section section--cream" aria-labelledby="chimney-landmarks">

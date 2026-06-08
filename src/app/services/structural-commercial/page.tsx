@@ -5,6 +5,7 @@ import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
+import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
@@ -130,6 +131,7 @@ export default function StructuralCommercialPage() {
           src: "/images/structural-commercial/goodwin-bricklaying-commercial-blockwork-curved-walls-multi-storey-development.jpg",
           alt: "Curved structural blockwork walls under construction at a multi-storey Melbourne development by Goodwin Bricklaying",
         }}
+        showCta
       />
 
       <section className="section section--cream" aria-labelledby="structural-intro">
@@ -168,6 +170,11 @@ export default function StructuralCommercialPage() {
       <ServiceGallery
         heading="Blockwork & Structural Masonry on Site"
         items={gallery}
+      />
+
+      <ServiceCtaBand
+        heading="Builders and developers — let's talk scope"
+        body="David welcomes enquiries on blockwork, retaining walls, and structural masonry subcontracting."
       />
 
       <section className="section section--cream" aria-labelledby="structural-who">

@@ -88,6 +88,33 @@
   animation: heroIn 700ms var(--ease-reveal) 350ms both;
 }
 
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 2rem;
+  animation: heroIn 700ms var(--ease-reveal) 500ms both;
+}
+
+.ctaBtn {
+  margin-top: 0;
+}
+
+.phone {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  color: var(--color-cream);
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.phone:hover,
+.phone:focus-visible {
+  color: var(--color-deep);
+}
+
 @keyframes heroIn {
   from {
     opacity: 0;
@@ -102,7 +129,8 @@
 @media (prefers-reduced-motion: reduce) {
   .eyebrow,
   .title,
-  .subtext {
+  .subtext,
+  .actions {
     animation: none;
   }
 }
