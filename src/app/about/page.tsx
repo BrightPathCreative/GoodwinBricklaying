@@ -20,15 +20,6 @@ export const metadata: Metadata = buildMetadata({
     "The story behind Goodwin Bricklaying — heritage specialist, Melbourne.",
 });
 
-const credentials = [
-  "25 years of specialist masonry experience.",
-  "Heritage and restoration specialist: a rare skill in Melbourne.",
-  "Fully insured: public liability and WorkCover.",
-  "ABN 87 434 328 744.",
-  "Based in Camberwell VIC 3124.",
-  "Serving inner Melbourne and surrounding suburbs within approximately 40 minutes.",
-];
-
 const landmarks = [
   "Chimney Stack: Highett Gasworks, Melbourne.",
   "Chimney Stack: Collingwood (40 metres).",
@@ -37,6 +28,33 @@ const landmarks = [
   "Cairo Flats, Fitzroy: 10,000-brick heritage boundary wall rebuild.",
   "Kirra Gardens, Camberwell.",
 ];
+
+const landmarkPhotos = [
+  {
+    src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-completed-restoration-red-brick.jpg",
+    alt: "Completed red-brick restoration of the Highett Gasworks heritage chimney by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-40-metre-chimney-stack-full-height-ground-view.jpg",
+    alt: "40-metre heritage brick chimney stack in Collingwood restored by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-restoration-new-brickwork-corbelling.jpg",
+    alt: "New corbelled brickwork on the Old Licorice Factory chimney restoration in Brunswick",
+  },
+  {
+    src: "/images/hero-fitzroy-brick-arch-tunnel-melbourne.jpg",
+    alt: "Vaulted brick arch tunnel built by Goodwin Bricklaying in Fitzroy, Melbourne",
+  },
+  {
+    src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
+    alt: "Restored heritage boundary wall at the Cairo Flats, Fitzroy, by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-36.jpg",
+    alt: "Heritage brickwork restoration on a period home by Goodwin Bricklaying, inner Melbourne",
+  },
+] as const;
 
 const faqs: ReadonlyArray<FaqItem> = [
   {
@@ -150,32 +168,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section--cream" aria-labelledby="credentials-heading">
-        <div className="container">
-          <div className={styles.credGrid}>
-            <Reveal variant="left" className={`${styles.credFigure} image-shape`}>
-              <Image
-                src="/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-rebuild-bricklayer-at-height.jpg"
-                alt="David Goodwin rebuilding the Old Licorice Factory chimney crown at height in Brunswick, Melbourne"
-                fill
-                sizes="(min-width: 960px) 42vw, 100vw"
-                className={styles.coverImage}
-              />
-            </Reveal>
-            <Reveal variant="right">
-              <span className={`eyebrow ${styles.eyebrowSpace}`}>Background</span>
-              <h2 id="credentials-heading" className={styles.heading}>
-                Experience &amp; Credentials
-              </h2>
-              <ul className={styles.list}>
-                {credentials.map((item) => (
-                  <li key={item} className={styles.listItem}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          </div>
+      <section className={styles.banner} aria-label="David Goodwin at work">
+        <Image
+          src="/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-rebuild-bricklayer-at-height.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className={styles.bannerImage}
+          aria-hidden
+        />
+        <div className={styles.bannerScrim} aria-hidden />
+        <div className={`container ${styles.bannerInner}`}>
+          <Reveal variant="fade">
+            <p className={styles.bannerText}>
+              Twenty-five years of heritage restoration and architectural masonry
+              across inner Melbourne.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -200,14 +209,21 @@ export default function AboutPage() {
                 ))}
               </ul>
             </Reveal>
-            <Reveal variant="right" className={`${styles.landmarkFigure} image-shape`}>
-              <Image
-                src="/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-27-metre-heritage-landmark-1938.jpg"
-                alt="The 27-metre 1938 Highett Gasworks heritage chimney landmark restored by Goodwin Bricklaying, Melbourne"
-                fill
-                sizes="(min-width: 960px) 42vw, 100vw"
-                className={styles.coverImage}
-              />
+            <Reveal variant="right" className={styles.landmarkPhotos}>
+              {landmarkPhotos.map((photo) => (
+                <figure
+                  key={photo.src}
+                  className={`${styles.landmarkPhoto} image-shape`}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(min-width: 960px) 22vw, 50vw"
+                    className={styles.coverImage}
+                  />
+                </figure>
+              ))}
             </Reveal>
           </div>
         </div>
