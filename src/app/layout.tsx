@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Analytics } from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -98,6 +99,7 @@ export default function RootLayout({
         <BackToTop />
         <CookieConsent />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
