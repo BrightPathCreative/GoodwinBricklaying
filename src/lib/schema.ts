@@ -15,8 +15,9 @@ export function localBusinessSchema(): Record<string, unknown> {
     description:
       "Luxury masonry, heritage restoration, and architectural brickwork specialists serving inner Melbourne. 25 years experience.",
     url: site.url,
-    // telephone and email omitted intentionally — enquiries route through the
-    // GHL form / click-to-call. Restore telephone once the CRM number is live.
+    // GHL CRM tracking number. Email omitted intentionally — enquiries route
+    // through the GHL form / click-to-call.
+    telephone: site.phone,
     image: `${site.url}/og/og-default.jpg`,
     logo: `${site.url}/logo/goodwin-logo-seo.png`,
     // Street address and postcode intentionally omitted (private). Modelled as

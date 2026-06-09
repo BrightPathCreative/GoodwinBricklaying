@@ -10,10 +10,11 @@ export const site = {
   url: "https://goodwinbricklaying.com.au",
   // Email intentionally not published — enquiries route through the GHL form
   // and click-to-call only.
-  // Phone number intentionally not exposed yet. Once the CRM tracking number
-  // is live, set phoneHref to `tel:+61…`; the label can stay "Click to Call".
+  // GHL CRM tracking number. `phone` is the E.164 value used for structured
+  // data; `phoneHref` is the tel: link behind every "Click to Call" CTA.
+  phone: "+61489262279",
   phoneLabel: "Click to Call",
-  phoneHref: "/contact",
+  phoneHref: "tel:+61489262279",
   instagram: {
     handle: "@goodwinbrickblockandheritage",
     url: "https://www.instagram.com/goodwinbrickblockandheritage",
