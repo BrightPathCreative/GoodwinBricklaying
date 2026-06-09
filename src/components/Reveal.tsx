@@ -49,6 +49,12 @@ export function Reveal({
       return;
     }
 
+    // A fixed visibility fraction can never be reached for elements taller than
+    // the viewport (e.g. the long projects gallery on mobile), which would leave
+    // them stuck at opacity:0. Cap the threshold to what is actually attainable.
+    const viewportRatio = window.innerHeight / (el.offsetHeight || window.innerHeight);
+    const safeThreshold = Math.min(threshold, viewportRatio * 0.6);
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -58,7 +64,7 @@ export function Reveal({
           }
         }
       },
-      { threshold }
+      { threshold: safeThreshold }
     );
 
     observer.observe(el);
