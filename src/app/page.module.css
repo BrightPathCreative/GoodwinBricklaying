@@ -172,7 +172,10 @@
   flex-shrink: 0;
 }
 
-.heroCta {
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   animation: fadeIn 600ms var(--ease-luxury) 1100ms both;
 }
 
@@ -511,6 +514,52 @@
 .faqInner {
   max-width: 920px;
   margin-inline: auto;
+}
+
+/* --- Mid-page CTA band (dark) --- */
+.midCta {
+  background-color: var(--color-deep);
+  color: var(--color-text-light);
+  padding-block: clamp(2.75rem, 6vw, 4rem);
+}
+
+.midCta .sectionEyebrow {
+  color: var(--color-cream);
+}
+
+.midCtaInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.midCtaHeading {
+  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+  max-width: 22ch;
+  margin-bottom: 1rem;
+}
+
+.midCtaSub {
+  max-width: 52ch;
+  color: var(--color-cream);
+}
+
+.midCtaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media (min-width: 900px) {
+  .midCtaInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
 }
 
 /* --- Closing CTA (dark) --- */

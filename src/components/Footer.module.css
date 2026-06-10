@@ -91,6 +91,16 @@
   color: var(--color-deep);
 }
 
+.contactCta {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.contactList a.contactCta:hover,
+.contactList a.contactCta:focus-visible {
+  color: var(--color-text-dark);
+}
+
 .divider {
   height: 1px;
   background-color: rgba(245, 241, 236, 0.14);

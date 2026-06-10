@@ -176,9 +176,14 @@ export default function HomePage() {
             <span>Five-Star Google Rating</span>
             <span>Heritage Specialists</span>
           </div>
-          <Link href="/projects" className={`btn btn--light ${styles.heroCta}`}>
-            View Projects
-          </Link>
+          <div className={styles.heroActions}>
+            <Link href="/projects" className="btn btn--light">
+              View Projects
+            </Link>
+            <a href={site.phoneHref} className="btn btn--light">
+              {site.phoneLabel}
+            </a>
+          </div>
         </div>
         <ScrollIndicator />
       </section>
@@ -277,6 +282,33 @@ export default function HomePage() {
                 <span className={styles.showcaseCaption}>{item.caption}</span>
               </Link>
             ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section className={styles.midCta} aria-labelledby="mid-cta-heading">
+        <div className="container">
+          <Reveal className={styles.midCtaInner}>
+            <div>
+              <span className={`eyebrow ${styles.sectionEyebrow}`}>
+                Start Your Project
+              </span>
+              <h2 id="mid-cta-heading" className={styles.midCtaHeading}>
+                Ready to build something that lasts?
+              </h2>
+              <p className={styles.midCtaSub}>
+                Tell us about your project, or call David directly for an honest
+                conversation about what&apos;s possible.
+              </p>
+            </div>
+            <div className={styles.midCtaActions}>
+              <Link href="/contact" className="btn btn--light">
+                Get a Quote
+              </Link>
+              <a href={site.phoneHref} className="btn btn--light">
+                {site.phoneLabel}
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>

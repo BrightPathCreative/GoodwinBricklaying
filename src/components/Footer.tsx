@@ -70,7 +70,9 @@ export function Footer() {
               Servicing {site.address.locality} &amp; inner Melbourne,{" "}
               {site.address.region}
             </span>
-            <a href={site.phoneHref}>{site.phoneLabel}</a>
+            <a href={site.phoneHref} className={`btn btn--light ${styles.contactCta}`}>
+              {site.phoneLabel}
+            </a>
           </address>
         </div>
       </div>
