@@ -1,12 +1,12 @@
 /* ==========================================================================
-   Goodwin Bricklaying — Global tokens & base styles
+   Goodwin Bricklaying: Global tokens & base styles
    Palette and typography are LOCKED per docs/content-notes.md. Do not add
-   cool greys, blues, or corporate colours. Font weights 300–400 only.
+   cool greys, blues, or corporate colours. Font weights 300 to 400 only.
    ========================================================================== */
 
 :root {
   /* --- Colour palette (locked) --- */
-  --color-primary: #5b4f47; /* Grey Brown — logo bg, primary brand */
+  --color-primary: #5b4f47; /* Grey Brown: logo bg, primary brand */
   --color-white: #ffffff;
   --color-black: #000000;
   --color-taupe: #66574f; /* Warm Taupe Brown */
@@ -14,23 +14,23 @@
      Client-approved Clay Beige (#8A7A70). Deep Heritage Brown (#4e433d) is
      retained below as a contrast/accent tone (--color-deep). */
   --color-heritage: #8a7a70;
-  --color-deep: #4e433d; /* Deep Heritage Brown — accents/contrast */
+  --color-deep: #4e433d; /* Deep Heritage Brown: accents/contrast */
   --color-stone: #74665d; /* Soft Stone Brown */
-  --color-clay: #8a7a70; /* Clay Beige — labels, accents */
-  --color-cream: #f5f1ec; /* Warm Cream — light backgrounds */
+  --color-clay: #8a7a70; /* Clay Beige: labels, accents */
+  --color-cream: #f5f1ec; /* Warm Cream: light backgrounds */
   --color-text-dark: #2c2420; /* Body text on light */
   --color-text-light: #f5f1ec; /* Body text on dark */
   --color-overlay: rgba(78, 67, 61, 0.72);
   --color-overlay-light: rgba(91, 79, 71, 0.45);
   --color-divider: #8a7a70;
-  --color-star: #c9a96e; /* Gold — star ratings only */
+  --color-star: #c9a96e; /* Gold: star ratings only */
 
   /* --- Typography --- */
   --font-display: var(--font-dm-serif), Georgia, "Times New Roman", serif;
   --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
-  /* TAN Twinkle — logo/display font for H1 (self-hosted, webfont licensed). */
+  /* TAN Twinkle: logo/display font for H1 (self-hosted, webfont licensed). */
   --font-twinkle: var(--font-tan-twinkle), var(--font-dm-serif), Georgia, serif;
-  /* Montserrat — capitalised secondary heading font for H2. */
+  /* Montserrat: capitalised secondary heading font for H2. */
   --font-heading-alt: var(--font-montserrat), var(--font-inter), system-ui,
     sans-serif;
 
@@ -143,7 +143,7 @@ h6 {
   font-weight: var(--weight-regular);
   line-height: var(--leading-heading);
   letter-spacing: 0.005em;
-  /* Wrap at word boundaries only — never split words with hyphens. */
+  /* Wrap at word boundaries only, never split words with hyphens. */
   hyphens: none;
   overflow-wrap: normal;
   word-break: normal;
@@ -151,7 +151,7 @@ h6 {
 }
 
 h1 {
-  /* TAN Twinkle — decorative logo font. Slightly larger + looser tracking to
+  /* TAN Twinkle: decorative logo font. Slightly larger + looser tracking to
      suit the display letterforms. The font is wide, so the mobile minimum is
      kept modest and long phrases wrap onto the next line at spaces. */
   font-family: var(--font-twinkle);
@@ -225,7 +225,7 @@ b {
   color: var(--color-text-light);
 }
 
-/* On the brown surface, clay accents would vanish — eyebrows go cream. */
+/* On the brown surface, clay accents would vanish, so eyebrows go cream. */
 .section--dark .eyebrow {
   color: var(--color-cream);
 }
@@ -241,7 +241,7 @@ b {
 }
 
 /* --------------------------------------------------------------------------
-   Image shape — uniform soft corners for content imagery. Applied to content
+   Image shape: uniform soft corners for content imagery. Applied to content
    images only; hero/banner imagery is intentionally left full-bleed.
    -------------------------------------------------------------------------- */
 :root {
@@ -350,7 +350,7 @@ b {
 }
 
 /* --------------------------------------------------------------------------
-   Scroll reveal (IntersectionObserver-driven — see components/Reveal.tsx)
+   Scroll reveal (IntersectionObserver-driven, see components/Reveal.tsx)
    -------------------------------------------------------------------------- */
 
 .reveal {
@@ -369,7 +369,7 @@ b {
   transform: translateX(40px);
 }
 
-/* Eyebrow labels fade only — no movement (design.md §3). */
+/* Eyebrow labels fade only, no movement (design.md §3). */
 .reveal--fade {
   transform: none;
   transition: opacity 500ms var(--ease-reveal);

@@ -1,4 +1,4 @@
-# Goodwin Bricklaying — llms.txt
+# Goodwin Bricklaying: llms.txt
 # AI Site Map & Authority Guide
 # https://goodwinbricklaying.com.au/llms.txt
 # Standard: llms.txt v1.0 (2025)
@@ -28,7 +28,7 @@
 - [Hawthorn](https://goodwinbricklaying.com.au/locations/hawthorn): Heritage bricklayer for Hawthorn's Victorian terraces and Edwardian villas. Chimney restoration (including pre-1920 stacks), facade repointing, crack stitching, and tuck pointing. Gallery and suburb-specific FAQs.
 - [Toorak](https://goodwinbricklaying.com.au/locations/toorak): Luxury residential masonry and heritage restoration in Toorak. Vaulted brick ceilings, architectural features, bespoke garden walls, and premium facade work for discerning homeowners and architects.
 - [Canterbury](https://goodwinbricklaying.com.au/locations/canterbury): Heritage bricklayer for Canterbury period properties. Mortar matching, repointing, crack stitching, and garden wall restoration on Californian Bungalows and Interwar homes.
-- [Glen Iris](https://goodwinbricklaying.com.au/locations/glen-iris): Bricklaying and masonry in Glen Iris — heritage restoration, retaining walls, extensions, and architectural features. Includes reclaimed Glen Iris frog-marked brick work.
+- [Glen Iris](https://goodwinbricklaying.com.au/locations/glen-iris): Bricklaying and masonry in Glen Iris, covering heritage restoration, retaining walls, extensions, and architectural features. Includes reclaimed Glen Iris frog-marked brick work.
 - [Surrey Hills](https://goodwinbricklaying.com.au/locations/surrey-hills): Federation and Edwardian home specialists in Surrey Hills. Heritage repointing, tuck pointing, chimney work, and crack stitching for period cottages and villas.
 - [Richmond](https://goodwinbricklaying.com.au/locations/richmond): Victorian terrace and heritage masonry in Richmond. Facade repointing, chimney stack restoration, party wall repair, and tuck pointing for terrace rows and workers' cottages.
 - [Fitzroy](https://goodwinbricklaying.com.au/locations/fitzroy): Architectural and heritage brickwork in Fitzroy. Landmark Cairo Flats heritage wall restoration, brick tunnels and arches, vaulted ceilings, and heritage-listed building work.
@@ -52,6 +52,6 @@
 
 ## Optional: Full Content
 
-- [Heritage & Restoration — full page](https://goodwinbricklaying.com.au/services/heritage-restoration)
-- [Architectural Masonry — full page](https://goodwinbricklaying.com.au/services/architectural-masonry)
-- [About David Goodwin — full page](https://goodwinbricklaying.com.au/about)
+- [Heritage & Restoration, full page](https://goodwinbricklaying.com.au/services/heritage-restoration)
+- [Architectural Masonry, full page](https://goodwinbricklaying.com.au/services/architectural-masonry)
+- [About David Goodwin, full page](https://goodwinbricklaying.com.au/about)

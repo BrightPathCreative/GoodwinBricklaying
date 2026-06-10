@@ -4,7 +4,7 @@ import styles from "./Faq.module.css";
 
 /**
  * Accessible FAQ list using native <details>/<summary> (open, indexable, and
- * keyboard-operable — design.md AEO rules). Emits FAQPage structured data so
+ * keyboard-operable, design.md AEO rules). Emits FAQPage structured data so
  * the same answers feed rich results and LLM answers.
  */
 export function Faq({ items }: { items: ReadonlyArray<FaqItem> }) {

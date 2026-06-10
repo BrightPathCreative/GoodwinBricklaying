@@ -59,7 +59,7 @@
   animation: heroIn 800ms var(--ease-reveal) 200ms both;
 }
 
-/* First sentence — TAN Twinkle display font, capitalised (matches home hero). */
+/* First sentence: TAN Twinkle display font, capitalised (matches home hero). */
 .titleLead {
   display: block;
   font-family: var(--font-twinkle);
@@ -69,7 +69,7 @@
   text-wrap: pretty;
 }
 
-/* Following sentence(s) — Montserrat secondary heading, a step smaller. */
+/* Following sentence(s): Montserrat secondary heading, a step smaller. */
 .titleRest {
   display: block;
   margin-top: 0.35em;

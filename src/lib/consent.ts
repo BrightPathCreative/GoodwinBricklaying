@@ -1,5 +1,5 @@
 /**
- * Lightweight cookie-consent storage (no third-party platform — per
+ * Lightweight cookie-consent storage (no third-party platform, per
  * docs/sitemap.md). Analytics/Ads scripts must check hasAnalyticsConsent()
  * before firing. A "gb:consent" event fires whenever the choice changes.
  */
@@ -33,7 +33,7 @@ export function setConsent(analytics: boolean): Consent {
     window.localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
     window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: consent }));
   } catch {
-    /* storage unavailable — banner simply reappears next visit */
+    /* storage unavailable, banner simply reappears next visit */
   }
   return consent;
 }

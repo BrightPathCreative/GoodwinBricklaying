@@ -108,8 +108,8 @@ export default async function LocationPage({
 
       <ServiceCtaBand
         heading={`Get a quote for your ${location.name} project`}
-        body="David provides detailed quotes with full construction specifics. If you're not sure what your property needs, he'll give you an honest assessment — no obligation, no sales pressure."
-        buttonLabel={`Enquire — ${location.name}`}
+        body="David provides detailed quotes with full construction specifics. If you're not sure what your property needs, he'll give you an honest assessment, with no obligation and no sales pressure."
+        buttonLabel={`Enquire in ${location.name}`}
       />
 
       <section className="section section--cream" aria-labelledby="loc-explore">
@@ -169,9 +169,9 @@ export default async function LocationPage({
       ) : null}
 
       <EnquiryCta
-        heading={`Get a Quote — ${location.name}`}
+        heading={`Get a Quote in ${location.name}`}
         body={location.closing}
-        buttonLabel={`Enquire — ${location.name}`}
+        buttonLabel={`Enquire in ${location.name}`}
       />
     </>
   );

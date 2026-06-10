@@ -64,7 +64,7 @@
   font-size: 0.6rem;
 }
 
-/* Accept All — solid primary, per design.md §12 (banner-specific). */
+/* Accept All: solid primary, per design.md §12 (banner-specific). */
 .accept {
   background-color: var(--color-primary);
   color: var(--color-cream);

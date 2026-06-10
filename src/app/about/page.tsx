@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
   path: "/about",
   ogTitle: "About David Goodwin | 25 Years of Specialist Masonry",
   ogDescription:
-    "The story behind Goodwin Bricklaying — heritage specialist, Melbourne.",
+    "The story behind Goodwin Bricklaying, heritage specialist, Melbourne.",
 });
 
 const landmarks = [

@@ -183,7 +183,7 @@ export default function ChimneysFireplacesPage() {
 
       <ServiceCtaBand
         heading="Discuss your chimney or fireplace project"
-        body="From heritage stacks to pizza ovens — get a detailed quote with full construction specifics."
+        body="From heritage stacks to pizza ovens, get a detailed quote with full construction specifics."
       />
 
       <section className="section section--cream" aria-labelledby="chimney-landmarks">

@@ -5,7 +5,7 @@ import styles from "./not-found.module.css";
 export const metadata: Metadata = {
   title: { absolute: "Page Not Found | Goodwin Bricklaying" },
   description:
-    "The page you're looking for doesn't exist. Return to Goodwin Bricklaying — Melbourne's heritage masonry specialist.",
+    "The page you're looking for doesn't exist. Return to Goodwin Bricklaying, Melbourne's heritage masonry specialist.",
   robots: { index: false, follow: false },
 };
 

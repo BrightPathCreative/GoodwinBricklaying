@@ -26,7 +26,7 @@ const cookieRows = [
   {
     type: "Analytics",
     purpose:
-      "Understand how visitors use the site — pages visited, time on site, referral source.",
+      "Understand how visitors use the site, including pages visited, time on site, and referral source.",
     provider: "Google Analytics 4",
   },
   {

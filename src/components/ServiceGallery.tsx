@@ -6,7 +6,7 @@ export type GalleryItem = { src: string; alt: string };
 
 /**
  * Editorial image grid for a single service page. Server component (no
- * lightbox) — the interactive lightbox lives on the /projects page.
+ * lightbox). The interactive lightbox lives on the /projects page.
  */
 export function ServiceGallery({
   eyebrow = "Selected Work",

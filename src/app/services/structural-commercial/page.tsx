@@ -173,7 +173,7 @@ export default function StructuralCommercialPage() {
       />
 
       <ServiceCtaBand
-        heading="Builders and developers — let's talk scope"
+        heading="Builders and developers, let's talk scope"
         body="David welcomes enquiries on blockwork, retaining walls, and structural masonry subcontracting."
       />
 

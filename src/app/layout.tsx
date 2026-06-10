@@ -31,7 +31,7 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-// TAN Twinkle — licensed Canva/foundry display font (webfont licence purchased).
+// TAN Twinkle: licensed Canva/foundry display font (webfont licence purchased).
 // Self-hosted from src/app/fonts; used for the H1 / logo-style display headings.
 const tanTwinkle = localFont({
   src: [

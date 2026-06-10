@@ -4,7 +4,7 @@ import { navCta, site } from "@/lib/site";
 import styles from "./ServiceCtaBand.module.css";
 
 /**
- * Compact mid-page call-to-action for long service pages — sits between
+ * Compact mid-page call-to-action for long service pages, sits between
  * content sections so readers don't have to scroll to the footer to convert.
  */
 export function ServiceCtaBand({

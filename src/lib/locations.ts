@@ -8,7 +8,7 @@ import type { FaqItem } from "./schema";
 
 export type LocationGalleryItem = { src: string; alt: string };
 
-/** A single service offered in a suburb — title, SEO excerpt, connecting image. */
+/** A single service offered in a suburb: title, SEO excerpt, connecting image. */
 export type LocationService = {
   title: string;
   text: string;
@@ -22,13 +22,13 @@ export type Location = {
   metaDescription: string;
   /** Page H1. */
   headline: string;
-  /** Intro body paragraphs — first shown in hero, rest in intro section. */
+  /** Intro body paragraphs: first shown in hero, rest in intro section. */
   body: ReadonlyArray<string>;
   /** H2 for the intro section below the hero. */
   introHeading: string;
   /** Additional locality / architecture context paragraphs. */
   localContext: ReadonlyArray<string>;
-  /** Services offered locally — each with a location SEO excerpt and image. */
+  /** Services offered locally, each with a location SEO excerpt and image. */
   services: ReadonlyArray<LocationService>;
   /** Closing line above the CTA. */
   closing: string;
@@ -54,8 +54,8 @@ export const locations: ReadonlyArray<Location> = [
     ],
     introHeading: "Your Local Camberwell Bricklayer",
     localContext: [
-      "Camberwell's streetscapes are defined by Edwardian and Interwar homes, Californian Bungalows, and substantial brick villas — many within Boroondara heritage overlays. That combination of age, architectural detail, and council scrutiny demands a bricklayer who understands period construction, not just modern blockwork.",
-      "David has completed heritage restorations, chimney repairs, and architectural masonry across Camberwell for over two decades — including landmark residential work at Kirra Gardens. When Camberwell homeowners need masonry done properly, they call someone who lives and works here.",
+      "Camberwell's streetscapes are defined by Edwardian and Interwar homes, Californian Bungalows, and substantial brick villas, many within Boroondara heritage overlays. That combination of age, architectural detail, and council scrutiny demands a bricklayer who understands period construction, not just modern blockwork.",
+      "David has completed heritage restorations, chimney repairs, and architectural masonry across Camberwell for over two decades, including landmark residential work at Kirra Gardens. When Camberwell homeowners need masonry done properly, they call someone who lives and works here.",
     ],
     services: [
       {
@@ -68,7 +68,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Crack Stitching & Remedial Masonry",
-        text: "Settlement and structural movement are common in Camberwell's older brick homes. David diagnoses the cause and crack-stitches walls with steel reinforcement to stabilise them — no rebuild, no change to the heritage appearance.",
+        text: "Settlement and structural movement are common in Camberwell's older brick homes. David diagnoses the cause and crack-stitches walls with steel reinforcement to stabilise them, with no rebuild and no change to the heritage appearance.",
         image: {
           src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-35-2.jpg",
           alt: "Steel reinforcement stabilising cracked heritage brickwork during remedial masonry in Camberwell by Goodwin Bricklaying",
@@ -84,7 +84,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Architectural Masonry",
-        text: "For Camberwell's high-end renovations, David builds bespoke feature brickwork — herringbone walls, arches, and detailed masonry that becomes the centrepiece of a luxury home.",
+        text: "For Camberwell's high-end renovations, David builds bespoke feature brickwork: herringbone walls, arches, and detailed masonry that becomes the centrepiece of a luxury home.",
         image: {
           src: "/images/architectural-masonry/herringbone/goodwin-bricklaying-herringbone-brick-pattern-completed-interior-feature-wall.jpg",
           alt: "Reclaimed brick herringbone feature wall for a Camberwell luxury renovation by Goodwin Bricklaying",
@@ -144,7 +144,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Do you offer a local bricklayer service in Camberwell?",
         answer:
-          "Yes. Goodwin Bricklaying is based in Camberwell, and David Goodwin is the bricklayer Camberwell homeowners deal with directly. There is no subcontracting chain — you get the specialist who has worked across this suburb for over 20 years.",
+          "Yes. Goodwin Bricklaying is based in Camberwell, and David Goodwin is the bricklayer Camberwell homeowners deal with directly. There is no subcontracting chain. You get the specialist who has worked across this suburb for over 20 years.",
       },
       {
         question: "What types of homes do you work on in Camberwell?",
@@ -177,7 +177,7 @@ export const locations: ReadonlyArray<Location> = [
     ],
     introHeading: "Heritage Brickwork for Hawthorn's Finest Homes",
     localContext: [
-      "From the grand Victorian terraces along Glenferrie Road to the Edwardian villas and Arts and Crafts homes tucked behind them, Hawthorn's brickwork tells the story of Melbourne's growth. Many of these properties carry heritage overlays, and the mortar joints, chimney stacks, and facades need specialist care — not a general trades approach.",
+      "From the grand Victorian terraces along Glenferrie Road to the Edwardian villas and Arts and Crafts homes tucked behind them, Hawthorn's brickwork tells the story of Melbourne's growth. Many of these properties carry heritage overlays, and the mortar joints, chimney stacks, and facades need specialist care, not a general trades approach.",
       "David has restored 1915 chimneys, repointed weathered facades, and completed structural crack repairs across Hawthorn. His work is trusted by homeowners who understand that heritage masonry is a discipline, not a line item.",
     ],
     services: [
@@ -191,7 +191,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Chimney Restoration",
-        text: "David has restored chimney stacks on Hawthorn homes dating to the early 1900s — rebuilding crowns, repointing stacks, and returning twin-pot chimneys to their original profile. All chimney work is carried out at height, fully insured.",
+        text: "David has restored chimney stacks on Hawthorn homes dating to the early 1900s, rebuilding crowns, repointing stacks, and returning twin-pot chimneys to their original profile. All chimney work is carried out at height, fully insured.",
         image: {
           src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-24.jpg",
           alt: "Heritage chimney rebuilt with new cement capping on a Hawthorn period home by Goodwin Bricklaying",
@@ -199,7 +199,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Heritage Facade Restoration",
-        text: "A Hawthorn facade is the face of the home. David restores weathered and damaged brick frontages — matching brick, mortar, and detailing — so the streetscape value of these heritage properties is protected.",
+        text: "A Hawthorn facade is the face of the home. David restores weathered and damaged brick frontages, matching brick, mortar, and detailing, so the streetscape value of these heritage properties is protected.",
         image: {
           src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-36.jpg",
           alt: "Heritage facade brickwork restoration on a Hawthorn period home by Goodwin Bricklaying",
@@ -207,7 +207,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Architectural Masonry",
-        text: "For Hawthorn's premium renovations, David delivers architectural brickwork — feature walls, arches, and vaulted detailing — built to the standard architects and high-end builders expect.",
+        text: "For Hawthorn's premium renovations, David delivers architectural brickwork such as feature walls, arches, and vaulted detailing, built to the standard architects and high-end builders expect.",
         image: {
           src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-44.jpg",
           alt: "Hand-laid brick vaulted ceiling feature for a Hawthorn residence by Goodwin Bricklaying",
@@ -267,7 +267,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Do you restore chimneys on heritage homes in Hawthorn?",
         answer:
-          "Yes. Chimney stack restoration is one of David's core specialisations. He has worked on Hawthorn chimneys dating to the early 1900s — rebuilding crowns, repointing stacks, and restoring twin-pot chimneys to their original profile. All work is fully insured.",
+          "Yes. Chimney stack restoration is one of David's core specialisations. He has worked on Hawthorn chimneys dating to the early 1900s, rebuilding crowns, repointing stacks, and restoring twin-pot chimneys to their original profile. All work is fully insured.",
       },
       {
         question: "Can you repoint a Victorian terrace facade in Hawthorn?",
@@ -282,7 +282,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "How much does a heritage bricklayer cost in Hawthorn?",
         answer:
-          "Every Hawthorn project is different — scope, access, materials, and heritage complexity all affect the quote. David provides detailed quotes with full construction specifics so you know exactly what you're paying for. Enquire for an honest assessment with no obligation.",
+          "Every Hawthorn project is different. Scope, access, materials, and heritage complexity all affect the quote. David provides detailed quotes with full construction specifics so you know exactly what you're paying for. Enquire for an honest assessment with no obligation.",
       },
     ],
     nearby: ["camberwell", "richmond", "toorak", "canterbury"],
@@ -300,7 +300,7 @@ export const locations: ReadonlyArray<Location> = [
     ],
     introHeading: "Premium Masonry for Toorak Residences",
     localContext: [
-      "Toorak combines grand period estates, contemporary architectural homes, and meticulous renovations where every detail is scrutinised. Vaulted brick ceilings, bespoke garden walls, heritage facade restoration, and chimney work on substantial properties — this is work that requires a bricklayer comfortable at the top of the market.",
+      "Toorak combines grand period estates, contemporary architectural homes, and meticulous renovations where every detail is scrutinised. Vaulted brick ceilings, bespoke garden walls, heritage facade restoration, and chimney work on substantial properties. This is work that requires a bricklayer comfortable at the top of the market.",
       "David collaborates with architects and builders on Toorak projects where precision, material selection, and finish quality are non-negotiable. His 25 years of specialist experience and fully insured operation give discerning homeowners the confidence to invest in work that lasts.",
     ],
     services: [
@@ -322,7 +322,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Arches & Vaulted Ceilings",
-        text: "For Toorak's architect-designed homes, David builds hand-laid brick arches and barrel-vaulted ceilings — structural showpieces that few bricklayers in Melbourne can execute to this standard.",
+        text: "For Toorak's architect-designed homes, David builds hand-laid brick arches and barrel-vaulted ceilings, structural showpieces that few bricklayers in Melbourne can execute to this standard.",
         image: {
           src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-45.jpg",
           alt: "Hand-laid barrel-vaulted brick ceiling under construction for a Toorak residence by Goodwin Bricklaying",
@@ -330,7 +330,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Chimney Restoration",
-        text: "Toorak's substantial period homes often retain original chimney stacks. David restores them — rebuilding crowns and repointing stacks — to a safe, weatherproof, and architecturally correct finish.",
+        text: "Toorak's substantial period homes often retain original chimney stacks. David restores them, rebuilding crowns and repointing stacks, to a safe, weatherproof, and architecturally correct finish.",
         image: {
           src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-25.jpg",
           alt: "Heritage chimney stack restoration on a Toorak roof by Goodwin Bricklaying",
@@ -338,7 +338,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Bespoke Garden Walls & Feature Brickwork",
-        text: "From screening walls to feature brickwork, David creates bespoke garden masonry for Toorak's premium landscapes — hit-and-miss screens, curved walls, and detailing tailored to the property.",
+        text: "From screening walls to feature brickwork, David creates bespoke garden masonry for Toorak's premium landscapes: hit-and-miss screens, curved walls, and detailing tailored to the property.",
         image: {
           src: "/images/architectural-masonry/hit-and-miss/goodwin-bricklaying-hit-and-miss-decorative-brick-screen-wall-melbourne.jpg",
           alt: "Hit-and-miss decorative brick screen wall for a Toorak garden by Goodwin Bricklaying",
@@ -382,7 +382,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Do you work with architects on Toorak projects?",
         answer:
-          "Yes. David regularly collaborates with architects and premium builders on Toorak residential projects. He is comfortable reading plans, working to engineering specifications, and delivering architectural masonry features — vaulted ceilings, arches, and bespoke brickwork — to the standard these projects demand.",
+          "Yes. David regularly collaborates with architects and premium builders on Toorak residential projects. He is comfortable reading plans, working to engineering specifications, and delivering architectural masonry features, including vaulted ceilings, arches, and bespoke brickwork, to the standard these projects demand.",
       },
       {
         question: "Can you build vaulted brick ceilings in Toorak homes?",
@@ -392,7 +392,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Do you restore heritage facades on Toorak period homes?",
         answer:
-          "Yes. Alongside contemporary architectural work, David restores heritage brickwork on Toorak's period properties — repointing, mortar matching, chimney restoration, and remedial masonry that respects the original architecture while meeting modern structural requirements.",
+          "Yes. Alongside contemporary architectural work, David restores heritage brickwork on Toorak's period properties: repointing, mortar matching, chimney restoration, and remedial masonry that respects the original architecture while meeting modern structural requirements.",
       },
       {
         question: "Is Goodwin Bricklaying insured for Toorak residential work?",
@@ -415,7 +415,7 @@ export const locations: ReadonlyArray<Location> = [
     ],
     introHeading: "Period Home Masonry in Canterbury",
     localContext: [
-      "Canterbury is defined by substantial Edwardian and Interwar homes, Californian Bungalows with distinctive brick detailing, and garden walls that frame some of Boroondara's most desirable streets. The brickwork here is often original — and when mortar fails or cracks appear, the repair needs to be invisible.",
+      "Canterbury is defined by substantial Edwardian and Interwar homes, Californian Bungalows with distinctive brick detailing, and garden walls that frame some of Boroondara's most desirable streets. The brickwork here is often original, and when mortar fails or cracks appear, the repair needs to be invisible.",
       "David has repointed Canterbury facades, restored garden walls with reclaimed brick, and completed chimney and remedial work on period homes where the owners expect craftsmanship, not compromise.",
     ],
     services: [
@@ -437,7 +437,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Crack Stitching",
-        text: "Period homes on Canterbury's wide streets often crack as they settle. David crack-stitches walls with steel reinforcement to stabilise the structure — without rebuilding or altering the original appearance.",
+        text: "Period homes on Canterbury's wide streets often crack as they settle. David crack-stitches walls with steel reinforcement to stabilise the structure, without rebuilding or altering the original appearance.",
         image: {
           src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-35-2.jpg",
           alt: "Crack stitching steel reinforcement in heritage brickwork on a Canterbury home by Goodwin Bricklaying",
@@ -510,7 +510,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "What is crack stitching and do you offer it in Canterbury?",
         answer:
-          "Crack stitching is a structural repair technique that stabilises cracked masonry walls using steel reinforcement inserted at key points. David offers crack stitching across Canterbury on period homes where walls have shifted due to settlement or structural stress — without rebuilding or altering the original appearance.",
+          "Crack stitching is a structural repair technique that stabilises cracked masonry walls using steel reinforcement inserted at key points. David offers crack stitching across Canterbury on period homes where walls have shifted due to settlement or structural stress, without rebuilding or altering the original appearance.",
       },
       {
         question: "Do you restore front garden walls in Canterbury?",
@@ -520,7 +520,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "How do I find a heritage bricklayer in Canterbury?",
         answer:
-          "Goodwin Bricklaying serves Canterbury as part of its inner Melbourne service area, based in nearby Camberwell. David is a specialist heritage bricklayer with 25 years experience — enquire with your project details for a detailed quote within 24 hours.",
+          "Goodwin Bricklaying serves Canterbury as part of its inner Melbourne service area, based in nearby Camberwell. David is a specialist heritage bricklayer with 25 years experience. Enquire with your project details for a detailed quote within 24 hours.",
       },
     ],
     nearby: ["camberwell", "surrey-hills", "hawthorn", "glen-iris"],
@@ -538,13 +538,13 @@ export const locations: ReadonlyArray<Location> = [
     ],
     introHeading: "Heritage and Contemporary Masonry in Glen Iris",
     localContext: [
-      "Glen Iris sits between Camberwell and Malvern, with a mix of Federation and Edwardian brick homes, post-war character properties, and architect-designed renovations. Many older Glen Iris walls feature locally distinctive brick — including reclaimed Glen Iris frog-marked brick that David has sourced and laid on restoration projects.",
+      "Glen Iris sits between Camberwell and Malvern, with a mix of Federation and Edwardian brick homes, post-war character properties, and architect-designed renovations. Many older Glen Iris walls feature locally distinctive brick, including reclaimed Glen Iris frog-marked brick that David has sourced and laid on restoration projects.",
       "Whether your Glen Iris project is a heritage repair, a structural extension, or an architectural feature wall, David brings the same specialist approach: assess properly, match materials accurately, and build work that lasts.",
     ],
     services: [
       {
         title: "Heritage Restoration",
-        text: "Glen Iris blends Federation and Edwardian character homes with later additions. David restores original brickwork — including locally distinctive Glen Iris frog-marked brick — to match the home's era exactly.",
+        text: "Glen Iris blends Federation and Edwardian character homes with later additions. David restores original brickwork, including locally distinctive Glen Iris frog-marked brick, to match the home's era exactly.",
         image: {
           src: "/images/heritage-restoration/remedial/photo-2026-05-23-10-12-26-3.jpg",
           alt: "Reclaimed Glen Iris frog-marked brick laid into a restored heritage wall by Goodwin Bricklaying",
@@ -584,7 +584,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Architectural Masonry",
-        text: "For Glen Iris's contemporary renovations, David delivers architectural features — curved walls, decorative patterns, and bespoke brickwork that make a modern home stand out.",
+        text: "For Glen Iris's contemporary renovations, David delivers architectural features: curved walls, decorative patterns, and bespoke brickwork that make a modern home stand out.",
         image: {
           src: "/images/architectural-masonry/dental-pattern/goodwin-bricklaying-dental-brick-pattern-two-storey-contemporary-home-exterior.jpg",
           alt: "Decorative dentil brick pattern on a contemporary Glen Iris home by Goodwin Bricklaying",
@@ -628,12 +628,12 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Do you build retaining walls in Glen Iris?",
         answer:
-          "Yes. David builds brick and blockwork retaining walls for Glen Iris homeowners — from garden terraces and boundary walls to structural retaining required for extensions and sloping blocks. All work is engineered to specification and fully insured.",
+          "Yes. David builds brick and blockwork retaining walls for Glen Iris homeowners, from garden terraces and boundary walls to structural retaining required for extensions and sloping blocks. All work is engineered to specification and fully insured.",
       },
       {
         question: "Can you work on both heritage and modern homes in Glen Iris?",
         answer:
-          "Yes. Glen Iris projects range from Federation repointing and chimney restoration to contemporary architectural features and extension blockwork. David is a specialist comfortable across both — the standard of finish is the same regardless of the era.",
+          "Yes. Glen Iris projects range from Federation repointing and chimney restoration to contemporary architectural features and extension blockwork. David is a specialist comfortable across both, and the standard of finish is the same regardless of the era.",
       },
       {
         question: "Do you source matching brick for Glen Iris heritage repairs?",
@@ -643,7 +643,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "How far is Goodwin Bricklaying from Glen Iris?",
         answer:
-          "Goodwin Bricklaying is based in Camberwell, minutes from Glen Iris. David services Glen Iris regularly as part of his inner Melbourne coverage — approximately 40 minutes from base for surrounding suburbs.",
+          "Goodwin Bricklaying is based in Camberwell, minutes from Glen Iris. David services Glen Iris regularly as part of his inner Melbourne coverage, approximately 40 minutes from base for surrounding suburbs.",
       },
     ],
     nearby: ["camberwell", "toorak", "hawthorn", "canterbury"],
@@ -657,12 +657,12 @@ export const locations: ReadonlyArray<Location> = [
     headline: "Heritage Masonry and Bricklaying: Surrey Hills VIC",
     body: [
       "Surrey Hills is known for its Federation homes, period cottages, and leafy streets, and the brickwork that defines them needs an expert's care. Goodwin Bricklaying provides heritage repointing, remedial masonry, and restoration work for Surrey Hills homeowners who won't accept anything less than the original quality.",
-      "David understands the brick profiles, mortar styles, and construction details that make Federation and Edwardian homes in Surrey Hills distinctive — and he restores them accordingly.",
+      "David understands the brick profiles, mortar styles, and construction details that make Federation and Edwardian homes in Surrey Hills distinctive, and he restores them accordingly.",
     ],
     introHeading: "Federation and Edwardian Masonry in Surrey Hills",
     localContext: [
       "Surrey Hills' heritage streetscapes feature Federation villas with ornate brick detailing, Edwardian cottages, and front garden walls that frame tree-lined avenues. Many properties date to the early 1900s, and the original brickwork and tuck-pointed mortar joints are now a century old.",
-      "David provides repointing, tuck pointing, chimney restoration, and crack stitching for Surrey Hills homeowners who want their period homes maintained to the standard they deserve — not patched with mismatched mortar and modern shortcuts.",
+      "David provides repointing, tuck pointing, chimney restoration, and crack stitching for Surrey Hills homeowners who want their period homes maintained to the standard they deserve, not patched with mismatched mortar and modern shortcuts.",
     ],
     services: [
       {
@@ -748,7 +748,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "What is tuck pointing and do Surrey Hills homes need it?",
         answer:
-          "Tuck pointing is a fine pointing technique that creates crisp, uniform mortar joints on weathered brickwork — common on Victorian and Federation homes. Many Surrey Hills properties benefit from tuck pointing or specialist repointing when original mortar has deteriorated. David delivers this in collaboration with specialist subcontractors.",
+          "Tuck pointing is a fine pointing technique that creates crisp, uniform mortar joints on weathered brickwork, common on Victorian and Federation homes. Many Surrey Hills properties benefit from tuck pointing or specialist repointing when original mortar has deteriorated. David delivers this in collaboration with specialist subcontractors.",
       },
       {
         question: "Can you repair cracks in Surrey Hills brick walls?",
@@ -758,7 +758,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Do you service Surrey Hills from Camberwell?",
         answer:
-          "Yes. Surrey Hills is within Goodwin Bricklaying's core service area. David is based in Camberwell and works across Surrey Hills regularly — it is one of the nine suburbs served as a dedicated location.",
+          "Yes. Surrey Hills is within Goodwin Bricklaying's core service area. David is based in Camberwell and works across Surrey Hills regularly. It is one of the nine suburbs served as a dedicated location.",
       },
     ],
     nearby: ["canterbury", "camberwell", "hawthorn", "glen-iris"],
@@ -772,11 +772,11 @@ export const locations: ReadonlyArray<Location> = [
     headline: "Bricklayer and Heritage Masonry: Richmond VIC",
     body: [
       "Richmond's terrace rows and Victorian workers' cottages are some of Melbourne's most recognisable streetscapes. Keeping them at their best requires a bricklayer with real heritage expertise, not just someone who can mix mortar. David Goodwin has worked across Richmond on repointing, structural crack repair, chimney restoration, and heritage brickwork that blends perfectly with original fabric.",
-      "When a Richmond terrace needs work that respects its history, homeowners call a specialist — not a generalist.",
+      "When a Richmond terrace needs work that respects its history, homeowners call a specialist, not a generalist.",
     ],
     introHeading: "Victorian Terrace Restoration in Richmond",
     localContext: [
-      "Richmond's housing stock is dominated by single-fronted and double-fronted Victorian terraces, workers' cottages, and converted industrial buildings — much of it built in the late 1800s with red brick, lime mortar, and decorative detail that modern trades often struggle to replicate.",
+      "Richmond's housing stock is dominated by single-fronted and double-fronted Victorian terraces, workers' cottages, and converted industrial buildings, much of it built in the late 1800s with red brick, lime mortar, and decorative detail that modern trades often struggle to replicate.",
       "David has repointed Richmond facades, restored chimney stacks, and completed structural repairs on terrace party walls where the original construction demands careful handling. His work preserves the streetscape character that makes Richmond one of Melbourne's most sought-after suburbs.",
     ],
     services: [
@@ -790,7 +790,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Victorian Terrace Restoration",
-        text: "Single and double-fronted terraces dominate Richmond's streets. David restores their original brickwork — facades, party walls, and decorative detail — to blend perfectly with the surviving fabric.",
+        text: "Single and double-fronted terraces dominate Richmond's streets. David restores their original brickwork, including facades, party walls, and decorative detail, to blend perfectly with the surviving fabric.",
         image: {
           src: "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-35-1.jpg",
           alt: "Structural heritage brickwork during a Richmond Victorian terrace restoration by Goodwin Bricklaying",
@@ -858,12 +858,12 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Do you restore Victorian terraces in Richmond?",
         answer:
-          "Yes. Victorian terrace restoration is one of David's core specialisations. He has worked across Richmond on repointing, chimney repairs, party wall stabilisation, and facade restoration — always matching original brick and mortar profiles.",
+          "Yes. Victorian terrace restoration is one of David's core specialisations. He has worked across Richmond on repointing, chimney repairs, party wall stabilisation, and facade restoration, always matching original brick and mortar profiles.",
       },
       {
         question: "Can you repoint the front facade of a Richmond terrace?",
         answer:
-          "Yes. Facade repointing is one of the most common Richmond projects. David rakes out failed mortar, matches the original joint profile — whether flush, struck, or tuck pointed — and uses materials appropriate to the building's age. The result should be invisible.",
+          "Yes. Facade repointing is one of the most common Richmond projects. David rakes out failed mortar, matches the original joint profile, whether flush, struck, or tuck pointed, and uses materials appropriate to the building's age. The result should be invisible.",
       },
       {
         question: "Do you repair chimney stacks on Richmond terraces?",
@@ -892,12 +892,12 @@ export const locations: ReadonlyArray<Location> = [
     introHeading: "Architectural and Heritage Masonry in Fitzroy",
     localContext: [
       "Fitzroy's built environment spans 1860s brick walls, Victorian terraces, industrial warehouses, and cutting-edge contemporary architecture. The suburb demands a bricklayer who can restore a 150-year-old boundary wall one week and build a sweeping brick arch tunnel the next.",
-      "David's landmark Cairo Flats heritage wall project on Hanover Street — opposite the Royal Exhibition Building — is one of Melbourne's most significant recent heritage masonry restorations. It represents the standard of work Fitzroy properties deserve.",
+      "David's landmark Cairo Flats heritage wall project on Hanover Street, opposite the Royal Exhibition Building, is one of Melbourne's most significant recent heritage masonry restorations. It represents the standard of work Fitzroy properties deserve.",
     ],
     services: [
       {
         title: "Heritage Restoration & Repointing",
-        text: "Fitzroy's brickwork ranges from 1860s boundary walls to Victorian terraces. David's landmark Cairo Flats wall restoration on Hanover Street shows the standard — careful deconstruction, new footings, and brick-by-brick reconstruction under heritage guidance.",
+        text: "Fitzroy's brickwork ranges from 1860s boundary walls to Victorian terraces. David's landmark Cairo Flats wall restoration on Hanover Street shows the standard: careful deconstruction, new footings, and brick-by-brick reconstruction under heritage guidance.",
         image: {
           src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26-1.jpg",
           alt: "Restored heritage boundary wall at the Cairo flats on Hanover Street, Fitzroy by Goodwin Bricklaying",
@@ -905,7 +905,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Architectural Brickwork",
-        text: "Fitzroy is where contemporary architecture meets old Melbourne. David builds bespoke architectural masonry — feature walls and structural detail — for the suburb's most design-led projects.",
+        text: "Fitzroy is where contemporary architecture meets old Melbourne. David builds bespoke architectural masonry, including feature walls and structural detail, for the suburb's most design-led projects.",
         image: {
           src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-32.jpg",
           alt: "Architectural vaulted brick ceiling detail in Fitzroy by Goodwin Bricklaying",
@@ -929,7 +929,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Structural Masonry",
-        text: "From reconstructed heritage walls to new structural brickwork, David delivers Fitzroy masonry that is engineered to last — properly footed, drained, and built to specification.",
+        text: "From reconstructed heritage walls to new structural brickwork, David delivers Fitzroy masonry that is engineered to last: properly footed, drained, and built to specification.",
         image: {
           src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-25.jpg",
           alt: "Structural heritage brick wall reconstruction in progress at the Cairo flats, Fitzroy by Goodwin Bricklaying",
@@ -973,12 +973,12 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "Did Goodwin Bricklaying restore the Cairo Flats heritage wall in Fitzroy?",
         answer:
-          "Yes. David Goodwin led the heritage reconstruction of the 150-year-old brick boundary wall on Hanover Street at the Cairo flats in Fitzroy — opposite the Royal Exhibition Building. The wall was carefully deconstructed, given new footings and drainage, then historically reconstructed brick by brick over eight months.",
+          "Yes. David Goodwin led the heritage reconstruction of the 150-year-old brick boundary wall on Hanover Street at the Cairo flats in Fitzroy, opposite the Royal Exhibition Building. The wall was carefully deconstructed, given new footings and drainage, then historically reconstructed brick by brick over eight months.",
       },
       {
         question: "Can you build brick arches and tunnels in Fitzroy?",
         answer:
-          "Yes. Architectural brickwork — including barrel-vaulted tunnels, arches, and vaulted ceilings — is a signature of Goodwin Bricklaying. David has completed landmark architectural masonry in Fitzroy that demonstrates the full range of structural brick craft.",
+          "Yes. Architectural brickwork, including barrel-vaulted tunnels, arches, and vaulted ceilings, is a signature of Goodwin Bricklaying. David has completed landmark architectural masonry in Fitzroy that demonstrates the full range of structural brick craft.",
       },
       {
         question: "Do you work on heritage-listed buildings in Fitzroy?",
@@ -988,7 +988,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "What services does a bricklayer offer in Fitzroy?",
         answer:
-          "Goodwin Bricklaying offers heritage restoration, repointing, architectural masonry, brick tunnels and arches, chimney restoration, and structural masonry across Fitzroy. David is a specialist with 25 years experience — not a general bricklaying contractor.",
+          "Goodwin Bricklaying offers heritage restoration, repointing, architectural masonry, brick tunnels and arches, chimney restoration, and structural masonry across Fitzroy. David is a specialist with 25 years experience, not a general bricklaying contractor.",
       },
     ],
     nearby: ["richmond", "hawthorn", "camberwell", "toorak"],
@@ -1006,7 +1006,7 @@ export const locations: ReadonlyArray<Location> = [
     ],
     introHeading: "Luxury Period Home Masonry in Hawksburn",
     localContext: [
-      "Hawksburn Village and the surrounding streets feature substantial brick homes built in the early 1900s — many with original chimneys, tuck-pointed facades, and garden walls that require ongoing specialist maintenance. These are not properties where average trades work suffices.",
+      "Hawksburn Village and the surrounding streets feature substantial brick homes built in the early 1900s, many with original chimneys, tuck-pointed facades, and garden walls that require ongoing specialist maintenance. These are not properties where average trades work suffices.",
       "David provides heritage repointing, chimney restoration, tuck pointing, and luxury residential masonry for Hawksburn homeowners who expect precision, discretion, and a finish that honours the architecture.",
     ],
     services: [
@@ -1036,7 +1036,7 @@ export const locations: ReadonlyArray<Location> = [
       },
       {
         title: "Luxury Residential Masonry",
-        text: "Adjacent to Toorak, Hawksburn properties expect the highest standard. David delivers premium residential masonry — feature brickwork and vaulted detailing — for the suburb's finest homes.",
+        text: "Adjacent to Toorak, Hawksburn properties expect the highest standard. David delivers premium residential masonry, including feature brickwork and vaulted detailing, for the suburb's finest homes.",
         image: {
           src: "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-43.jpg",
           alt: "Hand-laid brick vaulted ceiling for a luxury Hawksburn renovation by Goodwin Bricklaying",
@@ -1103,7 +1103,7 @@ export const locations: ReadonlyArray<Location> = [
       {
         question: "What makes Goodwin Bricklaying different for Hawksburn homeowners?",
         answer:
-          "David is a specialist heritage and architectural bricklayer with 25 years experience — not a volume contractor. Hawksburn homeowners get direct access to the tradesman, detailed quotes with construction specifics, and work built to a standard that matches the suburb's architecture.",
+          "David is a specialist heritage and architectural bricklayer with 25 years experience, not a volume contractor. Hawksburn homeowners get direct access to the tradesman, detailed quotes with construction specifics, and work built to a standard that matches the suburb's architecture.",
       },
     ],
     nearby: ["toorak", "richmond", "hawthorn", "camberwell"],

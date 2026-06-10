@@ -9,8 +9,8 @@ import { CONSENT_EVENT, hasAnalyticsConsent } from "@/lib/consent";
  *
  * Inert until a measurement ID is provided via NEXT_PUBLIC_GA_ID, and only
  * loads gtag.js once the visitor has granted analytics consent. It listens for
- * the consent event so tracking begins immediately after acceptance — no reload
- * required — and stays off entirely if consent is declined.
+ * the consent event so tracking begins immediately after acceptance (no reload
+ * required) and stays off entirely if consent is declined.
  */
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 

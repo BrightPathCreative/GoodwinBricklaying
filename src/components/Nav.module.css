@@ -450,7 +450,7 @@
     background-color: var(--color-heritage);
     border-bottom-color: rgba(245, 241, 236, 0.12);
     /* The scrolled state adds backdrop-filter, which turns the fixed header
-       into a containing block for the fixed overlay below — collapsing it to
+       into a containing block for the fixed overlay below, collapsing it to
        the height of the bar so the menu appears empty. Drop it while open so
        the overlay is positioned against the viewport again. */
     -webkit-backdrop-filter: none;

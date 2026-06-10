@@ -1,6 +1,6 @@
 /**
  * Central site configuration for Goodwin Bricklaying.
- * Business facts sourced from docs/brief.md — do not invent or alter.
+ * Business facts sourced from docs/brief.md. Do not invent or alter.
  */
 
 export const site = {
@@ -8,7 +8,7 @@ export const site = {
   legalName: "Goodwin Brick Block & Heritage",
   abn: "87 434 328 744",
   url: "https://goodwinbricklaying.com.au",
-  // Email intentionally not published — enquiries route through the GHL form
+  // Email intentionally not published; enquiries route through the GHL form
   // and click-to-call only.
   // GHL CRM tracking number. `phone` is the E.164 value used for structured
   // data; `phoneHref` is the tel: link behind every "Click to Call" CTA.
@@ -19,7 +19,7 @@ export const site = {
     handle: "@goodwinbrickblockandheritage",
     url: "https://www.instagram.com/goodwinbrickblockandheritage",
   },
-  // Street address intentionally withheld — private. Service-area business;
+  // Street address intentionally withheld and private. Service-area business;
   // only the base suburb/state are referenced publicly.
   address: {
     locality: "Camberwell",
@@ -35,7 +35,7 @@ export const site = {
   },
 } as const;
 
-/** Service pages — used by the header dropdown and footer site map. */
+/** Service pages, used by the header dropdown and footer site map. */
 export const serviceNav: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Heritage & Restoration", href: "/services/heritage-restoration" },
   { label: "Architectural Masonry", href: "/services/architectural-masonry" },
@@ -64,7 +64,7 @@ export const primaryNav: ReadonlyArray<NavItem> = [
 /** Primary call-to-action in the header (and mobile menu). */
 export const navCta = { label: "Get a Quote", href: "/contact" } as const;
 
-/** Suburbs served — used in footer and location pages. */
+/** Suburbs served, used in footer and location pages. */
 export const locationNav: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Camberwell", href: "/locations/camberwell" },
   { label: "Hawthorn", href: "/locations/hawthorn" },

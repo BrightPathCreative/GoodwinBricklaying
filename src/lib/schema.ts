@@ -2,10 +2,10 @@ import { site } from "./site";
 
 /**
  * Structured-data builders. Values are sourced from docs/seo.md and
- * docs/brief.md — do not invent claims (e.g. never assert licensed builder).
+ * docs/brief.md. Do not invent claims (e.g. never assert licensed builder).
  */
 
-/** LocalBusiness + HomeAndConstructionBusiness — homepage only. */
+/** LocalBusiness + HomeAndConstructionBusiness, homepage only. */
 export function localBusinessSchema(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
@@ -15,7 +15,7 @@ export function localBusinessSchema(): Record<string, unknown> {
     description:
       "Luxury masonry, heritage restoration, and architectural brickwork specialists serving inner Melbourne. 25 years experience.",
     url: site.url,
-    // GHL CRM tracking number. Email omitted intentionally — enquiries route
+    // GHL CRM tracking number. Email omitted intentionally; enquiries route
     // through the GHL form / click-to-call.
     telephone: site.phone,
     image: `${site.url}/og/og-default.jpg`,
@@ -58,7 +58,7 @@ export function localBusinessSchema(): Record<string, unknown> {
 
 export type FaqItem = { question: string; answer: string };
 
-/** FAQPage — for any page that renders FAQ content. */
+/** FAQPage, for any page that renders FAQ content. */
 export function faqPageSchema(items: ReadonlyArray<FaqItem>): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
@@ -74,7 +74,7 @@ export function faqPageSchema(items: ReadonlyArray<FaqItem>): Record<string, unk
   };
 }
 
-/** WebPage + Service scoped to a single suburb — location landing pages. */
+/** WebPage + Service scoped to a single suburb, location landing pages. */
 export function locationPageSchema(location: {
   name: string;
   slug: string;
@@ -118,7 +118,7 @@ export function locationPageSchema(location: {
 
 export type Crumb = { name: string; url?: string };
 
-/** BreadcrumbList — for inner pages (not the homepage). */
+/** BreadcrumbList, for inner pages (not the homepage). */
 export function breadcrumbSchema(crumbs: ReadonlyArray<Crumb>): Record<string, unknown> {
   return {
     "@context": "https://schema.org",

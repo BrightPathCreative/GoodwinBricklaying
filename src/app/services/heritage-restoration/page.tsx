@@ -265,7 +265,7 @@ export default function HeritageRestorationPage() {
 
       <ServiceCtaBand
         heading="Get an honest assessment of your heritage property"
-        body="David provides detailed quotes with full construction specifics — no obligation, no sales pressure."
+        body="David provides detailed quotes with full construction specifics, with no obligation and no sales pressure."
       />
 
       <section className="section section--cream" aria-labelledby="heritage-reviews">

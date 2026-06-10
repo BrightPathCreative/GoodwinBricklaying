@@ -24,7 +24,7 @@ export const metadata: Metadata = buildMetadata({
 const nextSteps = [
   {
     title: "David reviews your enquiry",
-    body: "Every enquiry is read personally — not passed to a call centre or sales team.",
+    body: "Every enquiry is read personally, not passed to a call centre or sales team.",
   },
   {
     title: "He's in touch within 24 hours",

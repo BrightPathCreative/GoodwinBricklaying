@@ -224,7 +224,7 @@ export default function ArchitecturalMasonryPage() {
 
       <ServiceCtaBand
         heading="Planning an architectural masonry feature?"
-        body="From a single arch to a vaulted ceiling — David works from your drawings or collaborates on the design."
+        body="From a single arch to a vaulted ceiling, David works from your drawings or collaborates on the design."
       />
 
       <section className="section section--cream" aria-labelledby="arch-highlight">

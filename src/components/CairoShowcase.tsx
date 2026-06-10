@@ -36,13 +36,13 @@ const chapters: Chapter[] = [
           src: `${base}/photo-2026-05-23-10-34-22.jpg`,
           alt: "Close detail of the original handmade brick and weathered lime mortar on the Cairo flats heritage wall before restoration",
           caption:
-            "The original wall — handmade brick and lime mortar, weathered by more than 150 Fitzroy winters.",
+            "The original wall, handmade brick and lime mortar, weathered by more than 150 Fitzroy winters.",
         },
         {
           src: `${base}/photo-2026-05-23-10-34-23.jpg`,
           alt: "The base of the original Cairo flats wall during careful deconstruction, with the corbelled course lifted and reinforcement exposed",
           caption:
-            "Careful deconstruction — each course recorded, the original bricks set aside for reuse.",
+            "Careful deconstruction, with each course recorded and the original bricks set aside for reuse.",
         },
       ],
     ],
@@ -62,7 +62,7 @@ const chapters: Chapter[] = [
         {
           src: `${base}/photo-2026-05-23-10-34-24-1.jpg`,
           alt: "A reclaimed-brick pier being rebuilt by hand with stainless ties on the Cairo flats heritage wall",
-          caption: "Rebuilding a pier by hand — tied, plumbed and levelled.",
+          caption: "Rebuilding a pier by hand, tied, plumbed and levelled.",
         },
         {
           src: `${base}/photo-2026-05-23-10-34-25-2.jpg`,
@@ -95,7 +95,7 @@ const chapters: Chapter[] = [
         {
           src: `${base}/photo-2026-05-23-10-34-27-2.jpg`,
           alt: "The finished elevation of the Cairo flats heritage wall, reclaimed brick relaid to the original bond and colour",
-          caption: "The finished elevation — reclaimed brick relaid to the original bond.",
+          caption: "The finished elevation, reclaimed brick relaid to the original bond.",
         },
         {
           src: `${base}/photo-2026-05-23-10-34-26-2.jpg`,
@@ -122,7 +122,7 @@ const chapters: Chapter[] = [
         {
           src: `${base}/photo-2026-05-23-10-34-25-1.jpg`,
           alt: "A dragonfly resting on the new brickwork of the restored Cairo flats heritage wall, Fitzroy",
-          caption: "A dragonfly settles on the new brickwork — the wall alive in its setting again.",
+          caption: "A dragonfly settles on the new brickwork, the wall alive in its setting again.",
         },
       ],
     ],
@@ -148,7 +148,7 @@ function Figure({ image, sizes }: { image: ShowcaseImage; sizes: string }) {
 }
 
 /**
- * Editorial photo essay for the Cairo Flats heritage wall — a full-bleed lead
+ * Editorial photo essay for the Cairo Flats heritage wall: a full-bleed lead
  * image followed by chaptered before / work / finished rows. Captions tell the
  * eight-month restoration story.
  */

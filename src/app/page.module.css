@@ -60,7 +60,7 @@
   padding-block: var(--section-padding);
 }
 
-/* On small screens the text spans the width — darken vertically instead. */
+/* On small screens the text spans the width, so darken vertically instead. */
 @media (max-width: 768px) {
   .hero::before {
     background: linear-gradient(
@@ -105,9 +105,9 @@
   animation: slideUpFade 900ms var(--ease-reveal) 700ms both;
 }
 
-/* Headline hierarchy — strictly brand palette.
+/* Headline hierarchy, strictly brand palette.
    Line 1: TAN Twinkle display font, capitalised, warm cream.
-   Lines 2–3: Montserrat (brand secondary heading), capitalised; brand gold
+   Lines 2 to 3: Montserrat (brand secondary heading), capitalised; brand gold
    accent on line 2, cream on line 3. */
 .heroLineOne {
   display: block;
@@ -457,7 +457,7 @@
   color: var(--color-text-light);
 }
 
-/* Clay eyebrows would disappear on the brown surface — go cream here. */
+/* Clay eyebrows would disappear on the brown surface, so go cream here. */
 .why .sectionEyebrow,
 .cta .sectionEyebrow {
   color: var(--color-cream);

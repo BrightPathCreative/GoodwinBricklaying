@@ -63,7 +63,7 @@ export function PageHero({
           priority
         />
       ) : null}
-      {/* Breadcrumb kept as invisible structured data only — the visible
+      {/* Breadcrumb kept as invisible structured data only; the visible
           trail was removed for a cleaner, more editorial hero. */}
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <div className={`container ${styles.inner}`}>

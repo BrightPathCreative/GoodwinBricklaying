@@ -46,7 +46,7 @@ export default function LocationsIndexPage() {
               >
                 <span>
                   {location.name}
-                  <span className={styles.locationBlurb}> — {location.metaDescription}</span>
+                  <span className={styles.locationBlurb}>: {location.metaDescription}</span>
                 </span>
                 <span className={styles.linkArrow} aria-hidden="true">
                   &rarr;
@@ -59,7 +59,7 @@ export default function LocationsIndexPage() {
 
       <EnquiryCta
         heading="Not Sure Which Page to Read?"
-        body="David services inner Melbourne within approximately 40 minutes of Camberwell. Enquire with your suburb and project details — he responds within 24 hours."
+        body="David services inner Melbourne within approximately 40 minutes of Camberwell. Enquire with your suburb and project details, and he responds within 24 hours."
         buttonLabel="Get a Quote"
       />
     </>
