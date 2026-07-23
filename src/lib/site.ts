@@ -12,9 +12,9 @@ export const site = {
   // and click-to-call only.
   // GHL CRM tracking number. `phone` is the E.164 value used for structured
   // data; `phoneHref` is the tel: link behind every "Click to Call" CTA.
-  phone: "+61410558465",
+  phone: "+61489262279",
   phoneLabel: "Click to Call",
-  phoneHref: "tel:+61410558465",
+  phoneHref: "tel:+61489262279",
   instagram: {
     handle: "@goodwinbrickblockandheritage",
     url: "https://www.instagram.com/goodwinbrickblockandheritage",
