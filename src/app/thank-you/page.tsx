@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { LeadTracking } from "@/components/LeadTracking";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -39,6 +40,7 @@ const nextSteps = [
 export default function ThankYouPage() {
   return (
     <>
+      <LeadTracking />
       <PageHero
         eyebrow="Enquiry Received"
         title="Thank You. Your Enquiry Is On Its Way."
