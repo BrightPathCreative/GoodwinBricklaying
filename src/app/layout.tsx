@@ -7,7 +7,10 @@ import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Analytics } from "@/components/Analytics";
+import { GoogleTagManager } from "@/components/GoogleTagManager";
+import { CallTracking } from "@/components/CallTracking";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { GTM_ID } from "@/lib/gtm";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -90,6 +93,18 @@ export default function RootLayout({
         </noscript>
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        {GTM_ID ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        ) : null}
+        {/* End Google Tag Manager (noscript) */}
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
@@ -99,6 +114,8 @@ export default function RootLayout({
         <BackToTop />
         <CookieConsent />
         <Analytics />
+        <GoogleTagManager />
+        <CallTracking />
         <VercelAnalytics />
       </body>
     </html>
