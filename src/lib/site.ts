@@ -7,7 +7,9 @@ export const site = {
   name: "Goodwin Bricklaying",
   legalName: "Goodwin Brick Block & Heritage",
   abn: "87 434 328 744",
-  url: "https://goodwinbricklaying.com.au",
+  // Must match the canonical host Vercel serves: the apex 307-redirects to
+  // www, so canonicals, the sitemap, and JSON-LD all have to say www.
+  url: "https://www.goodwinbricklaying.com.au",
   // Email intentionally not published; enquiries route through the GHL form
   // and click-to-call only.
   // GHL CRM tracking number. `phone` is the E.164 value used for structured
