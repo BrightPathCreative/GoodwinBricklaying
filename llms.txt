@@ -15,9 +15,9 @@
 
 ## Service Pages
 
-- [Heritage & Restoration](https://goodwinbricklaying.com.au/services/heritage-restoration): Heritage brickwork, repointing, crack stitching, remedial masonry. Specialist in period homes across inner Melbourne.
-- [Architectural Masonry](https://goodwinbricklaying.com.au/services/architectural-masonry): Vaulted ceilings, arches, brick tunnels, bespoke architectural features. Trusted by Melbourne architects.
-- [Chimneys & Fireplaces](https://goodwinbricklaying.com.au/services/chimneys-fireplaces): Chimney stack construction and restoration, heritage fireplaces, pizza ovens. Landmark projects include Highett Gasworks and Old Licorice Factory Brunswick.
+- [Heritage & Restoration](https://goodwinbricklaying.com.au/services/heritage): Heritage brickwork, repointing, crack stitching, remedial masonry. Specialist in period homes across inner Melbourne.
+- [Architectural Masonry](https://goodwinbricklaying.com.au/services/architectural): Vaulted ceilings, arches, brick tunnels, bespoke architectural features. Trusted by Melbourne architects.
+- [Chimneys & Fireplaces](https://goodwinbricklaying.com.au/services/chimneys): Chimney stack construction and restoration, heritage fireplaces, pizza ovens. Landmark projects include Highett Gasworks and Old Licorice Factory Brunswick.
 - [Structural & Commercial](https://goodwinbricklaying.com.au/services/structural-commercial): Blockwork, retaining walls, extensions, commercial masonry for builders and developers.
 - [Tuck Pointing](https://goodwinbricklaying.com.au/services/tuck-pointing): Period-accurate tuck pointing for Victorian and Edwardian homes across Melbourne.
 
@@ -52,6 +52,6 @@
 
 ## Optional: Full Content
 
-- [Heritage & Restoration, full page](https://goodwinbricklaying.com.au/services/heritage-restoration)
-- [Architectural Masonry, full page](https://goodwinbricklaying.com.au/services/architectural-masonry)
+- [Heritage & Restoration, full page](https://goodwinbricklaying.com.au/services/heritage)
+- [Architectural Masonry, full page](https://goodwinbricklaying.com.au/services/architectural)
 - [About David Goodwin, full page](https://goodwinbricklaying.com.au/about)

@@ -37,9 +37,9 @@ export const site = {
 
 /** Service pages, used by the header dropdown and footer site map. */
 export const serviceNav: ReadonlyArray<{ label: string; href: string }> = [
-  { label: "Heritage & Restoration", href: "/services/heritage-restoration" },
-  { label: "Architectural Masonry", href: "/services/architectural-masonry" },
-  { label: "Chimneys & Fireplaces", href: "/services/chimneys-fireplaces" },
+  { label: "Heritage & Restoration", href: "/services/heritage" },
+  { label: "Architectural Masonry", href: "/services/architectural" },
+  { label: "Chimneys & Fireplaces", href: "/services/chimneys" },
   { label: "Structural & Commercial", href: "/services/structural-commercial" },
   { label: "Tuck Pointing", href: "/services/tuck-pointing" },
 ];

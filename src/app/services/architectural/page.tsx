@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
     "Architectural Masonry Melbourne | Vaulted Ceilings, Arches & Brick Tunnels",
   description:
     "Bespoke architectural masonry including vaulted ceilings, arches, and brick tunnels. Trusted by Melbourne architects and premium builders. 25 years of specialist experience.",
-  path: "/services/architectural-masonry",
+  path: "/services/architectural",
   ogTitle: "Architectural Masonry Melbourne | Vaulted Ceilings & Arches",
   ogDescription:
     "Bespoke architectural masonry trusted by Melbourne architects. 25 years experience.",

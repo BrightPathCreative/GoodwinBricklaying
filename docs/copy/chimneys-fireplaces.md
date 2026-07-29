@@ -1,5 +1,5 @@
 # Page: Chimneys & Fireplaces
-**URL:** goodwinbricklaying.com.au/services/chimneys-fireplaces
+**URL:** goodwinbricklaying.com.au/services/chimneys
 **Meta title:** Chimney Stack Construction & Restoration Melbourne | Goodwin Bricklaying
 **Meta description:** Specialist chimney stack construction and heritage restoration across Melbourne. From residential fireplaces to 40-metre commercial stacks. Fully insured. 25 years experience.
 

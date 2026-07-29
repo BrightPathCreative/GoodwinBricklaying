@@ -1,5 +1,5 @@
 # Page: Heritage & Restoration
-**URL:** goodwinbricklaying.com.au/services/heritage-restoration
+**URL:** goodwinbricklaying.com.au/services/heritage
 **Meta title:** Heritage Brickwork & Restoration Melbourne | Goodwin Bricklaying
 **Meta description:** Specialist heritage brickwork, repointing, crack stitching, and masonry restoration for Melbourne's finest period homes. Camberwell, Hawthorn, Canterbury, Toorak, and surrounding suburbs.
 

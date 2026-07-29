@@ -14,7 +14,7 @@ const services = [
   {
     title: "Heritage & Restoration",
     text: "Repointing, crack stitching, heritage brickwork, and remedial work that honours the original.",
-    href: "/services/heritage-restoration",
+    href: "/services/heritage",
     image:
       "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
     alt: "Restored heritage garden wall in Fitzroy rebuilt by Goodwin Bricklaying using reclaimed brick",
@@ -22,7 +22,7 @@ const services = [
   {
     title: "Architectural Masonry",
     text: "Vaulted ceilings, arches, brick tunnels, and bespoke masonry for architects and high-end builders.",
-    href: "/services/architectural-masonry",
+    href: "/services/architectural",
     image:
       "/images/architectural-masonry/prahran-park/goodwin-bricklaying-architectural-curved-brick-retaining-wall-prahran-council-park-completed.jpg",
     alt: "Curved architectural brick retaining wall built by Goodwin Bricklaying in a Prahran council park",
@@ -30,7 +30,7 @@ const services = [
   {
     title: "Chimneys & Fireplaces",
     text: "Chimney stacks, heritage fireplace restoration, and handcrafted pizza ovens.",
-    href: "/services/chimneys-fireplaces",
+    href: "/services/chimneys",
     image:
       "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-40-metre-chimney-stack-full-height-ground-view.jpg",
     alt: "Forty-metre heritage brick chimney stack in Collingwood restored by Goodwin Bricklaying",

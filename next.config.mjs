@@ -5,7 +5,26 @@ const nextConfig = {
     formats: ["image/webp"],
   },
   async redirects() {
-    return [];
+    return [
+      // Service slugs shortened so the Google Ads display path fits the
+      // 15-character limit. The old URLs were indexed, so these must stay
+      // permanently.
+      {
+        source: "/services/heritage-restoration",
+        destination: "/services/heritage",
+        permanent: true,
+      },
+      {
+        source: "/services/chimneys-fireplaces",
+        destination: "/services/chimneys",
+        permanent: true,
+      },
+      {
+        source: "/services/architectural-masonry",
+        destination: "/services/architectural",
+        permanent: true,
+      },
+    ];
   },
 };
 

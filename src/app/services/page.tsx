@@ -21,7 +21,7 @@ const services = [
   {
     title: "Heritage & Restoration",
     text: "Melbourne's older homes and buildings deserve more than a patch job. David specialises in heritage brickwork, repointing, crack stitching, and remedial work that blends seamlessly with original construction.",
-    href: "/services/heritage-restoration",
+    href: "/services/heritage",
     image:
       "/images/heritage-restoration/renovation/photo-2026-05-23-10-19-34.jpg",
     alt: "Heritage home renovation brickwork matched to the original by Goodwin Bricklaying",
@@ -29,7 +29,7 @@ const services = [
   {
     title: "Architectural Masonry",
     text: "Vaulted ceilings, arches, brick tunnels, and bespoke architectural masonry for architects, designers, and high-end residential builds. Work that makes a statement and lasts generations.",
-    href: "/services/architectural-masonry",
+    href: "/services/architectural",
     image:
       "/images/architectural-masonry/vaulted-ceiling-fitzroy/photo-2026-05-23-09-56-44.jpg",
     alt: "Hand-laid brick vaulted ceiling in a Fitzroy residence by Goodwin Bricklaying",
@@ -37,7 +37,7 @@ const services = [
   {
     title: "Chimneys & Fireplaces",
     text: "Chimney stack construction and restoration, heritage fireplace work, and handcrafted pizza ovens. Precise structural masonry with a craftsman's eye for detail.",
-    href: "/services/chimneys-fireplaces",
+    href: "/services/chimneys",
     image:
       "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-27-metre-heritage-landmark-1938.jpg",
     alt: "27-metre 1938 Highett Gasworks heritage chimney landmark by Goodwin Bricklaying",

@@ -7,9 +7,9 @@ goodwinbricklaying.com.au/
 ├── /                                    → Home
 ├── /about                               → About / Our Story
 ├── /services                            → Services Overview
-│   ├── /services/heritage-restoration   → Heritage & Restoration
-│   ├── /services/architectural-masonry  → Architectural Masonry
-│   ├── /services/chimneys-fireplaces    → Chimneys & Fireplaces
+│   ├── /services/heritage               → Heritage & Restoration
+│   ├── /services/architectural          → Architectural Masonry
+│   ├── /services/chimneys               → Chimneys & Fireplaces
 │   ├── /services/structural-commercial  → Structural & Commercial
 │   └── /services/tuck-pointing          → Tuck Pointing
 ├── /projects                            → Gallery / Portfolio

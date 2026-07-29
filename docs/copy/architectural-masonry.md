@@ -1,5 +1,5 @@
 # Page: Architectural Masonry
-**URL:** goodwinbricklaying.com.au/services/architectural-masonry
+**URL:** goodwinbricklaying.com.au/services/architectural
 **Meta title:** Architectural Masonry Melbourne | Vaulted Ceilings, Arches & Brick Tunnels
 **Meta description:** Bespoke architectural masonry including vaulted ceilings, arches, and brick tunnels. Trusted by Melbourne architects and premium builders. 25 years of specialist experience.
 
