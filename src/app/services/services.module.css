@@ -220,3 +220,168 @@
     column-gap: 4rem;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Service page intro: copy beside a single large photograph
+   -------------------------------------------------------------------------- */
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.introFigure {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.introImage {
+  object-fit: cover;
+  filter: var(--image-treatment);
+  transition: transform 700ms var(--ease-luxury);
+}
+
+.introFigure:hover .introImage {
+  transform: scale(1.04);
+}
+
+@media (min-width: 900px) {
+  .introGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Headline service given a full photograph, with the shorter services
+   listed beneath it as text. Used where only the lead service has imagery.
+   -------------------------------------------------------------------------- */
+
+.leadService {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.leadServiceFigure {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.leadServiceImage {
+  object-fit: cover;
+  filter: var(--image-treatment);
+  transition: transform 700ms var(--ease-luxury);
+}
+
+.leadServiceFigure:hover .leadServiceImage {
+  transform: scale(1.04);
+}
+
+.leadServiceTitle {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  color: var(--color-cream);
+  margin-bottom: 0.9rem;
+}
+
+.leadServiceText {
+  color: var(--color-cream);
+  opacity: 0.85;
+  max-width: 46ch;
+  font-size: 1.05rem;
+}
+
+@media (min-width: 860px) {
+  .leadService {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 5vw, 4rem);
+  }
+}
+
+.minorServices {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 3rem;
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.minorService {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(245, 241, 236, 0.22);
+}
+
+.minorServiceTitle {
+  font-size: 1.15rem;
+  color: var(--color-cream);
+  margin-bottom: 0.55rem;
+}
+
+.minorServiceText {
+  color: var(--color-cream);
+  opacity: 0.8;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 760px) {
+  .minorServices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Landmark project intro: the story beside its lead photograph
+   -------------------------------------------------------------------------- */
+
+.projectIntro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.projectFigureWrap {
+  margin: 0;
+}
+
+.projectFigure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.projectImage {
+  object-fit: cover;
+  filter: var(--image-treatment);
+}
+
+.projectCaption {
+  margin-top: 0.9rem;
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-stone);
+}
+
+@media (min-width: 960px) {
+  .projectIntro {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .projectFigureWrap {
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+  }
+}

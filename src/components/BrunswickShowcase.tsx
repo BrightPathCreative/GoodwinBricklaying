@@ -14,14 +14,6 @@ const base = "/images/chimneys-fireplaces/brunswick-licorice-factory";
 const team = "/images/team";
 const prefix = `${base}/goodwin-bricklaying-brunswick-licorice-factory-chimney`;
 
-const lead: ShowcaseImage = {
-  src: `${prefix}-restored-stack-over-brunswick-rooftops.jpg`,
-  alt: "The restored octagonal brick chimney of the Old Licorice Factory standing over the Brunswick rooftops, rebuilt by Goodwin Bricklaying",
-  caption:
-    "The Old Licorice Factory stack, back over the Brunswick rooftops with its crown rebuilt.",
-  position: "center 45%",
-};
-
 type Chapter = {
   label: string;
   title: string;
@@ -183,29 +175,13 @@ function Figure({ image, sizes }: { image: ShowcaseImage; sizes: string }) {
 
 /**
  * Editorial photo essay for the Old Licorice Factory chimney in Brunswick.
- * Shares the Cairo showcase layout: a full-bleed lead image, then chaptered
- * rows working from the scaffold deck down to the finished stack.
+ * Chaptered rows working from the failing crown, up to the scaffold deck, and
+ * back out to the finished stack. The lead photograph sits with the project
+ * story above this, so the essay opens straight into its first chapter.
  */
 export function BrunswickShowcase() {
   return (
     <div className={styles.showcase}>
-      <Reveal variant="up" className={styles.lead}>
-        <figure className={styles.figure}>
-          <div className={`${styles.leadFrame} image-shape`}>
-            <Image
-              src={lead.src}
-              alt={lead.alt}
-              fill
-              priority={false}
-              sizes="(min-width: 1100px) 1040px, 100vw"
-              className={styles.image}
-              style={lead.position ? { objectPosition: lead.position } : undefined}
-            />
-          </div>
-          <figcaption className={styles.caption}>{lead.caption}</figcaption>
-        </figure>
-      </Reveal>
-
       {chapters.map((chapter) => (
         <div key={chapter.title} className={styles.chapter}>
           <Reveal variant="up" className={styles.chapterHead}>

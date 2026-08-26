@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
@@ -24,15 +24,16 @@ export const metadata: Metadata = buildMetadata({
     "Specialist chimney work from residential stacks to 40-metre commercial builds.",
 });
 
-const chimneyServices = [
-  {
-    title: "Chimney Stack Construction and Restoration",
-    text: "New chimney stack construction and full heritage restoration, from domestic residential stacks to large-scale commercial and industrial chimneys.",
-    image: {
-      src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-completed-restoration-red-brick.jpg",
-      alt: "Completed red-brick restoration of the heritage Highett Gasworks chimney stack by Goodwin Bricklaying",
-    },
+const leadService = {
+  title: "Chimney Stack Construction and Restoration",
+  text: "New chimney stack construction and full heritage restoration, from domestic residential stacks to large-scale commercial and industrial chimneys. Structural, exposed, and often worked at height on live sites.",
+  image: {
+    src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-restored-crown-new-brickwork.jpg",
+    alt: "Restored crown with new brickwork on the heritage Highett Gasworks chimney by Goodwin Bricklaying",
   },
+};
+
+const minorServices = [
   {
     title: "Heritage Fireplace Restoration",
     text: "Repair, repointing, and restoration of heritage fireplaces, retaining original character while ensuring structural soundness and safety.",
@@ -151,24 +152,39 @@ export default function ChimneysFireplacesPage() {
       />
 
       <section className="section section--cream" aria-labelledby="chimney-intro">
-        <div className="container-narrow">
-          <Reveal as="h2" id="chimney-intro" className={styles.headingTight}>
-            The Detail Work Others Turn Down.
+        <div className={`container ${styles.introGrid}`}>
+          <Reveal variant="left">
+            <h2 id="chimney-intro" className={styles.headingTight}>
+              The Detail Work Others Turn Down.
+            </h2>
+            <div className={styles.lead}>
+              <p>
+                Chimney work at the level David operates is a specialist
+                discipline. It is structural, exposed to the elements, and when
+                it is on a heritage building or a landmark site, there is no
+                room for error.
+              </p>
+              <p>
+                David has completed chimney projects that have stopped traffic:
+                a 40-metre stack in Collingwood, the chimney at the Highett
+                Gasworks in Melbourne, and the crown of the heritage-listed Old
+                Licorice Factory chimney in Brunswick, a project that sums up
+                exactly why clients choose Goodwin.
+              </p>
+            </div>
           </Reveal>
-          <Reveal className={styles.lead}>
-            <p>
-              Chimney work at the level David operates is a specialist
-              discipline. It is structural, exposed to the elements, and when it
-              is on a heritage building or a landmark site, there is no room for
-              error.
-            </p>
-            <p>
-              David has completed chimney projects that have stopped traffic: a
-              40-metre stack in Collingwood, the chimney at the Highett Gasworks
-              in Melbourne, and the crown of the heritage-listed Old Licorice
-              Factory chimney in Brunswick, a project that sums up exactly why
-              clients choose Goodwin.
-            </p>
+          <Reveal
+            as="figure"
+            variant="right"
+            className={`${styles.introFigure} image-shape`}
+          >
+            <Image
+              src="/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-completed-red-brick-against-sky.jpg"
+              alt="The restored 27-metre Highett Gasworks heritage chimney standing against a blue sky, by Goodwin Bricklaying"
+              fill
+              sizes="(min-width: 900px) 40vw, 100vw"
+              className={styles.introImage}
+            />
           </Reveal>
         </div>
       </section>
@@ -181,7 +197,29 @@ export default function ChimneysFireplacesPage() {
           <Reveal as="h2" id="chimney-services" className={styles.heading}>
             What We Do
           </Reveal>
-          <ServiceList items={chimneyServices} tone="dark" />
+          <Reveal variant="grid" className={styles.leadService}>
+            <figure className={`${styles.leadServiceFigure} image-shape`}>
+              <Image
+                src={leadService.image.src}
+                alt={leadService.image.alt}
+                fill
+                sizes="(min-width: 860px) 50vw, 100vw"
+                className={styles.leadServiceImage}
+              />
+            </figure>
+            <div>
+              <h3 className={styles.leadServiceTitle}>{leadService.title}</h3>
+              <p className={styles.leadServiceText}>{leadService.text}</p>
+            </div>
+          </Reveal>
+          <Reveal variant="grid" className={styles.minorServices}>
+            {minorServices.map((item) => (
+              <div key={item.title} className={styles.minorService}>
+                <h3 className={styles.minorServiceTitle}>{item.title}</h3>
+                <p className={styles.minorServiceText}>{item.text}</p>
+              </div>
+            ))}
+          </Reveal>
         </div>
       </section>
 
@@ -189,14 +227,15 @@ export default function ChimneysFireplacesPage() {
         className="section section--cream"
         aria-labelledby="chimney-brunswick"
       >
-        <div className="container-narrow">
-          <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
-            Landmark Project
-          </Reveal>
-          <Reveal as="h2" id="chimney-brunswick" className={styles.headingTight}>
-            The Old Licorice Factory Chimney, Brunswick
-          </Reveal>
-          <Reveal className={styles.lead}>
+        <div className={`container ${styles.projectIntro}`}>
+          <Reveal variant="left">
+            <span className={`eyebrow ${styles.eyebrowSpace}`}>
+              Landmark Project
+            </span>
+            <h2 id="chimney-brunswick" className={styles.headingTight}>
+              The Old Licorice Factory Chimney, Brunswick
+            </h2>
+            <div className={styles.lead}>
             <p>
               The Australian Licorice Company built its Brunswick factory on
               Victoria Street in 1922, and for the next six decades the octagonal
@@ -227,6 +266,22 @@ export default function ChimneysFireplacesPage() {
               around it, kept, as the register intended, for the skill it was
               built with.
             </p>
+            </div>
+          </Reveal>
+          <Reveal as="figure" variant="right" className={styles.projectFigureWrap}>
+            <div className={`${styles.projectFigure} image-shape`}>
+              <Image
+                src="/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-restored-stack-over-brunswick-rooftops.jpg"
+                alt="The restored octagonal brick chimney of the Old Licorice Factory standing over the Brunswick rooftops, rebuilt by Goodwin Bricklaying"
+                fill
+                sizes="(min-width: 960px) 45vw, 100vw"
+                style={{ objectPosition: "center 45%" }}
+                className={styles.projectImage}
+              />
+            </div>
+            <figcaption className={styles.projectCaption}>
+              The stack over the Brunswick rooftops, with its crown rebuilt.
+            </figcaption>
           </Reveal>
         </div>
         <div className="container">

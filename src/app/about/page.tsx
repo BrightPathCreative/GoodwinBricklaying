@@ -170,11 +170,11 @@ export default function AboutPage() {
 
       <section className={styles.banner} aria-label="David Goodwin at work">
         <Image
-          src="/images/team/goodwin-bricklaying-david-goodwin-on-scaffold-brunswick-portrait.jpg"
+          src="/images/hero-goodwin-bricklaying-lit-brick-arch-tunnel-melbourne.jpg"
           alt=""
           fill
           sizes="100vw"
-          style={{ objectPosition: "center 22%" }}
+          style={{ objectPosition: "center 40%" }}
           className={styles.bannerImage}
           aria-hidden
         />

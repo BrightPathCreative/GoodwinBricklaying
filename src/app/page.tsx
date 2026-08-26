@@ -43,6 +43,14 @@ const services = [
       "/images/structural-commercial/goodwin-bricklaying-commercial-blockwork-curved-walls-multi-storey-development.jpg",
     alt: "Curved commercial blockwork walls on a multi-storey Melbourne development by Goodwin Bricklaying",
   },
+  {
+    title: "Tuck Pointing",
+    text: "Fine tuck pointing and traditional joint profiles, matched to the original work on period homes.",
+    href: "/services/tuck-pointing",
+    image:
+      "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-tuck-pointing-joint-detail.jpg",
+    alt: "Close detail of traditional tuck pointing on heritage red brickwork by Goodwin Bricklaying",
+  },
 ] as const;
 
 const showcase = [
