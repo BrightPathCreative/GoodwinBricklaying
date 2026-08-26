@@ -1,0 +1,102 @@
+/* Specimen plates for the eight pointing profiles. Sits on the heritage
+   (dark) section, so all text runs off the cream body colour. */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 4vw, 3.5rem);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- The plate: joint detail beside the pier it was worked on -------------- */
+
+.plate {
+  display: grid;
+  /* The detail carries the profile, so it takes the wider half. */
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3px;
+  border-radius: var(--img-radius);
+  overflow: hidden;
+}
+
+.frame {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background-color: rgba(44, 36, 32, 0.2);
+}
+
+.frameDetail {
+  aspect-ratio: 3 / 4;
+}
+
+.framePier {
+  aspect-ratio: 3 / 4;
+}
+
+.image {
+  object-fit: cover;
+  filter: var(--image-treatment);
+  transition: transform 700ms var(--ease-luxury);
+}
+
+.card:hover .frameDetail .image {
+  transform: scale(1.06);
+}
+
+/* --- Caption -------------------------------------------------------------- */
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-top: 1.4rem;
+}
+
+/* Hairline runs out from the name to the edge of the plate. */
+.meta::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.22;
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: var(--color-cream);
+  opacity: 0.55;
+}
+
+.name {
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  line-height: 1.2;
+  color: var(--color-cream);
+}
+
+.text {
+  margin-top: 0.85rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--color-cream);
+  opacity: 0.82;
+  max-width: 46ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .frameDetail .image {
+    transform: none;
+  }
+}

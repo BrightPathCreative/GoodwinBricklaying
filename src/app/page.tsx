@@ -60,7 +60,7 @@ const showcase = [
   },
   {
     image:
-      "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+      "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
     caption: "Traditional tuck pointing",
     alt: "Close-up of traditional tuck pointing on heritage brickwork by Goodwin Bricklaying",
   },
@@ -322,8 +322,8 @@ export default function HomePage() {
             </h2>
             <span className={`${styles.whyImage} image-shape`}>
               <Image
-                src="/images/architectural-masonry/dental-pattern/goodwin-bricklaying-dental-brick-pattern-two-storey-contemporary-home-exterior.jpg"
-                alt="Bright contemporary two-storey home with white dental-pattern brickwork by Goodwin Bricklaying"
+                src="/images/team/goodwin-bricklaying-david-goodwin-on-scaffold-deck-chimney-crown.jpg"
+                alt="David Goodwin on the scaffold deck beside the rebuilt Old Licorice Factory chimney crown in Brunswick"
                 fill
                 sizes="(min-width: 960px) 40vw, 100vw"
                 className={styles.coverImage}

@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
 const landmarks = [
   "Chimney Stack: Highett Gasworks, Melbourne.",
   "Chimney Stack: Collingwood (40 metres).",
-  "Chimney Stack Restoration: Old Licorice Factory, Brunswick (in progress).",
+  "Chimney Stack Restoration: Old Licorice Factory, Brunswick (Victorian Heritage Register H1289).",
   "Brick Tunnel: Fitzroy.",
   "Cairo Flats, Fitzroy: 10,000-brick heritage boundary wall rebuild.",
   "Kirra Gardens, Camberwell.",
@@ -39,8 +39,8 @@ const landmarkPhotos = [
     alt: "Heritage brick chimney stacks at street level in Collingwood, Melbourne, by Goodwin Bricklaying",
   },
   {
-    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-restoration-new-brickwork-corbelling.jpg",
-    alt: "New corbelled brickwork on the Old Licorice Factory chimney restoration in Brunswick",
+    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-restored-octagonal-stack-full-height.jpg",
+    alt: "The restored octagonal brick chimney at the Old Licorice Factory, Brunswick, by Goodwin Bricklaying",
   },
   {
     src: "/images/hero-fitzroy-brick-arch-tunnel-melbourne.jpg",
@@ -113,9 +113,9 @@ export default function AboutPage() {
                   restored pre-war facades in Canterbury and Hawthorn, built
                   landmark chimney stacks for commercial clients across the city,
                   including the Highett Gasworks and a 40-metre stack in
-                  Collingwood, and is currently working on the Old Licorice
-                  Factory chimney in Brunswick: a project that tells you
-                  everything about the kind of work he is drawn to.
+                  Collingwood, and rebuilt the crown of the heritage-listed Old
+                  Licorice Factory chimney in Brunswick: a project that tells
+                  you everything about the kind of work he is drawn to.
                 </p>
                 <p>
                   David doesn&apos;t take every job. He works with homeowners,
@@ -128,8 +128,8 @@ export default function AboutPage() {
             </Reveal>
             <Reveal variant="right" className={`${styles.storyFigure} image-shape`}>
               <Image
-                src="/images/heritage-restoration/remedial/photo-2026-05-23-10-12-25.jpg"
-                alt="Bricklayer rebuilding a tall red-brick heritage chimney on a Melbourne roof by Goodwin Bricklaying"
+                src="/images/team/goodwin-bricklaying-david-goodwin-setting-chimney-capping-brunswick.jpg"
+                alt="David Goodwin setting the capping on the Old Licorice Factory chimney crown in Brunswick"
                 fill
                 sizes="(min-width: 960px) 40vw, 100vw"
                 className={styles.coverImage}
@@ -170,10 +170,11 @@ export default function AboutPage() {
 
       <section className={styles.banner} aria-label="David Goodwin at work">
         <Image
-          src="/images/architectural-masonry/hit-and-miss/goodwin-bricklaying-hit-and-miss-decorative-brick-screen-wall-melbourne.jpg"
+          src="/images/team/goodwin-bricklaying-david-goodwin-on-scaffold-brunswick-portrait.jpg"
           alt=""
           fill
           sizes="100vw"
+          style={{ objectPosition: "center 22%" }}
           className={styles.bannerImage}
           aria-hidden
         />

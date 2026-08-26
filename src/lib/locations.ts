@@ -62,7 +62,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Heritage Brickwork & Repointing",
         text: "Camberwell's Edwardian and Interwar homes were built with lime mortar that has weathered for a century. David rakes out failed joints and repoints to the original profile, matching brick and mortar so Camberwell facades read as untouched.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
           alt: "Heritage repointing on Camberwell red brickwork matched to the original mortar profile by Goodwin Bricklaying",
         },
       },
@@ -102,7 +102,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Tuck Pointing",
         text: "Camberwell's finest period facades were originally tuck pointed for crisp, uniform joints. David restores that heritage finish in collaboration with specialist subcontractors, returning the brickwork to its intended appearance.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-rolled-joint-pointing-joint-detail.jpg",
           alt: "Hand-finished tuck pointing on heritage brickwork in Camberwell by Goodwin Bricklaying",
         },
       },
@@ -185,7 +185,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Heritage Brickwork & Repointing",
         text: "Hawthorn's Victorian terraces and Edwardian villas along Glenferrie Road carry original brickwork that needs specialist care. David repoints failed mortar and rebuilds damaged courses to match the original, preserving the heritage character that defines Hawthorn.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
           alt: "Period-accurate repointing on a Hawthorn heritage facade by Goodwin Bricklaying",
         },
       },
@@ -225,7 +225,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Tuck Pointing",
         text: "Hawthorn's Victorian and Edwardian homes were originally finished with fine tuck pointing. David restores this period-accurate detail in collaboration with specialist subcontractors for a flawless heritage finish.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-ribbon-pointing-joint-detail.jpg",
           alt: "Fine tuck pointing on heritage red brickwork in Hawthorn by Goodwin Bricklaying",
         },
       },
@@ -251,7 +251,7 @@ export const locations: ReadonlyArray<Location> = [
         alt: "The Goodwin name carved into the cement capping of a restored twin-pot Hawthorn heritage chimney",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
         alt: "Period-accurate repointing on heritage red brickwork for a Hawthorn home by Goodwin Bricklaying",
       },
       {
@@ -431,7 +431,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Repointing & Mortar Matching",
         text: "On Canterbury's century-old facades, the right mortar is everything. David assesses the existing mortar's colour, composition, and joint profile, then mixes a match so the repointing is invisible.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-rolled-joint-pointing-joint-detail.jpg",
           alt: "Mortar-matched repointing on Canterbury heritage brickwork by Goodwin Bricklaying",
         },
       },
@@ -463,7 +463,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Tuck Pointing",
         text: "Canterbury's finest heritage facades were originally tuck pointed. David restores this fine finish in collaboration with specialist subcontractors, returning crisp, uniform joints to the brickwork.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-3.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-raked-jointing-joint-detail.jpg",
           alt: "Fine traditional tuck pointing on Canterbury heritage red brick by Goodwin Bricklaying",
         },
       },
@@ -485,7 +485,7 @@ export const locations: ReadonlyArray<Location> = [
         alt: "Reclaimed brick laid into a restored heritage wall for a Canterbury homeowner by Goodwin Bricklaying",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-rolled-joint-pointing-joint-detail.jpg",
         alt: "Hand-finished tuck pointing on weathered heritage brickwork, Canterbury VIC by Goodwin Bricklaying",
       },
       {
@@ -497,7 +497,7 @@ export const locations: ReadonlyArray<Location> = [
         alt: "Heritage chimney stack restoration on a Canterbury tiled roof by Goodwin Bricklaying",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-3.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-raked-jointing-joint-detail.jpg",
         alt: "Fine traditional tuck pointing on heritage red brick for a Canterbury home by Goodwin Bricklaying",
       },
     ],
@@ -554,7 +554,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Repointing",
         text: "Weathered mortar on Glen Iris's older facades lets in water and ages the brickwork. David rakes out and repoints to the original joint profile, restoring both weatherproofing and appearance.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-2.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-penny-rolled-pointing-joint-detail.jpg",
           alt: "Heritage repointing on Glen Iris brickwork matched to the original profile by Goodwin Bricklaying",
         },
       },
@@ -669,7 +669,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Heritage Repointing",
         text: "Surrey Hills's Federation homes are now over a century old, and their lime mortar has weathered. David rakes out and repoints to the original joint profile, protecting the brickwork and restoring the facade's character.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-flush-recessed-lime-pointing-joint-detail.jpg",
           alt: "Heritage repointing on a Surrey Hills Federation home facade by Goodwin Bricklaying",
         },
       },
@@ -701,7 +701,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Tuck Pointing",
         text: "Many Surrey Hills facades were originally tuck pointed for crisp, uniform joints. David restores this fine heritage finish in collaboration with specialist subcontractors.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-58.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-tuck-pointing-joint-detail.jpg",
           alt: "Fine tuck pointing on heritage brickwork for a Surrey Hills Federation home by Goodwin Bricklaying",
         },
       },
@@ -715,11 +715,11 @@ export const locations: ReadonlyArray<Location> = [
     galleryHeading: "Federation Home Restoration in Surrey Hills",
     gallery: [
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-58.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-tuck-pointing-joint-detail.jpg",
         alt: "Tuck pointing on heritage red brickwork for a Surrey Hills Federation home by Goodwin Bricklaying",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-flush-recessed-lime-pointing-joint-detail.jpg",
         alt: "Repointing detail on weathered Federation brickwork in Surrey Hills by Goodwin Bricklaying",
       },
       {
@@ -731,7 +731,7 @@ export const locations: ReadonlyArray<Location> = [
         alt: "Heritage chimney restoration on a Surrey Hills tiled roof by Goodwin Bricklaying",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-ribbon-pointing-joint-detail.jpg",
         alt: "Period-accurate mortar pointing profile on a Surrey Hills heritage home by Goodwin Bricklaying",
       },
       {
@@ -784,7 +784,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Heritage Repointing",
         text: "Richmond's Victorian terraces were built with red brick and lime mortar that has weathered for over 130 years. David repoints to the original joint profile, restoring weatherproofing and the streetscape character that makes Richmond distinctive.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-2.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-penny-rolled-pointing-joint-detail.jpg",
           alt: "Heritage repointing on a Richmond Victorian terrace facade by Goodwin Bricklaying",
         },
       },
@@ -816,7 +816,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Tuck Pointing",
         text: "Richmond's Victorian facades were originally tuck pointed for crisp, contrasting joints. David restores this period-accurate finish in collaboration with specialist subcontractors.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-1.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-birds-beak-pointing-joint-detail.jpg",
           alt: "Period-accurate tuck pointing on a Richmond Victorian terrace by Goodwin Bricklaying",
         },
       },
@@ -824,17 +824,17 @@ export const locations: ReadonlyArray<Location> = [
     closing:
       "Heritage bricklaying and masonry restoration in Richmond VIC. Victorian terrace and period home specialists. 25 years experience. Fully insured.",
     hero: {
-      src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+      src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
       alt: "Period-accurate tuck pointing on a Victorian terrace by Goodwin Bricklaying, Richmond Melbourne",
     },
     galleryHeading: "Victorian Terrace and Heritage Work in Richmond",
     gallery: [
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-2.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-penny-rolled-pointing-joint-detail.jpg",
         alt: "Heritage repointing on a Richmond Victorian terrace facade by Goodwin Bricklaying",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-1.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-birds-beak-pointing-joint-detail.jpg",
         alt: "Mortar joint profile detail on Richmond heritage red brickwork by Goodwin Bricklaying",
       },
       {
@@ -850,7 +850,7 @@ export const locations: ReadonlyArray<Location> = [
         alt: "Structural heritage brickwork opening during a Richmond terrace renovation by Goodwin Bricklaying",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-rolled-joint-pointing-joint-detail.jpg",
         alt: "Hand-finished tuck pointing on weathered Victorian brickwork, Richmond by Goodwin Bricklaying",
       },
     ],
@@ -1022,7 +1022,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Repointing",
         text: "Hawksburn's century-old facades need repointing as their lime mortar weathers. David rakes out and repoints to the original profile, matching mortar so the work disappears into the brickwork.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
           alt: "Heritage repointing on a Hawksburn period home facade by Goodwin Bricklaying",
         },
       },
@@ -1046,7 +1046,7 @@ export const locations: ReadonlyArray<Location> = [
         title: "Tuck Pointing",
         text: "Hawksburn's elegant period facades were originally tuck pointed for a refined finish. David restores this fine heritage detail in collaboration with specialist subcontractors.",
         image: {
-          src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-3.jpg",
+          src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-raked-jointing-joint-detail.jpg",
           alt: "Fine traditional tuck pointing on heritage brickwork for a Hawksburn residence by Goodwin Bricklaying",
         },
       },
@@ -1068,7 +1068,7 @@ export const locations: ReadonlyArray<Location> = [
         alt: "Restored twin-pot heritage chimney with Goodwin capping detail, Hawksburn-area home",
       },
       {
-        src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-3.jpg",
+        src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-raked-jointing-joint-detail.jpg",
         alt: "Fine traditional tuck pointing on heritage brickwork for a Hawksburn residence by Goodwin Bricklaying",
       },
       {

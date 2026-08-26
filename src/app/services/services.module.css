@@ -13,6 +13,21 @@
   margin-bottom: 1.75rem;
 }
 
+/* Heading directly above the pointing-styles intro paragraph. */
+.headingStyles {
+  max-width: 24ch;
+  margin-bottom: 1.25rem;
+}
+
+/* Intro copy between the pointing-styles heading and the specimen plates. */
+.stylesIntro {
+  max-width: 62ch;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--color-cream);
+  opacity: 0.88;
+  font-size: 1.05rem;
+}
+
 .lead p {
   font-size: 1.15rem;
   line-height: var(--leading-body);
@@ -193,7 +208,8 @@
 
 @media (max-width: 768px) {
   .heading,
-  .headingTight {
+  .headingTight,
+  .headingStyles {
     max-width: 100%;
   }
 }

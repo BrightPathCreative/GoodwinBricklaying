@@ -29,3 +29,6 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# local drop folder for client-supplied images and notes
+/incoming

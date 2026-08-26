@@ -55,7 +55,7 @@ const services = [
     text: "Fine tuck pointing performed in collaboration with specialist subcontractors, delivering a level of finish that matches the quality of the surrounding work.",
     href: "/services/tuck-pointing",
     image:
-      "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-3.jpg",
+      "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-raked-jointing-joint-detail.jpg",
     alt: "Fine traditional tuck pointing on heritage brickwork by Goodwin Bricklaying",
   },
 ] as const;

@@ -83,8 +83,8 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
     category: "Tuck Pointing",
     blurb:
       "Period-accurate repointing on weathered heritage brickwork, raked out by hand and finished to the original mortar profile.",
-    image: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00-2.jpg",
-    alt: "Tradesperson hand-finishing tuck pointing on weathered heritage brickwork, Goodwin Bricklaying Melbourne",
+    image: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-rolled-joint-pointing-joint-detail.jpg",
+    alt: "Rolled mortar joint finished by hand on weathered heritage brickwork, Goodwin Bricklaying Melbourne",
   },
 ];
 
@@ -169,6 +169,21 @@ export const galleryImages: ReadonlyArray<GalleryImage> = [
     category: "Chimneys",
   },
   {
+    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-restored-octagonal-stack-full-height.jpg",
+    alt: "Restored octagonal heritage brick chimney stack by Goodwin Bricklaying, Brunswick Melbourne",
+    category: "Chimneys",
+  },
+  {
+    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-rebuild-through-scaffolding.jpg",
+    alt: "Heritage chimney crown rebuild seen through scaffolding by Goodwin Bricklaying, Brunswick Melbourne",
+    category: "Chimneys",
+  },
+  {
+    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-corbelling-under-capping-blue-sky.jpg",
+    alt: "Corbelled brick courses beneath a rebuilt chimney capping by Goodwin Bricklaying, Brunswick Melbourne",
+    category: "Chimneys",
+  },
+  {
     src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-full-scaffolding-during-restoration.jpg",
     alt: "Heritage gasworks chimney restoration under full scaffolding Melbourne by Goodwin Bricklaying, Highett",
     category: "Chimneys",
@@ -196,18 +211,43 @@ export const galleryImages: ReadonlyArray<GalleryImage> = [
   },
   // --- Tuck Pointing ---
   {
-    src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-58.jpg",
-    alt: "Tuck pointing on heritage red brickwork, Goodwin Bricklaying Melbourne",
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-tuck-pointing-joint-detail.jpg",
+    alt: "Traditional tuck pointing detail, a fine lime ribbon set into coloured base mortar, Goodwin Bricklaying Melbourne",
     category: "Tuck Pointing",
   },
   {
-    src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59.jpg",
-    alt: "Repointing detail on weathered brickwork, Goodwin Bricklaying Melbourne",
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-tuck-pointing-brick-pier.jpg",
+    alt: "Sample brick pier finished in traditional tuck pointing, Goodwin Bricklaying Melbourne",
     category: "Tuck Pointing",
   },
   {
-    src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-02-00.jpg",
-    alt: "Period-accurate mortar pointing profile, Goodwin Bricklaying Melbourne",
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-ribbon-pointing-joint-detail.jpg",
+    alt: "Ribbon pointing detail, a raised band of mortar standing proud of dark heritage brick, Goodwin Bricklaying Melbourne",
+    category: "Tuck Pointing",
+  },
+  {
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-ribbon-pointing-brick-pier.jpg",
+    alt: "Sample brick pier finished in ribbon pointing with a Goodwin stamped brick, Goodwin Bricklaying Melbourne",
+    category: "Tuck Pointing",
+  },
+  {
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-penny-rolled-pointing-joint-detail.jpg",
+    alt: "Penny rolled pointing detail, a fine groove run between two rounded mortar shoulders, Goodwin Bricklaying Melbourne",
+    category: "Tuck Pointing",
+  },
+  {
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
+    alt: "Weather struck mortar joint angled to shed water off heritage brickwork, Goodwin Bricklaying Melbourne",
+    category: "Tuck Pointing",
+  },
+  {
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-raked-jointing-joint-detail.jpg",
+    alt: "Raked jointing recessed to a set depth, throwing a deep shadow line across brickwork, Goodwin Bricklaying Melbourne",
+    category: "Tuck Pointing",
+  },
+  {
+    src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-flush-recessed-lime-pointing-joint-detail.jpg",
+    alt: "Flush lime pointing finished level with the brick face on heritage brickwork, Goodwin Bricklaying Melbourne",
     category: "Tuck Pointing",
   },
 ];

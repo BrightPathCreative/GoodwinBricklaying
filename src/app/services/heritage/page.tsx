@@ -37,7 +37,7 @@ const heritageServices = [
     title: "Repointing and Pointing Styles",
     text: "Raking out and replacing deteriorated mortar using period-appropriate profiles and materials. Profiles include flush, struck, weathered, raised ribbon, bird's beak, penny rolled, and recessed pointing to match original construction.",
     image: {
-      src: "/images/tuck-pointing/repointing-styles/photo-2026-05-23-10-01-59-1.jpg",
+      src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-weather-struck-pointing-joint-detail.jpg",
       alt: "Period-accurate mortar joint profile raked and repointed on heritage red brickwork by Goodwin Bricklaying",
     },
   },

@@ -7,6 +7,7 @@ import { Faq } from "@/components/Faq";
 import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
+import { BrunswickShowcase } from "@/components/BrunswickShowcase";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
@@ -49,7 +50,7 @@ const chimneyServices = [
 const landmarks = [
   "Chimney Stack: Highett Gasworks, Melbourne.",
   "Chimney Stack: Collingwood (40 metres).",
-  "Chimney Stack Restoration: Old Licorice Factory, Brunswick (currently in progress).",
+  "Chimney Stack Restoration: Old Licorice Factory, Brunswick (Victorian Heritage Register H1289).",
 ];
 
 const gallery = [
@@ -88,6 +89,14 @@ const gallery = [
   {
     src: "/images/chimneys-fireplaces/highett-gasworks/goodwin-bricklaying-highett-gasworks-chimney-restored-crown-new-brickwork.jpg",
     alt: "Restored crown with new brickwork on the Highett Gasworks chimney by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-restored-stack-sunlit-brunswick.jpg",
+    alt: "The restored Old Licorice Factory chimney stack lit by afternoon sun in Brunswick, by Goodwin Bricklaying",
+  },
+  {
+    src: "/images/chimneys-fireplaces/brunswick-licorice-factory/goodwin-bricklaying-brunswick-licorice-factory-chimney-crown-corbel-brick-macro-detail.jpg",
+    alt: "Close detail of corbelled brickwork on the rebuilt Old Licorice Factory chimney crown, Brunswick",
   },
 ];
 
@@ -155,9 +164,9 @@ export default function ChimneysFireplacesPage() {
             </p>
             <p>
               David has completed chimney projects that have stopped traffic: a
-              40-metre stack in Collingwood, the chimney at the Highett Gasworks in
-              Melbourne, and the current restoration of the chimney at the Old
-              Licorice Factory in Brunswick, a project that sums up exactly why
+              40-metre stack in Collingwood, the chimney at the Highett Gasworks
+              in Melbourne, and the crown of the heritage-listed Old Licorice
+              Factory chimney in Brunswick, a project that sums up exactly why
               clients choose Goodwin.
             </p>
           </Reveal>
@@ -173,6 +182,55 @@ export default function ChimneysFireplacesPage() {
             What We Do
           </Reveal>
           <ServiceList items={chimneyServices} tone="dark" />
+        </div>
+      </section>
+
+      <section
+        className="section section--cream"
+        aria-labelledby="chimney-brunswick"
+      >
+        <div className="container-narrow">
+          <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
+            Landmark Project
+          </Reveal>
+          <Reveal as="h2" id="chimney-brunswick" className={styles.headingTight}>
+            The Old Licorice Factory Chimney, Brunswick
+          </Reveal>
+          <Reveal className={styles.lead}>
+            <p>
+              The Australian Licorice Company built its Brunswick factory on
+              Victoria Street in 1922, and for the next six decades the octagonal
+              brick stack above it drew for the boilers of one of the country&apos;s
+              great confectionery works. The factory closed in 1985. The chimney
+              stayed.
+            </p>
+            <p>
+              It is now on the Victorian Heritage Register (H1289), listed
+              together with the remains of the fire tunnel that served it as the
+              only known surviving chimney from the steam-driven years of Melbourne&apos;s
+              confectionery industry. The register&apos;s own words on why it
+              matters are worth repeating: the elaborate, octagonal stack is
+              significant as{" "}
+              <em>a fine example of the fully refined skills of the bricklayer</em>.
+            </p>
+            <p>
+              A century of Melbourne weather had taken the crown at the top of
+              it. The capping was broken through, courses were cracked and
+              shedding brick, and the whole head of the stack needed rebuilding
+              above a live site. Goodwin Bricklaying took it down and built it
+              back: corbelled courses stepped out by hand to carry a new
+              octagonal capping, matched course for course to the 1922
+              brickwork, worked from a scaffold deck several storeys up.
+            </p>
+            <p>
+              The stack now stands at the centre of the redevelopment rising
+              around it, kept, as the register intended, for the skill it was
+              built with.
+            </p>
+          </Reveal>
+        </div>
+        <div className="container">
+          <BrunswickShowcase />
         </div>
       </section>
 

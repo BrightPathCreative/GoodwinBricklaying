@@ -23,7 +23,7 @@ The Story Behind Goodwin Bricklaying
 **Body:**
 David Reuben Goodwin started out doing what bricklayers do: residential work, new builds, extensions. But over two decades, something became clear. The work that kept him up at night, in the best way, was the difficult stuff. The heritage restorations. The vaulted ceilings. The chimney stacks others had turned down.
 
-Based in Camberwell, David has spent 25 years refining a skill set that very few tradespeople in Melbourne can match. He has restored pre-war facades in Canterbury and Hawthorn, built landmark chimney stacks for commercial clients across the city, including the Hyatt Gasworks and a 40-metre stack in Collingwood, and is currently working on the Old Licorice Factory chimney in Brunswick: a project that tells you everything about the kind of work he is drawn to.
+Based in Camberwell, David has spent 25 years refining a skill set that very few tradespeople in Melbourne can match. He has restored pre-war facades in Canterbury and Hawthorn, built landmark chimney stacks for commercial clients across the city, including the Hyatt Gasworks and a 40-metre stack in Collingwood, and rebuilt the crown of the heritage-listed Old Licorice Factory chimney in Brunswick: a project that tells you everything about the kind of work he is drawn to.
 
 David doesn't take every job. He works with homeowners, architects, and builders who share his commitment to doing things properly, clients who understand that quality masonry is an investment, not a line item to trim.
 
@@ -66,7 +66,7 @@ Landmark Projects
 
 - Chimney Stack: Hyatt Gasworks, Melbourne.
 - Chimney Stack: Collingwood (40 metres).
-- Chimney Stack Restoration: Old Licorice Factory, Brunswick (currently in progress).
+- Chimney Stack Restoration: Old Licorice Factory, Brunswick (Victorian Heritage Register H1289).
 - Brick Tunnel: Fitzroy.
 - Cairo Flats, Fitzroy: 10,000-brick heritage boundary wall rebuild.
 - Kirra Gardens, Camberwell.
