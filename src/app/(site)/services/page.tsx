@@ -8,7 +8,7 @@ import { EnquiryCta } from "@/components/EnquiryCta";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
-import styles from "./services.module.css";
+import styles from "@/components/services/services.module.css";
 
 export const metadata: Metadata = buildMetadata({
   title: "Masonry Services Melbourne | Goodwin Bricklaying",

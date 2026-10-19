@@ -1,0 +1,35 @@
+.inner {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  color: var(--color-stone);
+  margin-bottom: 1.25rem;
+  max-width: 48ch;
+}
+
+.call {
+  color: var(--color-stone);
+  margin-bottom: 2.5rem;
+}
+
+.phone {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  color: var(--color-heritage);
+  white-space: nowrap;
+  border-bottom: 1px solid currentColor;
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.phone:hover,
+.phone:focus-visible {
+  color: var(--color-deep);
+}

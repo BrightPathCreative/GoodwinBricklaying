@@ -1,25 +1,14 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { PointingStyles } from "@/components/PointingStyles";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
-import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { homeCrumb } from "@/components/Breadcrumbs";
-import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
-import styles from "../services.module.css";
-
-export const metadata: Metadata = buildMetadata({
-  title: "Tuck Pointing Melbourne | Period-Accurate Heritage Finish",
-  description:
-    "Specialist tuck pointing for Victorian and Edwardian homes across inner Melbourne. Heritage-accurate finish delivered in collaboration with specialist subcontractors.",
-  path: "/services/tuck-pointing",
-  ogTitle: "Tuck Pointing Melbourne | Period-Accurate Heritage Finish",
-  ogDescription:
-    "Specialist tuck pointing for Victorian and Edwardian homes across inner Melbourne.",
-});
+import { ServiceEnquiry } from "./ServiceEnquiry";
+import { quoteHref, type ServiceVariant } from "./variant";
+import styles from "./services.module.css";
 
 const reviews = [
   {
@@ -57,23 +46,32 @@ const faqs: ReadonlyArray<FaqItem> = [
   },
 ];
 
-export default function TuckPointingPage() {
+export function TuckPointingContent({
+  variant = "page",
+}: {
+  variant?: ServiceVariant;
+}) {
   return (
     <>
       <PageHero
         eyebrow="Tuck Pointing"
         title="Fine Tuck Pointing. Period-Accurate Finish."
         subtext="Specialist tuck pointing for heritage homes, period buildings, and premium residential masonry, delivered in collaboration with Melbourne's finest tuck pointing specialists."
-        crumbs={[
-          homeCrumb,
-          { name: "Services", url: "/services" },
-          { name: "Tuck Pointing" },
-        ]}
+        crumbs={
+          variant === "page"
+            ? [
+                homeCrumb,
+                { name: "Services", url: "/services" },
+                { name: "Tuck Pointing" },
+              ]
+            : undefined
+        }
         image={{
           src: "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-tuck-pointing-joint-detail.jpg",
           alt: "Close detail of traditional tuck pointing, a fine pale ribbon of lime set into a coloured base mortar on heritage red brickwork by Goodwin Bricklaying",
         }}
         showCta
+        ctaHref={quoteHref(variant)}
       />
 
       <section className="section section--cream" aria-labelledby="tuck-intro">
@@ -120,6 +118,7 @@ export default function TuckPointingPage() {
       </section>
 
       <ServiceCtaBand
+        buttonHref={quoteHref(variant)}
         heading="Not sure if your tuck pointing needs restoration?"
         body="David will assess the condition of your existing work and advise on the right approach."
       />
@@ -160,7 +159,8 @@ export default function TuckPointingPage() {
         </div>
       </section>
 
-      <EnquiryCta
+      <ServiceEnquiry
+        variant={variant}
         heading="Enquire About Tuck Pointing"
         body="David will assess the condition of your existing tuck pointing and advise on whether restoration or replacement is appropriate. Get in touch for an honest assessment."
         buttonLabel="Enquire Now"

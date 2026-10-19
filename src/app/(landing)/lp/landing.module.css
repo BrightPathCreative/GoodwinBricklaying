@@ -1,0 +1,76 @@
+/* Sits over the page hero the way the site nav does, but scrolls away with
+   the page: there is nothing in it worth keeping pinned. */
+.header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 10;
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--nav-height);
+}
+
+.logo {
+  height: 5.5rem;
+  width: auto;
+}
+
+.call {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 959px) {
+  .headerInner {
+    min-height: auto;
+    padding-block: 0.75rem;
+  }
+
+  .logo {
+    height: 3rem;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  /* Logo plus a full-size button overflows a 360px phone. */
+  .call {
+    padding: 0.7rem 1rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 359px) {
+  .logo {
+    height: 2.25rem;
+  }
+}
+
+.legal {
+  background-color: var(--color-heritage);
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  padding-block: 1.5rem;
+}
+
+.legalInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.legalInner a {
+  color: var(--color-cream);
+  transition: color var(--transition);
+}
+
+.legalInner a:hover,
+.legalInner a:focus-visible {
+  color: var(--color-deep);
+}

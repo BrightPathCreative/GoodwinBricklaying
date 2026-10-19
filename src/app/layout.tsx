@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { DM_Serif_Display, Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import { site } from "@/lib/site";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
-import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Analytics } from "@/components/Analytics";
 import { GoogleTagManager } from "@/components/GoogleTagManager";
@@ -108,10 +105,10 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <Nav />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <BackToTop />
+        {/* Header, footer and <main> come from the route group layouts:
+            (site) carries the full site chrome, (landing) the stripped-back
+            Google Ads pages. */}
+        {children}
         <CookieConsent />
         <Analytics />
         <GoogleTagManager />

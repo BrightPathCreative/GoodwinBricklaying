@@ -42,14 +42,17 @@ export function PageHero({
   crumbs,
   image,
   showCta = false,
+  ctaHref = navCta.href,
 }: {
   eyebrow?: string;
   title: ReactNode;
   subtext?: ReactNode;
-  crumbs: ReadonlyArray<Crumb>;
+  /** Omitted on the Google Ads landing pages, which sit outside the site tree. */
+  crumbs?: ReadonlyArray<Crumb>;
   image?: { src: string; alt: string };
   /** Primary quote + call actions beneath the hero subtext. */
   showCta?: boolean;
+  ctaHref?: string;
 }) {
   return (
     <header className={`${styles.hero} ${image ? styles.hasImage : ""}`}>
@@ -65,7 +68,7 @@ export function PageHero({
       ) : null}
       {/* Breadcrumb kept as invisible structured data only; the visible
           trail was removed for a cleaner, more editorial hero. */}
-      <JsonLd data={breadcrumbSchema(crumbs)} />
+      {crumbs ? <JsonLd data={breadcrumbSchema(crumbs)} /> : null}
       <div className={`container ${styles.inner}`}>
         {eyebrow ? (
           <span className={`eyebrow ${styles.eyebrow}`}>{eyebrow}</span>
@@ -74,7 +77,7 @@ export function PageHero({
         {subtext ? <p className={styles.subtext}>{subtext}</p> : null}
         {showCta ? (
           <div className={styles.actions}>
-            <Link href={navCta.href} className={`btn btn--light ${styles.ctaBtn}`}>
+            <Link href={ctaHref} className={`btn btn--light ${styles.ctaBtn}`}>
               {navCta.label}
             </Link>
             <a href={site.phoneHref} className={styles.phone}>

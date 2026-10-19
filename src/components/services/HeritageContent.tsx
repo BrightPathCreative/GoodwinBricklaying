@@ -1,28 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
-import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import { CairoShowcase } from "@/components/CairoShowcase";
 import { homeCrumb } from "@/components/Breadcrumbs";
-import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
-import styles from "../services.module.css";
-
-export const metadata: Metadata = buildMetadata({
-  title: "Heritage Brickwork & Restoration Melbourne | Goodwin Bricklaying",
-  description:
-    "Specialist heritage brickwork, repointing, crack stitching, and masonry restoration for Melbourne's finest period homes. Camberwell, Hawthorn, Canterbury, Toorak, and surrounding suburbs.",
-  path: "/services/heritage",
-  ogTitle: "Heritage Brickwork & Restoration Melbourne | Goodwin",
-  ogDescription:
-    "Specialist heritage brickwork, repointing, and crack stitching for Melbourne's period homes.",
-});
+import { ServiceEnquiry } from "./ServiceEnquiry";
+import { quoteHref, type ServiceVariant } from "./variant";
+import styles from "./services.module.css";
 
 const heritageServices = [
   {
@@ -148,23 +137,32 @@ const faqs: ReadonlyArray<FaqItem> = [
   },
 ];
 
-export default function HeritageRestorationPage() {
+export function HeritageContent({
+  variant = "page",
+}: {
+  variant?: ServiceVariant;
+}) {
   return (
     <>
       <PageHero
         eyebrow="Heritage & Restoration"
         title="Melbourne's Heritage Deserves More Than a Patch Job."
         subtext="Specialist heritage brickwork, repointing, crack stitching, and restoration for pre-war homes and heritage buildings across Camberwell, Hawthorn, Canterbury, and inner Melbourne."
-        crumbs={[
-          homeCrumb,
-          { name: "Services", url: "/services" },
-          { name: "Heritage & Restoration" },
-        ]}
+        crumbs={
+          variant === "page"
+            ? [
+                homeCrumb,
+                { name: "Services", url: "/services" },
+                { name: "Heritage & Restoration" },
+              ]
+            : undefined
+        }
         image={{
           src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
           alt: "Restored heritage brick boundary wall with sandstone-capped pier by Goodwin Bricklaying on Hanover Street, Fitzroy, Melbourne",
         }}
         showCta
+        ctaHref={quoteHref(variant)}
       />
 
       <section className="section section--cream" aria-labelledby="heritage-intro">
@@ -264,6 +262,7 @@ export default function HeritageRestorationPage() {
       />
 
       <ServiceCtaBand
+        buttonHref={quoteHref(variant)}
         heading="Get an honest assessment of your heritage property"
         body="David provides detailed quotes with full construction specifics, with no obligation and no sales pressure."
       />
@@ -305,7 +304,8 @@ export default function HeritageRestorationPage() {
         </div>
       </section>
 
-      <EnquiryCta
+      <ServiceEnquiry
+        variant={variant}
         heading="Enquire About Your Heritage Project"
         body="David provides detailed quotes with full construction specifics. If you're not sure what your property needs, he'll give you an honest assessment."
         buttonLabel="Get a Quote"

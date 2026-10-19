@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
 import styles from "./not-found.module.css";
 
 export const metadata: Metadata = {
@@ -9,29 +11,39 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+/**
+ * Rendered by the root layout, outside both route groups, so it brings the
+ * full site nav and footer itself.
+ */
 export default function NotFound() {
   return (
-    <section className={styles.wrap}>
-      <div className={styles.inner}>
-        <span className={styles.code}>404</span>
-        <h1 className={styles.title}>This page doesn&apos;t exist.</h1>
-        <p className={styles.subtitle}>But the craftsmanship does.</p>
-        <p className={styles.body}>
-          It looks like the page you were after has moved or no longer exists.
-          Let&apos;s get you back on track.
-        </p>
-        <div className={styles.actions}>
-          <Link href="/" className="btn btn--light">
-            Return Home
-          </Link>
-          <Link href="/services" className="btn btn--light">
-            View Our Services
-          </Link>
-          <Link href="/contact" className="btn btn--light">
-            Get in Touch
-          </Link>
-        </div>
-      </div>
-    </section>
+    <>
+      <Nav />
+      <main id="main-content">
+        <section className={styles.wrap}>
+          <div className={styles.inner}>
+            <span className={styles.code}>404</span>
+            <h1 className={styles.title}>This page doesn&apos;t exist.</h1>
+            <p className={styles.subtitle}>But the craftsmanship does.</p>
+            <p className={styles.body}>
+              It looks like the page you were after has moved or no longer exists.
+              Let&apos;s get you back on track.
+            </p>
+            <div className={styles.actions}>
+              <Link href="/" className="btn btn--light">
+                Return Home
+              </Link>
+              <Link href="/services" className="btn btn--light">
+                View Our Services
+              </Link>
+              <Link href="/contact" className="btn btn--light">
+                Get in Touch
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }

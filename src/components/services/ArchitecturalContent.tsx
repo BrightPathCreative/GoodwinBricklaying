@@ -1,29 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
-import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import TiltedCarousel from "@/components/TiltedCarousel";
 import { homeCrumb } from "@/components/Breadcrumbs";
-import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
-import styles from "../services.module.css";
-
-export const metadata: Metadata = buildMetadata({
-  title:
-    "Architectural Masonry Melbourne | Vaulted Ceilings, Arches & Brick Tunnels",
-  description:
-    "Bespoke architectural masonry including vaulted ceilings, arches, and brick tunnels. Trusted by Melbourne architects and premium builders. 25 years of specialist experience.",
-  path: "/services/architectural",
-  ogTitle: "Architectural Masonry Melbourne | Vaulted Ceilings & Arches",
-  ogDescription:
-    "Bespoke architectural masonry trusted by Melbourne architects. 25 years experience.",
-});
+import { ServiceEnquiry } from "./ServiceEnquiry";
+import { quoteHref, type ServiceVariant } from "./variant";
+import styles from "./services.module.css";
 
 const architecturalServices = [
   {
@@ -163,23 +151,32 @@ const faqs: ReadonlyArray<FaqItem> = [
   },
 ];
 
-export default function ArchitecturalMasonryPage() {
+export function ArchitecturalContent({
+  variant = "page",
+}: {
+  variant?: ServiceVariant;
+}) {
   return (
     <>
       <PageHero
         eyebrow="Architectural Masonry"
         title="Masonry That Architects Trust. Work That Lasts Generations."
         subtext="Vaulted ceilings, arches, brick tunnels, and bespoke architectural masonry for residential builds, architectural commissions, and landmark projects across Melbourne."
-        crumbs={[
-          homeCrumb,
-          { name: "Services", url: "/services" },
-          { name: "Architectural Masonry" },
-        ]}
+        crumbs={
+          variant === "page"
+            ? [
+                homeCrumb,
+                { name: "Services", url: "/services" },
+                { name: "Architectural Masonry" },
+              ]
+            : undefined
+        }
         image={{
           src: "/images/architectural-masonry/prahran-park/goodwin-bricklaying-architectural-curved-brick-retaining-wall-prahran-council-park-completed.jpg",
           alt: "Completed curved architectural brick retaining wall with timber bench seating at a Prahran council park by Goodwin Bricklaying",
         }}
         showCta
+        ctaHref={quoteHref(variant)}
       />
 
       <section className="section section--cream" aria-labelledby="arch-intro">
@@ -223,6 +220,7 @@ export default function ArchitecturalMasonryPage() {
       />
 
       <ServiceCtaBand
+        buttonHref={quoteHref(variant)}
         heading="Planning an architectural masonry feature?"
         body="From a single arch to a vaulted ceiling, David works from your drawings or collaborates on the design."
       />
@@ -363,7 +361,8 @@ export default function ArchitecturalMasonryPage() {
         </div>
       </section>
 
-      <EnquiryCta
+      <ServiceEnquiry
+        variant={variant}
         heading="Discuss an Architectural Commission"
         body="From a single feature arch to a fully vaulted ceiling, David works from your architect's drawings or collaborates on the design. Get in touch to discuss your project."
         buttonLabel="Enquire Now"

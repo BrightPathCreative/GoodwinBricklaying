@@ -1,26 +1,15 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ServiceList } from "@/components/ServiceList";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
-import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import { homeCrumb } from "@/components/Breadcrumbs";
-import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
-import styles from "../services.module.css";
-
-export const metadata: Metadata = buildMetadata({
-  title: "Commercial Masonry & Structural Brickwork Melbourne | Goodwin Bricklaying",
-  description:
-    "Commercial blockwork, retaining walls, extensions, and structural masonry for builders and developers across Melbourne. Quality-first, on-time delivery.",
-  path: "/services/structural-commercial",
-  ogTitle: "Commercial Masonry & Structural Brickwork Melbourne",
-  ogDescription:
-    "Blockwork, retaining walls, and commercial masonry for Melbourne builders and developers.",
-});
+import { ServiceEnquiry } from "./ServiceEnquiry";
+import { quoteHref, type ServiceVariant } from "./variant";
+import styles from "./services.module.css";
 
 const structuralServices = [
   {
@@ -115,23 +104,32 @@ const faqs: ReadonlyArray<FaqItem> = [
   },
 ];
 
-export default function StructuralCommercialPage() {
+export function StructuralCommercialContent({
+  variant = "page",
+}: {
+  variant?: ServiceVariant;
+}) {
   return (
     <>
       <PageHero
         eyebrow="Structural & Commercial"
         title="Structural Masonry. Commercial Capability. The Same Standard."
         subtext="Commercial blockwork, retaining walls, extensions, and structural masonry for builders, developers, and commercial clients across Melbourne."
-        crumbs={[
-          homeCrumb,
-          { name: "Services", url: "/services" },
-          { name: "Structural & Commercial" },
-        ]}
+        crumbs={
+          variant === "page"
+            ? [
+                homeCrumb,
+                { name: "Services", url: "/services" },
+                { name: "Structural & Commercial" },
+              ]
+            : undefined
+        }
         image={{
           src: "/images/structural-commercial/goodwin-bricklaying-commercial-blockwork-curved-walls-multi-storey-development.jpg",
           alt: "Curved structural blockwork walls under construction at a multi-storey Melbourne development by Goodwin Bricklaying",
         }}
         showCta
+        ctaHref={quoteHref(variant)}
       />
 
       <section className="section section--cream" aria-labelledby="structural-intro">
@@ -173,6 +171,7 @@ export default function StructuralCommercialPage() {
       />
 
       <ServiceCtaBand
+        buttonHref={quoteHref(variant)}
         heading="Builders and developers, let's talk scope"
         body="David welcomes enquiries on blockwork, retaining walls, and structural masonry subcontracting."
       />
@@ -230,7 +229,8 @@ export default function StructuralCommercialPage() {
         </div>
       </section>
 
-      <EnquiryCta
+      <ServiceEnquiry
+        variant={variant}
         heading="Discuss Your Project"
         body="If you are a builder or developer seeking a quality-first masonry subcontractor, David welcomes enquiries. Get in touch to discuss scope, timeline, and specification."
         buttonLabel="Discuss Your Project"

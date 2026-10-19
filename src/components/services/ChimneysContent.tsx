@@ -1,28 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
-import { EnquiryCta } from "@/components/EnquiryCta";
 import { ServiceCtaBand } from "@/components/ServiceCtaBand";
 import { ServiceGallery } from "@/components/ServiceGallery";
 import { BrunswickShowcase } from "@/components/BrunswickShowcase";
 import { homeCrumb } from "@/components/Breadcrumbs";
-import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
-import styles from "../services.module.css";
-
-export const metadata: Metadata = buildMetadata({
-  title:
-    "Chimney Stack Construction & Restoration Melbourne | Goodwin Bricklaying",
-  description:
-    "Specialist chimney stack construction and heritage restoration across Melbourne. From residential fireplaces to 40-metre commercial stacks. Fully insured. 25 years experience.",
-  path: "/services/chimneys",
-  ogTitle: "Chimney Stack Construction & Restoration Melbourne",
-  ogDescription:
-    "Specialist chimney work from residential stacks to 40-metre commercial builds.",
-});
+import { ServiceEnquiry } from "./ServiceEnquiry";
+import { quoteHref, type ServiceVariant } from "./variant";
+import styles from "./services.module.css";
 
 const leadService = {
   title: "Chimney Stack Construction and Restoration",
@@ -132,23 +120,32 @@ const faqs: ReadonlyArray<FaqItem> = [
   },
 ];
 
-export default function ChimneysFireplacesPage() {
+export function ChimneysContent({
+  variant = "page",
+}: {
+  variant?: ServiceVariant;
+}) {
   return (
     <>
       <PageHero
         eyebrow="Chimneys & Fireplaces"
         title="Chimney Stacks Built to Stand for Generations."
         subtext="From landmark commercial stacks to heritage fireplace restoration and handcrafted pizza ovens: specialist chimney and fireplace masonry throughout Melbourne."
-        crumbs={[
-          homeCrumb,
-          { name: "Services", url: "/services" },
-          { name: "Chimneys & Fireplaces" },
-        ]}
+        crumbs={
+          variant === "page"
+            ? [
+                homeCrumb,
+                { name: "Services", url: "/services" },
+                { name: "Chimneys & Fireplaces" },
+              ]
+            : undefined
+        }
         image={{
           src: "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-40-metre-chimney-stack-full-height-ground-view.jpg",
           alt: "Restored 40-metre heritage brick chimney stack in Collingwood, Melbourne by Goodwin Bricklaying",
         }}
         showCta
+        ctaHref={quoteHref(variant)}
       />
 
       <section className="section section--cream" aria-labelledby="chimney-intro">
@@ -295,6 +292,7 @@ export default function ChimneysFireplacesPage() {
       />
 
       <ServiceCtaBand
+        buttonHref={quoteHref(variant)}
         heading="Discuss your chimney or fireplace project"
         body="From heritage stacks to pizza ovens, get a detailed quote with full construction specifics."
       />
@@ -350,7 +348,8 @@ export default function ChimneysFireplacesPage() {
         </div>
       </section>
 
-      <EnquiryCta
+      <ServiceEnquiry
+        variant={variant}
         heading="Enquire About Your Chimney or Fireplace"
         body="Whether it's a heritage stack, a new fireplace, or a handcrafted pizza oven, David will assess what's involved and provide a detailed quote."
         buttonLabel="Get a Quote"
