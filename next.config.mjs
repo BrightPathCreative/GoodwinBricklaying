@@ -6,6 +6,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // The cookie policy was folded into the privacy policy when the consent
+      // banner was removed.
+      {
+        source: "/cookie-policy",
+        destination: "/privacy-policy#cookies",
+        permanent: true,
+      },
       // Service slugs shortened so the Google Ads display path fits the
       // 15-character limit. The old URLs were indexed, so these must stay
       // permanently.

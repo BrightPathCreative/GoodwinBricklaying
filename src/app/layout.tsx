@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { DM_Serif_Display, Inter, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import { site } from "@/lib/site";
-import { CookieConsent } from "@/components/CookieConsent";
 import { Analytics } from "@/components/Analytics";
 import { GoogleTagManager } from "@/components/GoogleTagManager";
 import { CallTracking } from "@/components/CallTracking";
@@ -109,7 +108,6 @@ export default function RootLayout({
             (site) carries the full site chrome, (landing) the stripped-back
             Google Ads pages. */}
         {children}
-        <CookieConsent />
         <Analytics />
         <GoogleTagManager />
         <CallTracking />

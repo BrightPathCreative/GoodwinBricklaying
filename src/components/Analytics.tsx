@@ -1,21 +1,17 @@
-"use client";
-
 import Script from "next/script";
-import { useEffect, useState } from "react";
-import { CONSENT_EVENT, hasAnalyticsConsent } from "@/lib/consent";
 
 /**
- * Consent-gated Google tag (gtag.js) for GA4 and Google Ads.
+ * Google tag (gtag.js) for GA4 and Google Ads.
  *
  * Google's install snippet says one Google tag per page: that means one
  * gtag.js loader, not one product. GA4 and Ads are both configured on the
  * single loader below, which is why the Ads snippet from the Ads UI must not
  * be pasted in as well.
  *
- * Inert until an ID is provided via NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_ADS_ID,
- * and only loads once the visitor has granted analytics consent. It listens
- * for the consent event so tracking begins immediately after acceptance (no
- * reload required) and stays off entirely if consent is declined.
+ * Inert until an ID is provided via NEXT_PUBLIC_GA_ID / NEXT_PUBLIC_ADS_ID.
+ * There is no consent banner: the site is Australian, the Privacy Act does
+ * not require opt-in consent for analytics cookies, and the cookies are
+ * disclosed in the Privacy Policy instead.
  */
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const ADS_ID = process.env.NEXT_PUBLIC_ADS_ID;
@@ -24,16 +20,7 @@ const ADS_ID = process.env.NEXT_PUBLIC_ADS_ID;
 const TAG_ID = GA_ID || ADS_ID;
 
 export function Analytics() {
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    const sync = () => setEnabled(hasAnalyticsConsent());
-    sync();
-    window.addEventListener(CONSENT_EVENT, sync);
-    return () => window.removeEventListener(CONSENT_EVENT, sync);
-  }, []);
-
-  if (!TAG_ID || !enabled) return null;
+  if (!TAG_ID) return null;
 
   return (
     <>

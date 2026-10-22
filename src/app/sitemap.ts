@@ -19,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/locations",
     "/privacy-policy",
-    "/cookie-policy",
   ];
 
   const servicePaths = serviceNav.map((service) => service.href);

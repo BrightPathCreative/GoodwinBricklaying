@@ -17,6 +17,26 @@ export const metadata: Metadata = buildMetadata({
     "How Goodwin Bricklaying collects, uses, and protects your personal information.",
 });
 
+const cookieRows = [
+  {
+    type: "Analytics",
+    purpose:
+      "Understand how visitors use the site, including pages visited, time on site, and referral source.",
+    provider: "Google Analytics 4",
+  },
+  {
+    type: "Advertising",
+    purpose:
+      "Measure which Google ads lead to enquiries and phone calls, so we only pay for advertising that works.",
+    provider: "Google Ads, Google Tag Manager",
+  },
+  {
+    type: "Enquiry form",
+    purpose: "Allow the enquiry form to load and submit securely.",
+    provider: "BrightPath Creative (GoHighLevel)",
+  },
+];
+
 export default function PrivacyPolicyPage() {
   return (
     <>
@@ -29,7 +49,7 @@ export default function PrivacyPolicyPage() {
       <section className="section section--cream">
         <div className="container-narrow">
           <Reveal>
-            <span className={styles.updated}>Last updated: June 2026</span>
+            <span className={styles.updated}>Last updated: October 2026</span>
             <div className={styles.prose}>
               <p>
                 Goodwin Bricklaying (ABN {site.abn}), operated by David Reuben
@@ -74,8 +94,8 @@ export default function PrivacyPolicyPage() {
                   platforms.
                 </li>
                 <li>
-                  Automatically, via website analytics and cookies (see our{" "}
-                  <Link href="/cookie-policy">Cookie Policy</Link>).
+                  Automatically, via website analytics and cookies (see{" "}
+                  <a href="#cookies">Cookies</a> below).
                 </li>
               </ul>
 
@@ -134,11 +154,91 @@ export default function PrivacyPolicyPage() {
                 reasonable time frame.
               </p>
 
-              <h2>7. Cookies</h2>
+              <h2 id="cookies">7. Cookies</h2>
               <p>
-                This website uses cookies to improve your experience and collect
-                analytics data. For full details, please see our{" "}
-                <Link href="/cookie-policy">Cookie Policy</Link>.
+                Cookies are small text files placed on your device when you visit
+                a website. This website uses them to understand how visitors use
+                the site and to measure how our Google advertising performs. By
+                using this website, you agree to the use of cookies as described
+                here.
+              </p>
+              <div className={styles.tableWrap}>
+                <table className={styles.table}>
+                  <thead>
+                    <tr>
+                      <th scope="col">Cookie Type</th>
+                      <th scope="col">Purpose</th>
+                      <th scope="col">Provider</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cookieRows.map((row) => (
+                      <tr key={row.type}>
+                        <td>{row.type}</td>
+                        <td>{row.purpose}</td>
+                        <td>{row.provider}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p>
+                Analytics data is collected in aggregate and does not identify
+                you personally. Google may also use advertising cookies to show
+                you relevant ads on other websites; you can manage this in your{" "}
+                <a
+                  href="https://adssettings.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Ad Settings
+                </a>
+                . You can opt out of Google Analytics entirely with the{" "}
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Analytics Opt-out Browser Add-on
+                </a>
+                .
+              </p>
+              <p>
+                You can also block or delete cookies through your browser
+                settings (for example in{" "}
+                <a
+                  href="https://support.google.com/chrome/answer/95647"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Chrome
+                </a>
+                ,{" "}
+                <a
+                  href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Safari
+                </a>
+                ,{" "}
+                <a
+                  href="https://support.mozilla.org/kb/enable-and-disable-cookies-website-preferences"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Firefox
+                </a>{" "}
+                or{" "}
+                <a
+                  href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Edge
+                </a>
+                ). The website will still work, although the enquiry form may
+                need cookies enabled to submit.
               </p>
 
               <h2>8. Links to Other Websites</h2>

@@ -1,16 +1,10 @@
 /**
  * GA4 and Google Ads event helpers.
  *
- * Events are dropped unless the visitor has accepted analytics cookies, which
- * mirrors the gate on components/Analytics.tsx — no consent means no gtag, and
- * nothing should leave the browser.
- *
  * gtag.js loads with the afterInteractive strategy, so an event fired on mount
  * can beat the script into existence. Rather than dropping it, trackEvent
  * retries briefly and then gives up.
  */
-import { hasAnalyticsConsent } from "@/lib/consent";
-
 declare global {
   interface Window {
     gtag?: (command: string, ...args: unknown[]) => void;
@@ -25,7 +19,7 @@ export function trackEvent(
   params: Record<string, unknown> = {},
   attempt = 0,
 ): void {
-  if (typeof window === "undefined" || !hasAnalyticsConsent()) return;
+  if (typeof window === "undefined") return;
 
   if (typeof window.gtag === "function") {
     window.gtag("event", name, params);

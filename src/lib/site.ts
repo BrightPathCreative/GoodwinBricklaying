@@ -81,5 +81,4 @@ export const locationNav: ReadonlyArray<{ label: string; href: string }> = [
 
 export const legalNav: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Cookie Policy", href: "/cookie-policy" },
 ];

@@ -44,7 +44,7 @@ We collect personal information:
 - When you fill in and submit the enquiry form on this website.
 - When you call or send an email to us directly.
 - When you contact us via Instagram or other social media platforms.
-- Automatically, via website analytics and cookies (see Cookie Policy).
+- Automatically, via website analytics and cookies (see section 7).
 
 ---
 
@@ -90,7 +90,15 @@ We will respond to your request within a reasonable time frame.
 
 ### 7. Cookies
 
-This website uses cookies to improve your experience and collect analytics data. For full details, please see our [Cookie Policy](/cookie-policy).
+This website uses cookies to understand how visitors use the site and to measure how our Google advertising performs. By using this website, you agree to the use of cookies as described here. There is no cookie banner; this section is the disclosure.
+
+| Cookie Type | Purpose | Provider |
+|---|---|---|
+| Analytics | Understand how visitors use the site, including pages visited, time on site, and referral source. | Google Analytics 4 |
+| Advertising | Measure which Google ads lead to enquiries and phone calls, so we only pay for advertising that works. | Google Ads, Google Tag Manager |
+| Enquiry form | Allow the enquiry form to load and submit securely. | BrightPath Creative (GoHighLevel) |
+
+Analytics data is collected in aggregate and does not identify you personally. Google may also use advertising cookies to show you relevant ads on other websites; manage this in Google Ad Settings (adssettings.google.com). Opt out of Google Analytics with the Google Analytics Opt-out Browser Add-on. Cookies can also be blocked or deleted in browser settings; the enquiry form may need cookies enabled to submit.
 
 ---
 
