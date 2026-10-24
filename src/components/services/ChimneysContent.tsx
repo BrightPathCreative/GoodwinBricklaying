@@ -32,7 +32,7 @@ const minorServices = [
   },
   {
     title: "Pizza Ovens",
-    text: "Handcrafted brick pizza oven construction, built to function beautifully and become the centrepiece of any outdoor entertaining space.",
+    text: "Handcrafted brick pizza oven construction, built to function beautifully and become the centrepiece of any outdoor entertaining space. See our outdoor kitchens and pizza ovens page for more.",
   },
 ];
 

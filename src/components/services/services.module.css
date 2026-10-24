@@ -385,3 +385,19 @@
     top: calc(var(--nav-height) + 2rem);
   }
 }
+
+/* Visible tag on illustrative (non-photographic) tile images. */
+.serviceCardBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  padding: 0.4rem 0.7rem;
+  background-color: rgba(38, 30, 26, 0.82);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: 0.64rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+}

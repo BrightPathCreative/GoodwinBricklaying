@@ -17,7 +17,16 @@ export const metadata: Metadata = buildMetadata({
   path: "/services",
 });
 
-const services = [
+type ServiceCard = {
+  title: string;
+  text: string;
+  href: string;
+  image: string;
+  alt: string;
+  badge?: string;
+};
+
+const services: ReadonlyArray<ServiceCard> = [
   {
     title: "Heritage & Restoration",
     text: "Melbourne's older homes and buildings deserve more than a patch job. David specialises in heritage brickwork, repointing, crack stitching, and remedial work that blends seamlessly with original construction.",
@@ -43,6 +52,15 @@ const services = [
     alt: "27-metre 1938 Highett Gasworks heritage chimney landmark by Goodwin Bricklaying",
   },
   {
+    title: "Outdoor Kitchens & Pizza Ovens",
+    text: "Brick pizza ovens, outdoor kitchens, fire pits, and feature walls. Heritage-level brickwork, built properly from the footing up for your backyard.",
+    href: "/services/outdoor-kitchens-pizza-ovens",
+    image:
+      "/images/outdoor-kitchens/design-concepts/goodwin-bricklaying-outdoor-kitchen-design-concept-regional-farm-clay-brick.jpg",
+    alt: "Design concept of a regional farm outdoor kitchen in clay brick with a pizza oven and fire pit",
+    badge: "Design concept",
+  },
+  {
     title: "Structural & Commercial",
     text: "Commercial blockwork, retaining walls, extensions, and structural masonry for builders, developers, and commercial clients across Melbourne.",
     href: "/services/structural-commercial",
@@ -58,7 +76,7 @@ const services = [
       "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-raked-jointing-joint-detail.jpg",
     alt: "Fine traditional tuck pointing on heritage brickwork by Goodwin Bricklaying",
   },
-] as const;
+];
 
 const faqs: ReadonlyArray<FaqItem> = [
   {
@@ -69,7 +87,7 @@ const faqs: ReadonlyArray<FaqItem> = [
   {
     question: "Do you quote on all project types?",
     answer:
-      "David quotes on heritage and restoration work, architectural masonry, chimneys and fireplaces, structural and commercial masonry, and tuck pointing. He does not quote on very small patch repairs or minor jobs. If you're unsure, contact him and he'll let you know straightaway.",
+      "David quotes on heritage and restoration work, architectural masonry, chimneys and fireplaces, outdoor kitchens and pizza ovens, structural and commercial masonry, and tuck pointing. He does not quote on very small patch repairs or minor jobs. If you're unsure, contact him and he'll let you know straightaway.",
   },
   {
     question: "How quickly can you start?",
@@ -108,6 +126,9 @@ export default function ServicesPage() {
                     sizes="(min-width: 768px) 45vw, 100vw"
                     className={styles.serviceCardImg}
                   />
+                  {service.badge ? (
+                    <span className={styles.serviceCardBadge}>{service.badge}</span>
+                  ) : null}
                 </span>
                 <h3 className={styles.serviceCardTitle}>{service.title}</h3>
                 <p className={styles.serviceCardText}>{service.text}</p>

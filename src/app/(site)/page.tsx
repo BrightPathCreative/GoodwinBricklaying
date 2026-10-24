@@ -10,7 +10,16 @@ import type { FaqItem } from "@/lib/schema";
 import { site } from "@/lib/site";
 import styles from "./page.module.css";
 
-const services = [
+type ServiceTile = {
+  title: string;
+  text: string;
+  href: string;
+  image: string;
+  alt: string;
+  badge?: string;
+};
+
+const services: ReadonlyArray<ServiceTile> = [
   {
     title: "Heritage & Restoration",
     text: "Repointing, crack stitching, heritage brickwork, and remedial work that honours the original.",
@@ -36,6 +45,15 @@ const services = [
     alt: "Forty-metre heritage brick chimney stack in Collingwood restored by Goodwin Bricklaying",
   },
   {
+    title: "Outdoor Kitchens & Pizza Ovens",
+    text: "Brick pizza ovens, outdoor kitchens, fire pits, and feature walls, built properly from the footing up.",
+    href: "/services/outdoor-kitchens-pizza-ovens",
+    image:
+      "/images/outdoor-kitchens/design-concepts/goodwin-bricklaying-outdoor-kitchen-design-concept-regional-farm-clay-brick.jpg",
+    alt: "Design concept of a regional farm outdoor kitchen in clay brick with a pizza oven and fire pit",
+    badge: "Design concept",
+  },
+  {
     title: "Structural & Commercial",
     text: "Blockwork, retaining walls, extensions, and commercial projects across Melbourne.",
     href: "/services/structural-commercial",
@@ -51,7 +69,7 @@ const services = [
       "/images/tuck-pointing/pointing-styles/goodwin-bricklaying-tuck-pointing-joint-detail.jpg",
     alt: "Close detail of traditional tuck pointing on heritage red brickwork by Goodwin Bricklaying",
   },
-] as const;
+];
 
 const showcase = [
   {
@@ -111,7 +129,7 @@ const faqs: ReadonlyArray<FaqItem> = [
   {
     question: "What types of projects do you specialise in?",
     answer:
-      "David specialises in heritage brickwork and restoration, architectural masonry including vaulted ceilings and arches, and chimney stack construction and repair. He also takes on structural blockwork, retaining walls, and extensions for builders and developers. He does not take on small patch jobs or low-budget repairs: his work is for clients who want the job done properly, once.",
+      "David specialises in heritage brickwork and restoration, architectural masonry including vaulted ceilings and arches, and chimney stack construction and repair. He also takes on structural blockwork, retaining walls, and extensions for builders and developers, and builds brick pizza ovens, outdoor kitchens, fire pits, and feature walls for homeowners. He does not take on small patch jobs or low-budget repairs: his work is for clients who want the job done properly, once.",
   },
   {
     question: "Do you work directly with homeowners, or only through builders?",
@@ -127,6 +145,11 @@ const faqs: ReadonlyArray<FaqItem> = [
     question: "How do I get a quote?",
     answer:
       "Fill in the enquiry form on the Contact page, or call the number at the top of this page. David responds to all enquiries within 24 hours and provides detailed quotes with full construction specifics: no vague estimates, no surprises on site.",
+  },
+  {
+    question: "Do you build outdoor kitchens and pizza ovens?",
+    answer:
+      "Yes. Goodwin Bricklaying builds brick pizza ovens, outdoor kitchens, fire pits, and feature walls across Melbourne, and can supply and install a pizza oven kit of your choice. Supply and install of a pizza oven kit starts from $5,500, and outdoor kitchens are quoted after a site visit. See the outdoor kitchens and pizza ovens page for details.",
   },
   {
     question: "Which suburbs do you service?",
@@ -248,6 +271,9 @@ export default function HomePage() {
                     sizes="(min-width: 768px) 45vw, 100vw"
                     className={styles.coverImage}
                   />
+                  {service.badge ? (
+                    <span className={styles.tileBadge}>{service.badge}</span>
+                  ) : null}
                 </span>
                 <h3 className={styles.serviceTileTitle}>{service.title}</h3>
                 <p className={styles.serviceTileText}>{service.text}</p>

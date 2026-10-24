@@ -44,6 +44,10 @@ export function localBusinessSchema(): Record<string, unknown> {
       "Masonry restoration",
       "Architectural masonry",
       "Chimney stacks",
+      "Brick pizza ovens",
+      "Outdoor kitchens",
+      "Brick fire pits",
+      "Brick feature walls",
       "Repointing",
       "Tuck pointing",
       "Vaulted ceilings",
@@ -111,6 +115,55 @@ export function locationPageSchema(location: {
           name: "Victoria",
           containedInPlace: { "@type": "Country", name: "Australia" },
         },
+      },
+    },
+  };
+}
+
+/**
+ * Service schema for the outdoor kitchens and pizza ovens page. The offer
+ * reflects the one published price point: pizza oven kit supply and install
+ * from $5,500. Everything else is quoted after a site visit.
+ */
+export function outdoorKitchensServiceSchema(): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Outdoor Kitchens, Pizza Ovens, Fire Pits and Feature Walls",
+    serviceType: "Brick pizza ovens, outdoor kitchens, fire pits and feature walls",
+    description:
+      "Custom brick pizza ovens, outdoor kitchen designs, brick fire pits and feature walls in Melbourne, built by a Camberwell bricklayer with heritage restoration experience.",
+    url: `${site.url}/services/outdoor-kitchens-pizza-ovens`,
+    provider: {
+      "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+      name: site.name,
+      url: site.url,
+      telephone: site.phone,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: site.address.locality,
+        addressRegion: site.address.region,
+        addressCountry: site.address.country,
+      },
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: -37.8266,
+        longitude: 145.0587,
+      },
+      geoRadius: "60000",
+      description: "Up to an hour from Camberwell, Melbourne",
+    },
+    offers: {
+      "@type": "Offer",
+      name: "Pizza oven kit supply and install",
+      priceCurrency: "AUD",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        minPrice: 5500,
+        priceCurrency: "AUD",
       },
     },
   };

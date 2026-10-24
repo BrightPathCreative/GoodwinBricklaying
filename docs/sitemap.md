@@ -10,6 +10,7 @@ goodwinbricklaying.com.au/
 │   ├── /services/heritage               → Heritage & Restoration
 │   ├── /services/architectural          → Architectural Masonry
 │   ├── /services/chimneys               → Chimneys & Fireplaces
+│   ├── /services/outdoor-kitchens-pizza-ovens → Outdoor Kitchens & Pizza Ovens
 │   ├── /services/structural-commercial  → Structural & Commercial
 │   └── /services/tuck-pointing          → Tuck Pointing
 ├── /projects                            → Gallery / Portfolio

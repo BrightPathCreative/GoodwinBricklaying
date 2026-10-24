@@ -41,6 +41,7 @@ export function PageHero({
   subtext,
   crumbs,
   image,
+  imageLabel,
   showCta = false,
   ctaHref = navCta.href,
 }: {
@@ -50,6 +51,8 @@ export function PageHero({
   /** Omitted on the Google Ads landing pages, which sit outside the site tree. */
   crumbs?: ReadonlyArray<Crumb>;
   image?: { src: string; alt: string };
+  /** Visible tag on the hero photo, e.g. "Design concept" for illustrative images. */
+  imageLabel?: string;
   /** Primary quote + call actions beneath the hero subtext. */
   showCta?: boolean;
   ctaHref?: string;
@@ -65,6 +68,9 @@ export function PageHero({
           className={styles.image}
           priority
         />
+      ) : null}
+      {image && imageLabel ? (
+        <span className={styles.imageLabel}>{imageLabel}</span>
       ) : null}
       {/* Breadcrumb kept as invisible structured data only; the visible
           trail was removed for a cleaner, more editorial hero. */}

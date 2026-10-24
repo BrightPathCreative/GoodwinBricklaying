@@ -42,6 +42,10 @@ export const serviceNav: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Heritage & Restoration", href: "/services/heritage" },
   { label: "Architectural Masonry", href: "/services/architectural" },
   { label: "Chimneys & Fireplaces", href: "/services/chimneys" },
+  {
+    label: "Outdoor Kitchens & Pizza Ovens",
+    href: "/services/outdoor-kitchens-pizza-ovens",
+  },
   { label: "Structural & Commercial", href: "/services/structural-commercial" },
   { label: "Tuck Pointing", href: "/services/tuck-pointing" },
 ];

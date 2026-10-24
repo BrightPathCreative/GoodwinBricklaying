@@ -152,3 +152,19 @@
     animation: none;
   }
 }
+
+/* Visible tag for illustrative (non-photographic) hero images. */
+.imageLabel {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: 1rem;
+  z-index: 3;
+  padding: 0.5rem 0.85rem;
+  background-color: rgba(38, 30, 26, 0.82);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: 0.7rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+}
