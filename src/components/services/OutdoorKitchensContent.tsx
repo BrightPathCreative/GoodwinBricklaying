@@ -110,8 +110,7 @@ const faqs: ReadonlyArray<FaqItem> = [
       "A feature wall is a brick wall built to be seen. It can frame a pizza oven, add a heritage look to a garden or hide a service area, and it can include arches, niches and firewood storage.",
   },
   {
-    question:
-      "Can you add an oven or kitchen to my existing patio or pergola?",
+    question: "Can you add an oven or kitchen to my existing patio or pergola?",
     answer:
       "Often, yes. We check the space, the structure and the clearances first. Wood-fired ovens and barbecues need safe distances from timber, so every site is assessed before we quote.",
   },
@@ -197,10 +196,7 @@ export function OutdoorKitchensContent() {
         </div>
       </section>
 
-      <section
-        className="section section--dark"
-        aria-labelledby="oven-heading"
-      >
+      <section className="section section--dark" aria-labelledby="oven-heading">
         <div className={`container ${outdoor.ovenGrid}`}>
           <Reveal variant="left">
             <Reveal
@@ -239,7 +235,9 @@ export function OutdoorKitchensContent() {
                   className={outdoor.conceptImage}
                 />
               </div>
-              <figcaption className={`${outdoor.caption} ${outdoor.captionDark}`}>
+              <figcaption
+                className={`${outdoor.caption} ${outdoor.captionDark}`}
+              >
                 Inside a brick dome. Our work.
               </figcaption>
             </figure>
@@ -254,7 +252,9 @@ export function OutdoorKitchensContent() {
                   style={{ objectPosition: "50% 55%" }}
                 />
               </div>
-              <figcaption className={`${outdoor.caption} ${outdoor.captionDark}`}>
+              <figcaption
+                className={`${outdoor.caption} ${outdoor.captionDark}`}
+              >
                 A brick dome under construction. Our work.
               </figcaption>
             </figure>
@@ -315,9 +315,9 @@ export function OutdoorKitchensContent() {
           </Reveal>
           <Reveal className={`${styles.lead} ${outdoor.afterConcepts}`}>
             <p>
-              Every outdoor kitchen is designed around your yard, your budget and
-              how you like to entertain. Tell us what you have in mind and we
-              will help you shape it.
+              Every outdoor kitchen is designed around your yard, your budget
+              and how you like to entertain. Tell us what you have in mind and
+              we will help you shape it.
             </p>
           </Reveal>
         </div>
@@ -433,16 +433,21 @@ export function OutdoorKitchensContent() {
           >
             Service Area
           </Reveal>
-          <Reveal as="h2" id="outdoor-area-heading" className={styles.headingTight}>
+          <Reveal
+            as="h2"
+            id="outdoor-area-heading"
+            className={styles.headingTight}
+          >
             Where we work
           </Reveal>
-          <Reveal as="p" className={styles.areaText}>
-            We are based in Camberwell and travel up to an hour from Camberwell
-            for outdoor kitchen and pizza oven projects. See our location pages
-            for the suburbs we cover.
-          </Reveal>
           <Reveal>
-            <ServiceAreaMap />
+            <ServiceAreaMap>
+              <p className={styles.areaText}>
+                We are based in Camberwell and travel up to an hour from
+                Camberwell for outdoor kitchen and pizza oven projects. See our
+                location pages for the suburbs we cover.
+              </p>
+            </ServiceAreaMap>
           </Reveal>
         </div>
       </section>

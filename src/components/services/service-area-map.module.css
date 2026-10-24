@@ -1,15 +1,38 @@
 /* Simple service area map. Palette comes from the site tokens. */
 
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.copy {
+  max-width: 56ch;
+}
+
 .wrap {
-  margin: clamp(2rem, 5vw, 3rem) 0 0;
-  max-width: 640px;
+  margin: 0;
+  width: 100%;
+  max-width: 400px;
+  justify-self: center;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+    gap: 4rem;
+  }
+
+  .wrap {
+    justify-self: end;
+  }
 }
 
 .frame {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  border: 1px solid var(--color-divider);
   container-type: inline-size;
 }
 
@@ -57,24 +80,8 @@
 }
 
 .caption {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
-  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1.55;
   color: var(--color-stone);
-}
-
-.swatch {
-  flex: none;
-  width: 1.5rem;
-  height: 0.9rem;
-  margin-top: 0.3rem;
-  display: inline-block;
-}
-
-.swatchZone {
-  background-color: rgba(138, 122, 112, 0.28);
-  border: 1px dashed var(--color-primary);
 }
