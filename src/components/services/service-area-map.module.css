@@ -1,0 +1,129 @@
+/* Thin-line service area map. Palette comes from the site tokens. */
+
+.wrap {
+  margin: clamp(2rem, 5vw, 3rem) 0 0;
+}
+
+.maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: flex-start;
+}
+
+.mainCol {
+  flex: 1 1 420px;
+  max-width: 640px;
+  min-width: 0;
+}
+
+.detailCol {
+  flex: 1 1 340px;
+  max-width: 560px;
+  min-width: 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-divider);
+  container-type: inline-size;
+}
+
+.mapImage {
+  object-fit: cover;
+}
+
+.label {
+  position: absolute;
+  z-index: 2;
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: clamp(0.5rem, 1.55cqw, 0.7rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-deep);
+  pointer-events: none;
+}
+
+.anchor-start {
+  transform: translate(0, -50%);
+}
+
+.anchor-middle {
+  transform: translate(-50%, -50%);
+}
+
+.anchor-end {
+  transform: translate(-100%, -50%);
+}
+
+.labelServed {
+  font-size: clamp(0.55rem, 2.1cqw, 0.74rem);
+  color: var(--color-text-dark);
+}
+
+.labelContext {
+  color: var(--color-stone);
+  font-weight: var(--weight-light);
+}
+
+.water {
+  font-style: italic;
+  letter-spacing: 0.22em;
+  color: var(--color-stone);
+  transform: translate(-50%, -50%) rotate(-8deg);
+}
+
+.legend {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--color-stone);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.swatch {
+  flex: none;
+  width: 1.5rem;
+  height: 0.9rem;
+  display: inline-block;
+}
+
+.swatchZone {
+  background-color: rgba(138, 122, 112, 0.28);
+  border: 1px dashed var(--color-primary);
+}
+
+.swatchServed {
+  background-color: rgba(138, 122, 112, 0.45);
+  border: 1px solid var(--color-primary);
+}
+
+.swatchPin {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-star);
+  background: radial-gradient(circle, var(--color-deep) 0 35%, transparent 40%);
+}
+
+.caption {
+  margin-top: 1.5rem;
+  max-width: 64ch;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-stone);
+}

@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { EnquiryCta } from "@/components/EnquiryCta";
+import { ServiceAreaMap } from "./ServiceAreaMap";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { outdoorKitchensServiceSchema, type FaqItem } from "@/lib/schema";
 import styles from "./services.module.css";
@@ -424,7 +425,14 @@ export function OutdoorKitchensContent() {
         className="section section--cream"
         aria-labelledby="outdoor-area-heading"
       >
-        <div className="container-narrow">
+        <div className="container">
+          <Reveal
+            as="span"
+            variant="fade"
+            className={`eyebrow ${styles.eyebrowSpace}`}
+          >
+            Service Area
+          </Reveal>
           <Reveal as="h2" id="outdoor-area-heading" className={styles.headingTight}>
             Where we work
           </Reveal>
@@ -432,6 +440,9 @@ export function OutdoorKitchensContent() {
             We are based in Camberwell and travel up to an hour from Camberwell
             for outdoor kitchen and pizza oven projects. See our location pages
             for the suburbs we cover.
+          </Reveal>
+          <Reveal>
+            <ServiceAreaMap />
           </Reveal>
         </div>
       </section>
