@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { faqPageSchema, type FaqItem } from "@/lib/schema";
 import { JsonLd } from "./JsonLd";
 import styles from "./Faq.module.css";
@@ -17,7 +18,18 @@ export function Faq({ items }: { items: ReadonlyArray<FaqItem> }) {
             <span>{item.question}</span>
             <span className={styles.icon} aria-hidden="true" />
           </summary>
-          <p className={styles.answer}>{item.answer}</p>
+          <p className={styles.answer}>
+            {item.answer}
+            {item.link ? (
+              <>
+                {" "}
+                <Link href={item.link.href} className={styles.link}>
+                  {item.link.label}
+                </Link>
+                .
+              </>
+            ) : null}
+          </p>
         </details>
       ))}
     </div>

@@ -126,7 +126,8 @@ const faqs: ReadonlyArray<FaqItem> = [
   {
     question: "How do I get a quote?",
     answer:
-      "Call 0489 262 279 or send an enquiry through the form on this page. Tell us what you would like to build and where, and we will get back to you.",
+      "Submit the enquiry form on our contact page. Tell us what you would like to build and where, and we will get back to you.",
+    link: { label: "Go to the contact page", href: "/contact" },
   },
 ];
 

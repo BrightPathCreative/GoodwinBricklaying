@@ -60,10 +60,17 @@ export function localBusinessSchema(): Record<string, unknown> {
   };
 }
 
-export type FaqItem = { question: string; answer: string };
+export type FaqItem = {
+  question: string;
+  answer: string;
+  /** Optional link shown inside the answer, after the sentence. */
+  link?: { label: string; href: string };
+};
 
 /** FAQPage, for any page that renders FAQ content. */
-export function faqPageSchema(items: ReadonlyArray<FaqItem>): Record<string, unknown> {
+export function faqPageSchema(
+  items: ReadonlyArray<FaqItem>,
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -130,7 +137,8 @@ export function outdoorKitchensServiceSchema(): Record<string, unknown> {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Outdoor Kitchens, Pizza Ovens, Fire Pits and Feature Walls",
-    serviceType: "Brick pizza ovens, outdoor kitchens, fire pits and feature walls",
+    serviceType:
+      "Brick pizza ovens, outdoor kitchens, fire pits and feature walls",
     description:
       "Custom brick pizza ovens, outdoor kitchen designs, brick fire pits and feature walls in Melbourne, built by a Camberwell bricklayer with heritage restoration experience.",
     url: `${site.url}/services/outdoor-kitchens-pizza-ovens`,
@@ -172,7 +180,9 @@ export function outdoorKitchensServiceSchema(): Record<string, unknown> {
 export type Crumb = { name: string; url?: string };
 
 /** BreadcrumbList, for inner pages (not the homepage). */
-export function breadcrumbSchema(crumbs: ReadonlyArray<Crumb>): Record<string, unknown> {
+export function breadcrumbSchema(
+  crumbs: ReadonlyArray<Crumb>,
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
