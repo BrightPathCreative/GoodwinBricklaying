@@ -4,7 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { EnquiryCta } from "@/components/EnquiryCta";
-import { ServiceAreaMap } from "./ServiceAreaMap";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { outdoorKitchensServiceSchema, type FaqItem } from "@/lib/schema";
 import styles from "./services.module.css";
@@ -440,14 +439,13 @@ export function OutdoorKitchensContent() {
           >
             Where we work
           </Reveal>
-          <Reveal>
-            <ServiceAreaMap>
-              <p className={styles.areaText}>
-                We are based in Camberwell and travel up to an hour from
-                Camberwell for outdoor kitchen and pizza oven projects. See our
-                location pages for the suburbs we cover.
-              </p>
-            </ServiceAreaMap>
+          <Reveal as="p" className={styles.areaText}>
+            From Craigieburn in the north to Frankston in the south, Werribee in
+            the west and Lilydale in the east, we cover a large portion of
+            Melbourne. We are based in Camberwell and travel up to an hour from
+            Camberwell for outdoor kitchen and pizza oven projects, so you get
+            the same high quality brickwork and care wherever your backyard is.
+            See our location pages for the suburbs we cover.
           </Reveal>
         </div>
       </section>
