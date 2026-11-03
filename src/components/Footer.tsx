@@ -6,6 +6,7 @@ import {
   serviceNav,
   site,
 } from "@/lib/site";
+import { CallLink } from "./CallLink";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -70,9 +71,10 @@ export function Footer() {
               Servicing {site.address.locality} &amp; inner Melbourne,{" "}
               {site.address.region}
             </span>
-            <a href={site.phoneHref} className={`btn btn--light ${styles.contactCta}`}>
-              {site.phoneLabel}
-            </a>
+            <CallLink
+              className={`btn btn--light ${styles.contactCta}`}
+              mobileLabel={`Call ${site.phoneDisplay}`}
+            />
           </address>
         </div>
       </div>

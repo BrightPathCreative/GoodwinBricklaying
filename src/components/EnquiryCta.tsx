@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "./Reveal";
-import { site } from "@/lib/site";
 import styles from "./EnquiryCta.module.css";
+import { CallLink } from "./CallLink";
 
 /**
  * Reusable closing call-to-action: heading, supporting line, an outlined
@@ -30,9 +30,7 @@ export function EnquiryCta({
             <Link href={buttonHref} className="btn btn--light">
               {buttonLabel}
             </Link>
-            <a href={site.phoneHref} className={styles.phone}>
-              {site.phoneLabel}
-            </a>
+            <CallLink className={styles.phone} />
           </div>
         </Reveal>
       </div>

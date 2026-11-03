@@ -6,6 +6,8 @@ import { Analytics } from "@/components/Analytics";
 import { GoogleTagManager } from "@/components/GoogleTagManager";
 import { CallTracking } from "@/components/CallTracking";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { AttributionCapture } from "@/components/AttributionCapture";
 import { GTM_ID } from "@/lib/gtm";
 import "./globals.css";
 
@@ -82,12 +84,6 @@ export default function RootLayout({
       lang="en-AU"
       className={`${dmSerifDisplay.variable} ${inter.variable} ${montserrat.variable} ${tanTwinkle.variable}`}
     >
-      <head>
-        {/* Reveal content immediately when JavaScript is unavailable. */}
-        <noscript>
-          <style>{`.reveal,.reveal-grid>*{opacity:1!important;transform:none!important}`}</style>
-        </noscript>
-      </head>
       <body>
         {/* Google Tag Manager (noscript) */}
         {GTM_ID ? (
@@ -111,7 +107,9 @@ export default function RootLayout({
         <Analytics />
         <GoogleTagManager />
         <CallTracking />
+        <AttributionCapture />
         <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   );

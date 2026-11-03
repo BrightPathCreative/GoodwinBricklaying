@@ -43,6 +43,26 @@
   }
 }
 
+/* Under 768px the call button collapses to a round phone icon; the sticky
+   bar carries the labelled "Call David" button. */
+@media (max-width: 767px) {
+  .call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    flex-shrink: 0;
+    border-color: rgba(245, 241, 236, 0.5);
+    border-radius: 50%;
+  }
+
+  .call .callIcon {
+    display: inline-flex;
+  }
+}
+
 @media (max-width: 359px) {
   .logo {
     height: 2.25rem;

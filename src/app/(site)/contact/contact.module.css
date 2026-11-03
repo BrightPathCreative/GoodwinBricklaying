@@ -9,6 +9,27 @@
 
 .lead {
   color: var(--color-stone);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   max-width: 48ch;
+}
+
+/* Reassurance beside the form: a reason to finish it, and a way out to the
+   phone for anyone who would rather talk. */
+.reassure {
+  margin-bottom: 2.5rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--color-clay);
+  color: var(--color-text-dark);
+}
+
+.reassureLead {
+  font-weight: var(--weight-regular);
+  margin-bottom: 0.25rem;
+}
+
+.reassurePhone {
+  font-weight: var(--weight-regular);
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }

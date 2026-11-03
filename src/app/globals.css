@@ -350,67 +350,132 @@ b {
 }
 
 /* --------------------------------------------------------------------------
-   Scroll reveal (IntersectionObserver-driven, see components/Reveal.tsx)
+   Click-to-call labels (see components/CallLink.tsx): the number written out
+   on desktop, a short tappable label on phones.
    -------------------------------------------------------------------------- */
 
-.reveal {
+.label-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .label-desktop {
+    display: none;
+  }
+
+  .label-mobile {
+    display: inline;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile call/quote bar (see components/MobileCallBar.tsx)
+   -------------------------------------------------------------------------- */
+
+:root {
+  --mobile-bar-height: 4.25rem;
+}
+
+.mobile-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-bar {
+    position: fixed;
+    inset: auto 0 0 0;
+    /* Under the nav (1000) and its menu overlay (999), so the open menu
+       covers it; above page content and the back-to-top button. */
+    z-index: 900;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625rem;
+    padding: 0.625rem var(--gutter)
+      calc(0.625rem + env(safe-area-inset-bottom));
+    background-color: var(--color-deep);
+    border-top: 1px solid rgba(245, 241, 236, 0.16);
+  }
+
+  .mobile-bar .btn {
+    padding-inline: 0.5rem;
+    text-align: center;
+  }
+
+  /* "Get a Quote" filled cream, matching the header CTA. */
+  .mobile-bar__quote {
+    background-color: var(--color-cream);
+    color: var(--color-deep);
+    border-color: var(--color-cream);
+    font-weight: var(--weight-regular);
+  }
+
+  /* The bar must never cover the footer or the form's submit button. */
+  body {
+    padding-bottom: calc(var(--mobile-bar-height) + env(safe-area-inset-bottom));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll reveal (IntersectionObserver-driven, see components/Reveal.tsx)
+
+   Content is visible by default. Reveal only adds .is-armed (hidden) after
+   JavaScript runs, and only to elements still below the fold, so fast
+   scrolling, slow scripts and no-JS visitors never meet a blank section.
+   -------------------------------------------------------------------------- */
+
+.reveal,
+.reveal-grid > * {
+  transition: opacity 300ms var(--ease-reveal),
+    transform 300ms var(--ease-reveal);
+}
+
+.reveal.is-armed:not(.is-visible) {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity var(--duration-slow) var(--ease-reveal),
-    transform var(--duration-slow) var(--ease-reveal);
-  will-change: opacity, transform;
+  transform: translateY(24px);
 }
 
-.reveal--left {
-  transform: translateX(-40px);
+.reveal--left.is-armed:not(.is-visible) {
+  transform: translateX(-24px);
 }
 
-.reveal--right {
-  transform: translateX(40px);
+.reveal--right.is-armed:not(.is-visible) {
+  transform: translateX(24px);
+}
+
+/* Sideways offsets push full-width columns past a phone's edge and cause a
+   horizontal scroll, so on phones every reveal rises instead. */
+@media (max-width: 767px) {
+  .reveal--left.is-armed:not(.is-visible),
+  .reveal--right.is-armed:not(.is-visible) {
+    transform: translateY(24px);
+  }
 }
 
 /* Eyebrow labels fade only, no movement (design.md §3). */
-.reveal--fade {
+.reveal--fade.is-armed:not(.is-visible) {
   transform: none;
-  transition: opacity 500ms var(--ease-reveal);
 }
 
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
-  will-change: auto;
-}
-
-/* Staggered grid: each child reveals 120ms after the previous. */
-.reveal-grid > * {
+/* Staggered grid: each child reveals 50ms after the previous. */
+.reveal-grid.is-armed:not(.is-visible) > * {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity var(--duration-slow) var(--ease-reveal),
-    transform var(--duration-slow) var(--ease-reveal);
+  transform: translateY(24px);
 }
 
-.reveal-grid.is-visible > * {
-  opacity: 1;
-  transform: none;
-}
-
-.reveal-grid.is-visible > *:nth-child(1) {
-  transition-delay: 0ms;
-}
 .reveal-grid.is-visible > *:nth-child(2) {
-  transition-delay: 120ms;
+  transition-delay: 50ms;
 }
 .reveal-grid.is-visible > *:nth-child(3) {
-  transition-delay: 240ms;
+  transition-delay: 100ms;
 }
 .reveal-grid.is-visible > *:nth-child(4) {
-  transition-delay: 360ms;
+  transition-delay: 150ms;
 }
 .reveal-grid.is-visible > *:nth-child(5) {
-  transition-delay: 480ms;
+  transition-delay: 200ms;
 }
-.reveal-grid.is-visible > *:nth-child(6) {
-  transition-delay: 600ms;
+.reveal-grid.is-visible > *:nth-child(n + 6) {
+  transition-delay: 250ms;
 }
 
 @media (prefers-reduced-motion: reduce) {

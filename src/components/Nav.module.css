@@ -207,7 +207,7 @@
   padding: 0.7rem 1.5rem;
   border-radius: var(--btn-radius);
   background-color: var(--color-cream);
-  color: var(--color-heritage);
+  color: var(--color-deep);
   font-family: var(--font-body);
   font-weight: var(--weight-regular);
   font-size: 0.72rem;
@@ -221,6 +221,34 @@
 .cta:hover,
 .cta:focus-visible {
   background-color: var(--color-deep);
+  color: var(--color-cream);
+}
+
+/* --- Header phone: written out on desktop, an icon button on mobile --- */
+.phoneNumber {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--color-cream);
+  white-space: nowrap;
+  transition: opacity var(--transition);
+}
+
+.phoneNumber:hover,
+.phoneNumber:focus-visible {
+  opacity: 0.75;
+}
+
+.phoneIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(245, 241, 236, 0.5);
+  border-radius: 50%;
   color: var(--color-cream);
 }
 
@@ -238,7 +266,8 @@
 
   .logoLink {
     flex: 0 1 auto;
-    max-width: calc(100% - 3.25rem);
+    /* Room for the phone icon and the hamburger. */
+    max-width: calc(100% - 6.5rem);
     margin-right: auto;
   }
 
@@ -506,6 +535,10 @@
   }
 
   .toggle {
+    display: none;
+  }
+
+  .phoneIcon {
     display: none;
   }
 

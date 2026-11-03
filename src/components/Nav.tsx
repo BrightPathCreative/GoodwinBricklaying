@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Phone } from "lucide-react";
+import { CallLink } from "./CallLink";
 import { navCta, primaryNav, site } from "@/lib/site";
 import styles from "./Nav.module.css";
 
@@ -119,10 +121,21 @@ export function Nav() {
             ))}
           </ul>
 
+          <a href={site.phoneHref} className={styles.phoneNumber}>
+            {site.phoneDisplay}
+          </a>
           <Link href={navCta.href} className={styles.cta}>
             {navCta.label}
           </Link>
         </nav>
+
+        <a
+          href={site.phoneHref}
+          className={styles.phoneIcon}
+          aria-label={`Call David on ${site.phoneDisplay}`}
+        >
+          <Phone size={20} strokeWidth={1.5} aria-hidden="true" />
+        </a>
 
         <button
           type="button"
@@ -186,13 +199,10 @@ export function Nav() {
           >
             {navCta.label}
           </Link>
-          <a
-            href={site.phoneHref}
+          <CallLink
             className={`btn btn--light ${styles.overlayPhone}`}
             tabIndex={menuOpen ? 0 : -1}
-          >
-            {site.phoneLabel}
-          </a>
+          />
         </div>
       </div>
     </header>

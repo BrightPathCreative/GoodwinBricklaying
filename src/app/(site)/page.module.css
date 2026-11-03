@@ -146,18 +146,60 @@
   animation: slideUpFade 700ms var(--ease-reveal) 900ms both;
 }
 
+/* The strongest proof on the site, so it has to read clearly over any part
+   of the hero photo: cream text, a heavier weight, a soft shadow and a
+   faint dark backing. */
 .trustBar {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 1.25rem;
   margin-bottom: 2.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--btn-radius);
+  background-color: rgba(28, 23, 20, 0.45);
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--color-cream);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   animation: slideUpFade 700ms var(--ease-reveal) 1000ms both;
+}
+
+.trustLink {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(245, 241, 236, 0.5);
+  text-underline-offset: 0.25em;
+  transition: text-decoration-color var(--transition);
+}
+
+.trustLink:hover,
+.trustLink:focus-visible {
+  text-decoration-color: var(--color-cream);
+}
+
+/* Primary hero action: filled cream, matching the header "Get a Quote". */
+.heroPrimary {
+  background-color: var(--color-cream);
+  border-color: var(--color-cream);
+  color: var(--color-deep);
+  font-weight: var(--weight-regular);
+}
+
+.heroPrimary::before {
+  background-color: var(--color-deep);
+}
+
+.heroPrimary:hover,
+.heroPrimary:focus-visible {
+  color: var(--color-cream);
+}
+
+.allReviews {
+  margin-top: 2.5rem;
 }
 
 .awardBadge {
@@ -208,10 +250,30 @@
   }
 }
 
-.trustBar span:not(:last-child)::after {
+.trustBar > span:not(:last-child)::after {
   content: "·";
   margin-left: 1.25rem;
-  color: rgba(245, 241, 236, 0.4);
+  color: rgba(245, 241, 236, 0.6);
+}
+
+/* Stacked on phones: no separators left hanging at line ends, and kept
+   compact so the hero buttons stay near the fold. */
+@media (max-width: 767px) {
+  .trustBar {
+    display: grid;
+    gap: 0.4rem;
+    margin-bottom: 1.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.72rem;
+  }
+
+  .trustBar > span:not(:last-child)::after {
+    content: none;
+  }
+
+  .awardBadgeImg {
+    width: 1.5rem;
+  }
 }
 
 /* Scroll indicator (design.md §15) */

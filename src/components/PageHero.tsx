@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "./JsonLd";
 import { breadcrumbSchema, type Crumb } from "@/lib/schema";
-import { navCta, site } from "@/lib/site";
+import { navCta } from "@/lib/site";
 import styles from "./PageHero.module.css";
+import { CallLink } from "./CallLink";
 
 /**
  * Mirrors the home hero treatment: the first sentence renders in the TAN
@@ -86,9 +87,7 @@ export function PageHero({
             <Link href={ctaHref} className={`btn btn--light ${styles.ctaBtn}`}>
               {navCta.label}
             </Link>
-            <a href={site.phoneHref} className={styles.phone}>
-              {site.phoneLabel}
-            </a>
+            <CallLink className={styles.phone} />
           </div>
         ) : null}
       </div>

@@ -1,8 +1,8 @@
 import { Reveal } from "./Reveal";
 import { ContactForm } from "./ContactForm";
 import { LANDING_ENQUIRY_ID } from "./services/variant";
-import { site } from "@/lib/site";
 import styles from "./LandingEnquiry.module.css";
+import { CallLink } from "./CallLink";
 
 /**
  * The enquiry form embedded on a Google Ads landing page, with click-to-call
@@ -29,9 +29,7 @@ export function LandingEnquiry({
           <p className={styles.lead}>{body}</p>
           <p className={styles.call}>
             Prefer to talk it through?{" "}
-            <a href={site.phoneHref} className={styles.phone}>
-              {site.phoneLabel}
-            </a>
+            <CallLink className={styles.phone} />
           </p>
         </Reveal>
         <Reveal variant="fade">

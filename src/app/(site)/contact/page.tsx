@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = buildMetadata({
@@ -40,6 +41,17 @@ export default function ContactPage() {
               Tell David a little about your property and what you have in mind.
               There&apos;s no obligation, and no sales pressure.
             </p>
+            <div className={styles.reassure}>
+              <p className={styles.reassureLead}>
+                David replies to every enquiry within 24 hours.
+              </p>
+              <p>
+                Prefer to talk it through? Call{" "}
+                <a href={site.phoneHref} className={styles.reassurePhone}>
+                  {site.phoneDisplay}
+                </a>
+              </p>
+            </div>
           </Reveal>
           <Reveal variant="fade">
             <ContactForm />

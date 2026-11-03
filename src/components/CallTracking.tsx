@@ -20,8 +20,11 @@ export function CallTracking() {
       const link = target.closest<HTMLAnchorElement>('a[href^="tel:"]');
       if (!link) return;
 
+      // innerText skips the hidden desktop/mobile label (see CallLink); the
+      // icon-only header button has no text, so fall back to its aria-label.
+      const text = link.innerText.trim() || link.getAttribute("aria-label");
       trackEvent("click_to_call", {
-        link_text: link.textContent?.trim().slice(0, 100),
+        link_text: text?.slice(0, 100),
       });
       trackConversion("call");
     };

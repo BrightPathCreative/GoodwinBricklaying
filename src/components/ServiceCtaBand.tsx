@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Reveal } from "./Reveal";
-import { navCta, site } from "@/lib/site";
+import { navCta } from "@/lib/site";
 import styles from "./ServiceCtaBand.module.css";
+import { CallLink } from "./CallLink";
 
 /**
  * Compact mid-page call-to-action for long service pages, sits between
@@ -32,9 +33,7 @@ export function ServiceCtaBand({
             <Link href={buttonHref} className="btn btn--light">
               {buttonLabel}
             </Link>
-            <a href={site.phoneHref} className={styles.phone}>
-              {site.phoneLabel}
-            </a>
+            <CallLink className={styles.phone} />
           </div>
         </Reveal>
       </div>

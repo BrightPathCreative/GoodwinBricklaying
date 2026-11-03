@@ -3,11 +3,14 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
 import { Faq } from "@/components/Faq";
-import { Testimonials, type Testimonial } from "@/components/Testimonials";
+import { Testimonials } from "@/components/Testimonials";
+import { GoogleRating } from "@/components/GoogleRating";
+import { CallLink } from "@/components/CallLink";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusinessSchema } from "@/lib/schema";
 import type { FaqItem } from "@/lib/schema";
 import { site } from "@/lib/site";
+import { googleReviews } from "@/lib/reviews";
 import styles from "./page.module.css";
 
 type ServiceTile = {
@@ -107,24 +110,6 @@ const whyPoints = [
   "Fully insured: public liability and WorkCover.",
 ] as const;
 
-const testimonials: ReadonlyArray<Testimonial> = [
-  {
-    quote:
-      "David is a true master of his craft. He didn't just execute; he helped me navigate design choices and suggested valuable additions, even when it increased his own workload. His commitment to the best possible outcome is clear.",
-    author: "Jaspreet C.",
-  },
-  {
-    quote:
-      "His craftsmanship and dedication and level of detail is top class. We are very happy with the result and the front of the house has never looked better.",
-    author: "Ben L.",
-  },
-  {
-    quote:
-      "He restored a garage wall on a 1930s home and you can't tell the difference! Excellent craftsmanship from a lovely team, led by the delightful David.",
-    author: "Priyanka B.",
-  },
-];
-
 const faqs: ReadonlyArray<FaqItem> = [
   {
     question: "What types of projects do you specialise in?",
@@ -204,16 +189,24 @@ export default function HomePage() {
               2026 Quality Business Award Winner
             </span>
             <span>25 Years Experience</span>
-            <span>Five-Star Google Rating</span>
+            <span>
+              <a
+                href={site.google.reviewsUrl}
+                className={styles.trustLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {site.google.rating} ★ from {site.google.reviewCount} Google
+                reviews
+              </a>
+            </span>
             <span>Heritage Specialists</span>
           </div>
           <div className={styles.heroActions}>
-            <Link href="/projects" className="btn btn--light">
-              View Projects
+            <Link href="/contact" className={`btn ${styles.heroPrimary}`}>
+              Get a Quote
             </Link>
-            <a href={site.phoneHref} className="btn btn--light">
-              {site.phoneLabel}
-            </a>
+            <CallLink className="btn btn--light" />
           </div>
         </div>
         <ScrollIndicator />
@@ -339,9 +332,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn btn--light">
                 Get a Quote
               </Link>
-              <a href={site.phoneHref} className="btn btn--light">
-                {site.phoneLabel}
-              </a>
+              <CallLink className="btn btn--light" />
             </div>
           </Reveal>
         </div>
@@ -382,7 +373,13 @@ export default function HomePage() {
           <Reveal as="h2" id="testimonials-heading" className={styles.sectionHeading}>
             What Our Clients Say
           </Reveal>
-          <Testimonials items={testimonials} />
+          <GoogleRating />
+          <Testimonials items={googleReviews.slice(0, 6)} />
+          <Reveal variant="fade" className={styles.allReviews}>
+            <Link href="/testimonials" className={styles.serviceTileArrow}>
+              Read all reviews <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </Reveal>
         </div>
       </section>
 
@@ -423,9 +420,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn btn--light">
                 Contact Goodwin
               </Link>
-              <a href={site.phoneHref} className={styles.ctaPhone}>
-                {site.phoneLabel}
-              </a>
+              <CallLink className={styles.ctaPhone} />
             </div>
           </Reveal>
         </div>

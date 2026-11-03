@@ -18,21 +18,26 @@ type RevealProps = {
   as?: ElementType;
   variant?: RevealVariant;
   className?: string;
-  /** Fraction of the element visible before revealing (design.md: 15%). */
+  /** Fraction of the element visible before revealing. */
   threshold?: number;
 } & Record<string, unknown>;
 
 /**
  * Wraps content in a scroll-reveal container driven by IntersectionObserver
  * (no scroll listeners, per design.md §3/§14). Reveals once, then stops
- * observing. Reduced-motion users see content immediately via globals.css.
+ * observing.
+ *
+ * Content renders visible. Only once this effect runs is an element still
+ * below the fold "armed" (hidden, see globals.css) to animate in, so anything
+ * already on screen, and every visitor without JavaScript or with reduced
+ * motion, simply sees the content.
  */
 export function Reveal({
   children,
   as = "div",
   variant = "up",
   className = "",
-  threshold = 0.15,
+  threshold = 0.1,
   ...rest
 }: RevealProps) {
   const ref = useRef<HTMLElement>(null);
@@ -44,16 +49,19 @@ export function Reveal({
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    if (prefersReduced) {
-      el.classList.add("is-visible");
-      return;
-    }
+    if (prefersReduced) return;
+
+    // Already in (or above) the viewport: leave it alone rather than hide
+    // something the visitor may be looking at.
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
 
     // A fixed visibility fraction can never be reached for elements taller than
     // the viewport (e.g. the long projects gallery on mobile), which would leave
     // them stuck at opacity:0. Cap the threshold to what is actually attainable.
     const viewportRatio = window.innerHeight / (el.offsetHeight || window.innerHeight);
     const safeThreshold = Math.min(threshold, viewportRatio * 0.6);
+
+    el.classList.add("is-armed");
 
     const observer = new IntersectionObserver(
       (entries) => {

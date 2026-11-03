@@ -1,0 +1,31 @@
+.rating {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+  border-bottom: 1px solid var(--color-clay);
+  padding-bottom: 0.25rem;
+  transition: border-color var(--transition);
+}
+
+.rating:hover,
+.rating:focus-visible {
+  border-bottom-color: var(--color-text-dark);
+}
+
+.score {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.star {
+  color: var(--color-star);
+}

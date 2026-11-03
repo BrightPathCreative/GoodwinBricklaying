@@ -3,9 +3,10 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
-import { EnquiryCta } from "@/components/EnquiryCta";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { outdoorKitchensServiceSchema, type FaqItem } from "@/lib/schema";
+import { ServiceEnquiry } from "./ServiceEnquiry";
+import { quoteHref, type ServiceVariant } from "./variant";
 import styles from "./services.module.css";
 import outdoor from "./outdoor-kitchens.module.css";
 
@@ -67,7 +68,7 @@ const steps = [
   { title: "Handover", text: "We show you how to cure and use it." },
 ];
 
-const faqs: ReadonlyArray<FaqItem> = [
+const faqItems: ReadonlyArray<FaqItem> = [
   {
     question: "What is a wood-fired pizza oven made from?",
     answer:
@@ -162,25 +163,54 @@ function ConceptFigure({
   );
 }
 
-export function OutdoorKitchensContent() {
+/**
+ * On the landing page the form sits further down the page, so the quote
+ * answer points there instead of sending ad traffic to /contact.
+ */
+function faqsFor(variant: ServiceVariant): ReadonlyArray<FaqItem> {
+  if (variant === "page") return faqItems;
+  return faqItems.map((item) =>
+    item.link?.href === "/contact"
+      ? {
+          ...item,
+          answer:
+            "Submit the enquiry form on this page. Tell us what you would like to build and where, and we will get back to you.",
+          link: { label: "Go to the enquiry form", href: quoteHref(variant) },
+        }
+      : item,
+  );
+}
+
+export function OutdoorKitchensContent({
+  variant = "page",
+}: {
+  variant?: ServiceVariant;
+}) {
   return (
     <>
-      <JsonLd data={outdoorKitchensServiceSchema()} />
+      {variant === "page" ? (
+        <JsonLd data={outdoorKitchensServiceSchema()} />
+      ) : null}
       <PageHero
         eyebrow="Outdoor Kitchens & Pizza Ovens"
         title="Outdoor Kitchens, Pizza Ovens, Fire Pits and Feature Walls in Melbourne"
         subtext="Goodwin Brick Block and Heritage is a Camberwell bricklaying business. We are known for heritage restoration and detailed brickwork, and we bring that same care to the part of your home where people gather."
-        crumbs={[
-          homeCrumb,
-          { name: "Services", url: "/services" },
-          { name: "Outdoor Kitchens & Pizza Ovens" },
-        ]}
+        crumbs={
+          variant === "page"
+            ? [
+                homeCrumb,
+                { name: "Services", url: "/services" },
+                { name: "Outdoor Kitchens & Pizza Ovens" },
+              ]
+            : undefined
+        }
         image={{
           src: `${concepts}/goodwin-bricklaying-outdoor-kitchen-design-concept-regional-farm-clay-brick.jpg`,
           alt: "Design concept of a regional farm outdoor kitchen in clay brick under a timber pergola, with a brick pizza oven, barbecue and fire pit",
         }}
         imageLabel="Design concept"
         showCta
+        ctaHref={quoteHref(variant)}
       />
 
       <section className="section section--cream" aria-label="Introduction">
@@ -460,12 +490,13 @@ export function OutdoorKitchensContent() {
             Frequently Asked Questions
           </Reveal>
           <Reveal>
-            <Faq items={faqs} />
+            <Faq items={faqsFor(variant)} />
           </Reveal>
         </div>
       </section>
 
-      <EnquiryCta
+      <ServiceEnquiry
+        variant={variant}
         heading="Ready to plan your pizza oven, outdoor kitchen, fire pit or feature wall?"
         body="Call Goodwin on 0489 262 279 or send an enquiry. Tell us about your space and we will get back to you to arrange a quote."
         buttonLabel="Get a Quote"

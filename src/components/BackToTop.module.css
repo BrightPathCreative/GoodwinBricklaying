@@ -76,3 +76,11 @@
     transition: none;
   }
 }
+
+/* Clear the mobile call bar (globals.css .mobile-bar). */
+@media (max-width: 767px) {
+  .button {
+    bottom: calc(var(--mobile-bar-height) + env(safe-area-inset-bottom) + 1rem);
+    right: 1rem;
+  }
+}

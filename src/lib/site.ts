@@ -13,10 +13,20 @@ export const site = {
   // Email intentionally not published; enquiries route through the GHL form
   // and click-to-call only.
   // GHL CRM tracking number. `phone` is the E.164 value used for structured
-  // data; `phoneHref` is the tel: link behind every "Click to Call" CTA.
+  // data; `phoneHref` is the tel: link behind every call CTA (GA4/Ads call
+  // tracking keys off tel: links, so never change the href format);
+  // `phoneDisplay` is the written-out number shown to desktop visitors.
   phone: "+61489262279",
-  phoneLabel: "Click to Call",
+  phoneDisplay: "0489 262 279",
   phoneHref: "tel:+61489262279",
+  // Google Business Profile, checked on Google Maps 3 November 2026. Update
+  // the count as new reviews come in; the link opens the reviews panel.
+  google: {
+    rating: "5.0",
+    reviewCount: 17,
+    reviewsUrl:
+      "https://search.google.com/local/reviews?placeid=ChIJCRjAljre2EAR-Pzh4M4tXw4",
+  },
   instagram: {
     handle: "@goodwinbrickblockandheritage",
     url: "https://www.instagram.com/goodwinbrickblockandheritage",
