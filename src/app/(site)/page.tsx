@@ -8,8 +8,8 @@ import { GoogleRating } from "@/components/GoogleRating";
 import { CallLink } from "@/components/CallLink";
 import { JsonLd } from "@/components/JsonLd";
 import { homeLocalBusinessSchema } from "@/lib/siteSchema";
+import { TrustStrip } from "@/components/site/TrustStrip";
 import type { FaqItem } from "@/lib/schema";
-import { site } from "@/lib/site";
 import { googleReviews } from "@/lib/reviews";
 import styles from "./page.module.css";
 
@@ -177,31 +177,6 @@ export default function HomePage() {
             Twenty-five years of bespoke brickwork across Melbourne&apos;s and
             England&apos;s finest homes and most significant heritage buildings.
           </p>
-          <div className={styles.trustBar}>
-            <span className={styles.awardBadge}>
-              <Image
-                src="/images/quality-business-award-2026-badge.png"
-                alt="2026 Quality Business Award winner badge"
-                width={32}
-                height={32}
-                className={styles.awardBadgeImg}
-              />
-              2026 Quality Business Award Winner
-            </span>
-            <span>25 Years Experience</span>
-            <span>
-              <a
-                href={site.google.reviewsUrl}
-                className={styles.trustLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {site.google.rating} ★ from {site.google.reviewCount} Google
-                reviews
-              </a>
-            </span>
-            <span>Heritage Specialists</span>
-          </div>
           <div className={styles.heroActions}>
             <Link href="/contact" className={`btn ${styles.heroPrimary}`}>
               Get a Quote
@@ -211,6 +186,8 @@ export default function HomePage() {
         </div>
         <ScrollIndicator />
       </section>
+
+      <TrustStrip />
 
       <section className={`section ${styles.intro}`}>
         <div className={`container ${styles.introGrid}`}>
