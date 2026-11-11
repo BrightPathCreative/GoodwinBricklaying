@@ -22,9 +22,8 @@ export default function OutdoorKitchensPizzaOvensPage() {
     <>
       {/* Service schema for this page already comes from
           OutdoorKitchensContent (shared with /lp), so none is added here. */}
-      <OutdoorKitchensContent />
+      <OutdoorKitchensContent afterHero={<TrustStrip />} />
       <ServiceExplore service="outdoor-kitchens-pizza-ovens" />
-      <TrustStrip />
     </>
   );
 }

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -6,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { outdoorKitchensServiceSchema, type FaqItem } from "@/lib/schema";
 import { ServiceEnquiry } from "./ServiceEnquiry";
+import { withAfterHero } from "./slot";
 import { quoteHref, type ServiceVariant } from "./variant";
 import styles from "./services.module.css";
 import outdoor from "./outdoor-kitchens.module.css";
@@ -183,35 +185,41 @@ function faqsFor(variant: ServiceVariant): ReadonlyArray<FaqItem> {
 
 export function OutdoorKitchensContent({
   variant = "page",
+  afterHero,
 }: {
   variant?: ServiceVariant;
+  /** Main-site-only content shown straight after the hero. Never set on /lp. */
+  afterHero?: ReactNode;
 }) {
   return (
     <>
       {variant === "page" ? (
         <JsonLd data={outdoorKitchensServiceSchema()} />
       ) : null}
-      <PageHero
-        eyebrow="Outdoor Kitchens & Pizza Ovens"
-        title="Outdoor Kitchens, Pizza Ovens, Fire Pits and Feature Walls in Melbourne"
-        subtext="Goodwin Brick Block and Heritage is a Camberwell bricklaying business. We are known for heritage restoration and detailed brickwork, and we bring that same care to the part of your home where people gather."
-        crumbs={
-          variant === "page"
-            ? [
-                homeCrumb,
-                { name: "Services", url: "/services" },
-                { name: "Outdoor Kitchens & Pizza Ovens" },
-              ]
-            : undefined
-        }
-        image={{
-          src: `${concepts}/goodwin-bricklaying-outdoor-kitchen-design-concept-regional-farm-clay-brick.jpg`,
-          alt: "Design concept of a regional farm outdoor kitchen in clay brick under a timber pergola, with a brick pizza oven, barbecue and fire pit",
-        }}
-        imageLabel="Design concept"
-        showCta
-        ctaHref={quoteHref(variant)}
-      />
+      {withAfterHero(
+        <PageHero
+          eyebrow="Outdoor Kitchens & Pizza Ovens"
+          title="Outdoor Kitchens, Pizza Ovens, Fire Pits and Feature Walls in Melbourne"
+          subtext="Goodwin Brick Block and Heritage is a Camberwell bricklaying business. We are known for heritage restoration and detailed brickwork, and we bring that same care to the part of your home where people gather."
+          crumbs={
+            variant === "page"
+              ? [
+                  homeCrumb,
+                  { name: "Services", url: "/services" },
+                  { name: "Outdoor Kitchens & Pizza Ovens" },
+                ]
+              : undefined
+          }
+          image={{
+            src: `${concepts}/goodwin-bricklaying-outdoor-kitchen-design-concept-regional-farm-clay-brick.jpg`,
+            alt: "Design concept of a regional farm outdoor kitchen in clay brick under a timber pergola, with a brick pizza oven, barbecue and fire pit",
+          }}
+          imageLabel="Design concept"
+          showCta
+          ctaHref={quoteHref(variant)}
+        />,
+        afterHero,
+      )}
 
       <section className="section section--cream" aria-label="Introduction">
         <div className="container-narrow">

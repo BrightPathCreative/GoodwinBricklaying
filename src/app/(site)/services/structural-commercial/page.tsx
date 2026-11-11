@@ -22,9 +22,8 @@ export default function StructuralCommercialPage() {
   return (
     <>
       <JsonLd data={serviceSchema("structural-commercial", description)} />
-      <StructuralCommercialContent />
+      <StructuralCommercialContent afterHero={<TrustStrip />} />
       <ServiceExplore service="structural-commercial" />
-      <TrustStrip />
     </>
   );
 }

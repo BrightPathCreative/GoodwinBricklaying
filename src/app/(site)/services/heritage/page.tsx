@@ -22,9 +22,8 @@ export default function HeritageRestorationPage() {
   return (
     <>
       <JsonLd data={serviceSchema("heritage", description)} />
-      <HeritageContent />
+      <HeritageContent afterHero={<TrustStrip />} />
       <ServiceExplore service="heritage" />
-      <TrustStrip />
     </>
   );
 }

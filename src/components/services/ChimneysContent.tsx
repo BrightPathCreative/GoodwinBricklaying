@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -9,6 +10,7 @@ import { BrunswickShowcase } from "@/components/BrunswickShowcase";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import type { FaqItem } from "@/lib/schema";
 import { ServiceEnquiry } from "./ServiceEnquiry";
+import { withAfterHero } from "./slot";
 import { quoteHref, type ServiceVariant } from "./variant";
 import styles from "./services.module.css";
 
@@ -122,31 +124,37 @@ const faqs: ReadonlyArray<FaqItem> = [
 
 export function ChimneysContent({
   variant = "page",
+  afterHero,
 }: {
   variant?: ServiceVariant;
+  /** Main-site-only content shown straight after the hero. Never set on /lp. */
+  afterHero?: ReactNode;
 }) {
   return (
     <>
-      <PageHero
-        eyebrow="Chimneys & Fireplaces"
-        title="Chimney Stacks Built to Stand for Generations."
-        subtext="From landmark commercial stacks to heritage fireplace restoration and handcrafted pizza ovens: specialist chimney and fireplace masonry throughout Melbourne."
-        crumbs={
-          variant === "page"
-            ? [
-                homeCrumb,
-                { name: "Services", url: "/services" },
-                { name: "Chimneys & Fireplaces" },
-              ]
-            : undefined
-        }
-        image={{
-          src: "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-40-metre-chimney-stack-full-height-ground-view.jpg",
-          alt: "Restored 40-metre heritage brick chimney stack in Collingwood, Melbourne by Goodwin Bricklaying",
-        }}
-        showCta
-        ctaHref={quoteHref(variant)}
-      />
+      {withAfterHero(
+        <PageHero
+          eyebrow="Chimneys & Fireplaces"
+          title="Chimney Stacks Built to Stand for Generations."
+          subtext="From landmark commercial stacks to heritage fireplace restoration and handcrafted pizza ovens: specialist chimney and fireplace masonry throughout Melbourne."
+          crumbs={
+            variant === "page"
+              ? [
+                  homeCrumb,
+                  { name: "Services", url: "/services" },
+                  { name: "Chimneys & Fireplaces" },
+                ]
+              : undefined
+          }
+          image={{
+            src: "/images/chimneys-fireplaces/collingwood-chimney/goodwin-bricklaying-collingwood-40-metre-chimney-stack-full-height-ground-view.jpg",
+            alt: "Restored 40-metre heritage brick chimney stack in Collingwood, Melbourne by Goodwin Bricklaying",
+          }}
+          showCta
+          ctaHref={quoteHref(variant)}
+        />,
+        afterHero,
+      )}
 
       <section className="section section--cream" aria-labelledby="chimney-intro">
         <div className={`container ${styles.introGrid}`}>

@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -10,6 +11,7 @@ import { CairoShowcase } from "@/components/CairoShowcase";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import type { FaqItem } from "@/lib/schema";
 import { ServiceEnquiry } from "./ServiceEnquiry";
+import { withAfterHero } from "./slot";
 import { quoteHref, type ServiceVariant } from "./variant";
 import styles from "./services.module.css";
 
@@ -139,31 +141,37 @@ const faqs: ReadonlyArray<FaqItem> = [
 
 export function HeritageContent({
   variant = "page",
+  afterHero,
 }: {
   variant?: ServiceVariant;
+  /** Main-site-only content shown straight after the hero. Never set on /lp. */
+  afterHero?: ReactNode;
 }) {
   return (
     <>
-      <PageHero
-        eyebrow="Heritage & Restoration"
-        title="Melbourne's Heritage Deserves More Than a Patch Job."
-        subtext="Specialist heritage brickwork, repointing, crack stitching, and restoration for pre-war homes and heritage buildings across Camberwell, Hawthorn, Canterbury, and inner Melbourne."
-        crumbs={
-          variant === "page"
-            ? [
-                homeCrumb,
-                { name: "Services", url: "/services" },
-                { name: "Heritage & Restoration" },
-              ]
-            : undefined
-        }
-        image={{
-          src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
-          alt: "Restored heritage brick boundary wall with sandstone-capped pier by Goodwin Bricklaying on Hanover Street, Fitzroy, Melbourne",
-        }}
-        showCta
-        ctaHref={quoteHref(variant)}
-      />
+      {withAfterHero(
+        <PageHero
+          eyebrow="Heritage & Restoration"
+          title="Melbourne's Heritage Deserves More Than a Patch Job."
+          subtext="Specialist heritage brickwork, repointing, crack stitching, and restoration for pre-war homes and heritage buildings across Camberwell, Hawthorn, Canterbury, and inner Melbourne."
+          crumbs={
+            variant === "page"
+              ? [
+                  homeCrumb,
+                  { name: "Services", url: "/services" },
+                  { name: "Heritage & Restoration" },
+                ]
+              : undefined
+          }
+          image={{
+            src: "/images/heritage-restoration/cairo-flats-wall/photo-2026-05-23-10-34-26.jpg",
+            alt: "Restored heritage brick boundary wall with sandstone-capped pier by Goodwin Bricklaying on Hanover Street, Fitzroy, Melbourne",
+          }}
+          showCta
+          ctaHref={quoteHref(variant)}
+        />,
+        afterHero,
+      )}
 
       <section className="section section--cream" aria-labelledby="heritage-intro">
         <div className="container-narrow">

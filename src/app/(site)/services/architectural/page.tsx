@@ -23,9 +23,8 @@ export default function ArchitecturalMasonryPage() {
   return (
     <>
       <JsonLd data={serviceSchema("architectural", description)} />
-      <ArchitecturalContent />
+      <ArchitecturalContent afterHero={<TrustStrip />} />
       <ServiceExplore service="architectural" />
-      <TrustStrip />
     </>
   );
 }

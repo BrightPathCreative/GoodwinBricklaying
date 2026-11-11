@@ -22,9 +22,8 @@ export default function TuckPointingPage() {
   return (
     <>
       <JsonLd data={serviceSchema("tuck-pointing", description)} />
-      <TuckPointingContent />
+      <TuckPointingContent afterHero={<TrustStrip />} />
       <ServiceExplore service="tuck-pointing" />
-      <TrustStrip />
     </>
   );
 }

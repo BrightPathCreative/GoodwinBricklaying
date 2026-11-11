@@ -23,9 +23,8 @@ export default function ChimneysFireplacesPage() {
   return (
     <>
       <JsonLd data={serviceSchema("chimneys", description)} />
-      <ChimneysContent />
+      <ChimneysContent afterHero={<TrustStrip />} />
       <ServiceExplore service="chimneys" />
-      <TrustStrip />
     </>
   );
 }

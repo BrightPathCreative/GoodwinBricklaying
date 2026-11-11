@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ServiceList } from "@/components/ServiceList";
@@ -8,6 +9,7 @@ import { ServiceGallery } from "@/components/ServiceGallery";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import type { FaqItem } from "@/lib/schema";
 import { ServiceEnquiry } from "./ServiceEnquiry";
+import { withAfterHero } from "./slot";
 import { quoteHref, type ServiceVariant } from "./variant";
 import styles from "./services.module.css";
 
@@ -106,31 +108,37 @@ const faqs: ReadonlyArray<FaqItem> = [
 
 export function StructuralCommercialContent({
   variant = "page",
+  afterHero,
 }: {
   variant?: ServiceVariant;
+  /** Main-site-only content shown straight after the hero. Never set on /lp. */
+  afterHero?: ReactNode;
 }) {
   return (
     <>
-      <PageHero
-        eyebrow="Structural & Commercial"
-        title="Structural Masonry. Commercial Capability. The Same Standard."
-        subtext="Commercial blockwork, retaining walls, extensions, and structural masonry for builders, developers, and commercial clients across Melbourne."
-        crumbs={
-          variant === "page"
-            ? [
-                homeCrumb,
-                { name: "Services", url: "/services" },
-                { name: "Structural & Commercial" },
-              ]
-            : undefined
-        }
-        image={{
-          src: "/images/structural-commercial/goodwin-bricklaying-commercial-blockwork-curved-walls-multi-storey-development.jpg",
-          alt: "Curved structural blockwork walls under construction at a multi-storey Melbourne development by Goodwin Bricklaying",
-        }}
-        showCta
-        ctaHref={quoteHref(variant)}
-      />
+      {withAfterHero(
+        <PageHero
+          eyebrow="Structural & Commercial"
+          title="Structural Masonry. Commercial Capability. The Same Standard."
+          subtext="Commercial blockwork, retaining walls, extensions, and structural masonry for builders, developers, and commercial clients across Melbourne."
+          crumbs={
+            variant === "page"
+              ? [
+                  homeCrumb,
+                  { name: "Services", url: "/services" },
+                  { name: "Structural & Commercial" },
+                ]
+              : undefined
+          }
+          image={{
+            src: "/images/structural-commercial/goodwin-bricklaying-commercial-blockwork-curved-walls-multi-storey-development.jpg",
+            alt: "Curved structural blockwork walls under construction at a multi-storey Melbourne development by Goodwin Bricklaying",
+          }}
+          showCta
+          ctaHref={quoteHref(variant)}
+        />,
+        afterHero,
+      )}
 
       <section className="section section--cream" aria-labelledby="structural-intro">
         <div className="container-narrow">
