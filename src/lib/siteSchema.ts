@@ -41,6 +41,13 @@ export function homeLocalBusinessSchema(): Record<string, unknown> {
   return { ...localBusinessSchema(), "@id": BUSINESS_ID };
 }
 
+/** The homepage LocalBusiness without @context, for nesting in other schema. */
+function businessDetails(): Record<string, unknown> {
+  const { "@context": _context, ...rest } = homeLocalBusinessSchema();
+  void _context;
+  return rest;
+}
+
 /** Service, for each main-site service page. */
 export function serviceSchema(
   slug: ServiceSlug,
@@ -68,10 +75,8 @@ export function contactPageSchema(description: string): Record<string, unknown> 
     description,
     url: `${site.url}/contact`,
     inLanguage: "en-AU",
-    mainEntity: {
-      ...businessRef,
-      telephone: site.phone,
-      areaServed: suburbsServed,
-    },
+    // Full business details (address, image, logo, phone), the same as the
+    // homepage, so Google does not flag missing LocalBusiness fields here.
+    mainEntity: businessDetails(),
   };
 }
