@@ -1,0 +1,14 @@
+import styles from "./site.module.css";
+
+/**
+ * Visible placeholder for a fact that has not been confirmed yet. Search the
+ * codebase for "TODO: ASK SARA" to find every one. Each must be replaced with
+ * a confirmed fact, or removed, before this branch goes live.
+ */
+export function AskSara({ children }: { children: React.ReactNode }) {
+  return (
+    <mark className={styles.todo} data-todo="ask-sara">
+      TODO: ASK SARA: {children}
+    </mark>
+  );
+}

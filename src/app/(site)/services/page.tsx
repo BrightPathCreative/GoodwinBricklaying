@@ -9,6 +9,7 @@ import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
 import styles from "@/components/services/services.module.css";
+import { TrustStrip } from "@/components/site/TrustStrip";
 
 export const metadata: Metadata = buildMetadata({
   title: "Masonry Services Melbourne | Goodwin Bricklaying",
@@ -105,6 +106,8 @@ export default function ServicesPage() {
         subtext="From intricate heritage repointing to large-scale commercial blockwork, Goodwin Bricklaying brings the same precision and care to every project."
         crumbs={[homeCrumb, { name: "Services" }]}
       />
+
+      <TrustStrip />
 
       <section className="section section--cream" aria-labelledby="services-list">
         <div className="container">

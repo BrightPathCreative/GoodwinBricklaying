@@ -38,6 +38,21 @@ export type Location = {
   faqs: ReadonlyArray<FaqItem>;
   /** Slugs of nearby suburbs for internal linking. */
   nearby: ReadonlyArray<string>;
+  /**
+   * Optional "Recent job in <suburb>" photo and caption. The section only
+   * renders when this is set.
+   *
+   * TODO: ASK SARA: a real recent job for each of the nine suburbs (photo,
+   * street or area if the client is happy to share it, and one or two
+   * sentences on the job). None are set yet, so no suburb shows the section.
+   */
+  recentJob?: LocationRecentJob;
+};
+
+export type LocationRecentJob = {
+  image: { src: string; alt: string; width: number; height: number };
+  /** One or two sentences: what the job was and what was done. */
+  caption: string;
 };
 
 export const locations: ReadonlyArray<Location> = [

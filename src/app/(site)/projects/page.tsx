@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ProjectGallery } from "@/components/ProjectGallery";
@@ -8,6 +9,7 @@ import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import { featuredProjects } from "@/lib/projects";
 import styles from "./projects.module.css";
+import siteStyles from "@/components/site/site.module.css";
 
 export const metadata: Metadata = buildMetadata({
   title: "Projects & Portfolio | Goodwin Bricklaying Melbourne",
@@ -64,7 +66,16 @@ export default function ProjectsPage() {
                   <span className={styles.category}>{project.category}</span>
                   <h3 className={styles.title}>{project.title}</h3>
                   <p className={styles.location}>{project.location}</p>
-                  <p className={styles.blurb}>{project.blurb}</p>
+                  <p className={styles.blurb}>
+                    {project.blurb}
+                    {project.details ? ` ${project.details}` : null}
+                  </p>
+                  <div className={siteStyles.inlineLinks}>
+                    <Link href={project.serviceHref} className={siteStyles.arrowLink}>
+                      More on {project.serviceLabel}{" "}
+                      <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -82,6 +93,14 @@ export default function ProjectsPage() {
           </Reveal>
           <Reveal>
             <ProjectGallery />
+          </Reveal>
+          <Reveal variant="fade" className={siteStyles.inlineLinks}>
+            <Link href="/testimonials" className={siteStyles.arrowLink}>
+              Read what our clients say <span aria-hidden="true">&rarr;</span>
+            </Link>
+            <Link href="/services" className={siteStyles.arrowLink}>
+              Explore our services <span aria-hidden="true">&rarr;</span>
+            </Link>
           </Reveal>
         </div>
       </section>

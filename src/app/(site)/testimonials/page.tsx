@@ -7,7 +7,9 @@ import { EnquiryCta } from "@/components/EnquiryCta";
 import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import { googleReviews } from "@/lib/reviews";
+import Link from "next/link";
 import styles from "./testimonials.module.css";
+import siteStyles from "@/components/site/site.module.css";
 
 export const metadata: Metadata = buildMetadata({
   title: "Client Reviews | Goodwin Bricklaying Melbourne",
@@ -47,6 +49,15 @@ export default function TestimonialsPage() {
           </Reveal>
           <GoogleRating />
           <Testimonials items={googleReviews} />
+          <Reveal variant="fade" className={siteStyles.inlineLinks}>
+            <Link href="/projects" className={siteStyles.arrowLink}>
+              See the projects behind these reviews{" "}
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+            <Link href="/services" className={siteStyles.arrowLink}>
+              Explore our services <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </Reveal>
         </div>
       </section>
 

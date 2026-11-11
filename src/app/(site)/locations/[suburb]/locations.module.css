@@ -127,3 +127,21 @@
     font-size: 0.85rem;
   }
 }
+
+/* Optional "Recent job in <suburb>" figure */
+.recentJob {
+  margin: 0;
+}
+
+.recentJobImage {
+  width: 100%;
+  height: auto;
+  filter: var(--image-treatment);
+}
+
+.recentJobCaption {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: var(--leading-body);
+  color: var(--color-stone);
+}

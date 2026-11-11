@@ -8,6 +8,9 @@ import { homeCrumb } from "@/components/Breadcrumbs";
 import { buildMetadata } from "@/lib/seo";
 import type { FaqItem } from "@/lib/schema";
 import styles from "./about.module.css";
+import { TrustStrip } from "@/components/site/TrustStrip";
+import { LinkRows } from "@/components/site/LinkRows";
+import { serviceLinks } from "@/lib/siteLinks";
 
 export const metadata: Metadata = buildMetadata({
   title:
@@ -89,6 +92,8 @@ export default function AboutPage() {
           alt: "Heritage brickwork matched to the original during a period home renovation by Goodwin Bricklaying, Melbourne",
         }}
       />
+
+      <TrustStrip />
 
       <section className="section section--cream" aria-labelledby="story-heading">
         <div className="container">
@@ -227,6 +232,26 @@ export default function AboutPage() {
               ))}
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section className="section section--cream" aria-labelledby="about-services">
+        <div className="container">
+          <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
+            Services
+          </Reveal>
+          <Reveal as="h2" id="about-services" className={styles.heading}>
+            What We Do
+          </Reveal>
+          <Reveal>
+            <LinkRows
+              items={serviceLinks.map((service) => ({
+                href: service.href,
+                label: service.label,
+                description: service.description,
+              }))}
+            />
+          </Reveal>
         </div>
       </section>
 

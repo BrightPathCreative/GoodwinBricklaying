@@ -16,6 +16,17 @@ export type FeaturedProject = {
   location: string;
   category: string;
   blurb: string;
+  /** Extra sentence(s), taken only from copy already published on the site. */
+  details?: string;
+  /** The matching service page. */
+  serviceHref: string;
+  /** Short service name for the "More on ..." link. */
+  serviceLabel: string;
+  /**
+   * TODO: ASK SARA: facts still missing for this project. Not shown on the
+   * page; once answered, add them to `details` and delete this field.
+   */
+  askSara?: string;
   image: string;
   alt: string;
 };
@@ -30,6 +41,10 @@ export type GalleryImage = {
 export const featuredProjects: ReadonlyArray<FeaturedProject> = [
   {
     title: "Fitzroy Vaulted Brick Tunnel",
+    serviceHref: "/services/architectural",
+    serviceLabel: "architectural masonry",
+    askSara:
+      "what the client needed (the problem), and the finished result, for this project",
     location: "Fitzroy",
     category: "Architectural Masonry",
     blurb:
@@ -39,6 +54,10 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
   },
   {
     title: "Cairo Flats Heritage Wall",
+    details:
+      "The finished wall was unveiled to the Fitzroy community, preserving the last surviving feature of Uxbridge House.",
+    serviceHref: "/services/heritage",
+    serviceLabel: "heritage restoration",
     location: "Fitzroy",
     category: "Heritage & Restoration",
     blurb:
@@ -49,6 +68,10 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
   },
   {
     title: "Highett Gasworks Chimney",
+    serviceHref: "/services/chimneys",
+    serviceLabel: "chimney restoration",
+    askSara:
+      "the condition of the chimney before work started, and the outcome for the client",
     location: "Highett",
     category: "Chimneys & Restoration",
     blurb:
@@ -59,6 +82,9 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
   },
   {
     title: "Prahran Park Curved Wall",
+    serviceHref: "/services/architectural",
+    serviceLabel: "architectural masonry",
+    askSara: "what the council needed (the problem), and the result",
     location: "Prahran",
     category: "Architectural Masonry",
     blurb:
@@ -69,6 +95,10 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
   },
   {
     title: "Commercial Blockwork Development",
+    serviceHref: "/services/structural-commercial",
+    serviceLabel: "structural and commercial masonry",
+    askSara:
+      "the suburb, plus the problem and the result for this development (or confirm it should stay unnamed)",
     location: "Melbourne",
     category: "Structural & Commercial",
     blurb:
@@ -79,6 +109,10 @@ export const featuredProjects: ReadonlyArray<FeaturedProject> = [
   },
   {
     title: "Heritage Repointing & Tuck Pointing",
+    serviceHref: "/services/tuck-pointing",
+    serviceLabel: "tuck pointing",
+    askSara:
+      "the suburb, plus the problem and the result for this repointing job",
     location: "Inner Melbourne",
     category: "Tuck Pointing",
     blurb:

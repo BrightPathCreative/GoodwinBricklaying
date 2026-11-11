@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/PageHero";
@@ -105,6 +106,32 @@ export default async function LocationPage({
         items={location.gallery}
         tone="cream"
       />
+
+      {location.recentJob ? (
+        <section className="section section--cream" aria-labelledby="loc-recent">
+          <div className="container-narrow">
+            <Reveal as="span" variant="fade" className={`eyebrow ${styles.eyebrowSpace}`}>
+              Recent Job
+            </Reveal>
+            <Reveal as="h2" id="loc-recent" className={styles.heading}>
+              Recent Job in {location.name}
+            </Reveal>
+            <Reveal as="figure" className={styles.recentJob}>
+              <Image
+                src={location.recentJob.image.src}
+                alt={location.recentJob.image.alt}
+                width={location.recentJob.image.width}
+                height={location.recentJob.image.height}
+                sizes="(min-width: 820px) 780px, 100vw"
+                className={`${styles.recentJobImage} image-shape`}
+              />
+              <figcaption className={styles.recentJobCaption}>
+                {location.recentJob.caption}
+              </figcaption>
+            </Reveal>
+          </div>
+        </section>
+      ) : null}
 
       <ServiceCtaBand
         heading={`Get a quote for your ${location.name} project`}

@@ -7,7 +7,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { GoogleRating } from "@/components/GoogleRating";
 import { CallLink } from "@/components/CallLink";
 import { JsonLd } from "@/components/JsonLd";
-import { localBusinessSchema } from "@/lib/schema";
+import { homeLocalBusinessSchema } from "@/lib/siteSchema";
 import type { FaqItem } from "@/lib/schema";
 import { site } from "@/lib/site";
 import { googleReviews } from "@/lib/reviews";
@@ -151,7 +151,7 @@ const faqs: ReadonlyArray<FaqItem> = [
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema()} />
+      <JsonLd data={homeLocalBusinessSchema()} />
 
       <section className={styles.hero} aria-label="Introduction">
         <Image

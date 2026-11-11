@@ -1,0 +1,334 @@
+/* Shared styles for main-site-only blocks in src/components/site.
+   Matches the link rows and suburb links on the location pages. */
+
+/* ---------- Section headings ---------- */
+.eyebrowSpace {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  max-width: 24ch;
+  margin-bottom: 1.75rem;
+}
+
+.subheading {
+  margin-bottom: 1rem;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+}
+
+@media (max-width: 768px) {
+  .heading {
+    max-width: 100%;
+  }
+}
+
+.lead {
+  max-width: 60ch;
+  font-size: 1.1rem;
+  line-height: var(--leading-body);
+  color: var(--color-text-dark);
+}
+
+.lead + .lead {
+  margin-top: 1.25rem;
+}
+
+/* ---------- Link rows (services) ---------- */
+.linkList {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.linkList > li {
+  border-top: 1px solid var(--color-divider);
+}
+
+.linkList > li:last-child {
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.linkRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  color: var(--color-text-dark);
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.linkRowText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.linkRowTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: var(--leading-heading);
+}
+
+.linkRowDesc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-stone);
+}
+
+.linkRow:hover,
+.linkRow:focus-visible {
+  color: var(--color-primary);
+}
+
+.linkArrow {
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  color: var(--color-clay);
+  transition: transform var(--duration-fast) var(--ease-luxury);
+}
+
+.linkRow:hover .linkArrow,
+.linkRow:focus-visible .linkArrow {
+  transform: translateX(6px);
+}
+
+/* ---------- Plain text links (suburbs) ---------- */
+.textLinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: 0.75rem 2rem;
+  max-width: 960px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.textLink {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--color-stone);
+  transition: color var(--duration-fast) var(--ease-luxury);
+}
+
+.textLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--color-clay);
+  transition: width var(--duration-base) var(--ease-luxury);
+}
+
+.textLink:hover,
+.textLink:focus-visible {
+  color: var(--color-primary);
+}
+
+.textLink:hover::after,
+.textLink:focus-visible::after {
+  width: 100%;
+}
+
+/* ---------- Service page explore block ---------- */
+.exploreGroup + .exploreGroup {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.arrowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+  border-bottom: 1px solid var(--color-clay);
+  padding-bottom: 0.25rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.arrowLink:hover,
+.arrowLink:focus-visible {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-text-dark);
+}
+
+.inlineLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+/* ---------- Trust strip ---------- */
+.trust {
+  padding-block: clamp(2rem, 4vw, 2.75rem);
+  background: var(--color-cream);
+  border-top: 1px solid rgba(138, 122, 112, 0.35);
+  border-bottom: 1px solid rgba(138, 122, 112, 0.35);
+}
+
+.trustList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trustItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--color-text-dark);
+}
+
+.trustIcon {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: var(--color-clay);
+}
+
+.trustText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.trustLabel {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.trustDetail {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--color-stone);
+}
+
+.trustLink {
+  text-decoration: underline;
+  text-decoration-color: var(--color-clay);
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--transition);
+}
+
+.trustLink:hover,
+.trustLink:focus-visible {
+  text-decoration-color: var(--color-text-dark);
+}
+
+.star {
+  color: var(--color-star);
+}
+
+@media (max-width: 1100px) {
+  .trustList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .trustList {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+
+/* ---------- Contact page extras ---------- */
+/* Sits straight under the form section (same background), so drop the
+   doubled section padding between them. */
+.contactMore {
+  padding-top: 0;
+}
+
+.contactGoogle {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid rgba(138, 122, 112, 0.35);
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.step {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-divider);
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-clay);
+}
+
+.stepTitle {
+  margin-bottom: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.stepText {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--color-stone);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .steps,
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hours {
+  font-size: 1.05rem;
+  line-height: var(--leading-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linkArrow,
+  .textLink::after {
+    transition: none;
+  }
+
+  .linkRow:hover .linkArrow,
+  .linkRow:focus-visible .linkArrow {
+    transform: none;
+  }
+}
